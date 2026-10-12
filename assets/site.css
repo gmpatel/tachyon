@@ -1985,3 +1985,44 @@ article.doc code {
 .prose.prose-guide {
   max-width: 980px;
 }
+
+/* Markdown screenshots (the Australian live TV guide) */
+.md-shot {
+  margin: 20px 0 26px;
+}
+.md-shot img {
+  border-radius: var(--radius);
+  border: 1px solid var(--line-2);
+  box-shadow: var(--shadow);
+  max-width: min(100%, 640px);
+  height: auto;
+}
+.md-shot figcaption {
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: var(--dim);
+}
+/* the home section's in-app tip */
+.aussie-tip {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 0 0 24px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(124, 92, 255, 0.4);
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.14), rgba(34, 211, 238, 0.06));
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #cfd3e1;
+}
+.aussie-tip svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  color: #c4b5fd;
+}
+.aussie-tip b {
+  color: var(--text);
+}
