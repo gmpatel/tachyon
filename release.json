@@ -1,13 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.1.4",
-  "build": "2026.10.14.1227",
-  "versionCode": 3569067,
+  "version": "1.1.5",
+  "build": "2026.10.14.1459",
+  "versionCode": 3569219,
   "whatsNew": [
-    "Smoother, quicker scrolling on TV boxes, and a fix for crashes on TVs with little memory (like Chromecast)",
-    "Landing shows when a new release is out, and how to update for the way you installed Tachyon",
-    "Pick any colour for a service: set colours or a colour gradient",
-    "Tidier buttons across the app, a new Last Used badge, and time icons in the player"
+    "Fixed: after pressing Home while watching, nothing would play when you came back",
+    "The keyboard no longer covers what you type, on phones and on TV",
+    "All and Favorites buttons right on the current category",
+    "Select Latest on Landing to check for a new release at once",
+    "Tidier messages: centred on phones, no more width jump"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
