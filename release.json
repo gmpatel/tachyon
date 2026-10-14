@@ -1,14 +1,11 @@
 {
   "app": "tachyon",
-  "version": "1.1.5",
-  "build": "2026.10.14.1459",
-  "versionCode": 3569219,
+  "version": "1.1.6",
+  "build": "2026.10.14.1604",
+  "versionCode": 3569284,
   "whatsNew": [
-    "Fixed: after pressing Home while watching, nothing would play when you came back",
-    "The keyboard no longer covers what you type, on phones and on TV",
-    "All and Favorites buttons right on the current category",
-    "Select Latest on Landing to check for a new release at once",
-    "Tidier messages: centred on phones, no more width jump"
+    "Channels: the player's top bar opens at its full size, with every value pulsing until it loads — no more jumping",
+    "Small fixes for test devices and the update check"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
