@@ -1,0 +1,23 @@
+{
+  "app": "tachyon",
+  "version": "1.1.4",
+  "build": "2026.10.14.1227",
+  "versionCode": 3569067,
+  "whatsNew": [
+    "Smoother, quicker scrolling on TV boxes, and a fix for crashes on TVs with little memory (like Chromecast)",
+    "Landing shows when a new release is out, and how to update for the way you installed Tachyon",
+    "Pick any colour for a service: set colours or a colour gradient",
+    "Tidier buttons across the app, a new Last Used badge, and time icons in the player"
+  ],
+  "links": {
+    "site": "https://gmpatel.github.io/tachyon/",
+    "install": "https://gmpatel.github.io/tachyon/install.html",
+    "play": "https://play.google.com/store/apps/details?id=app.tachyon.android",
+    "apkDropbox": "https://www.dropbox.com/scl/fi/aeuu95e36p7jmti7dlcu2/Tachyon-latest-android-native-universal.apk?rlkey=19ch5si1hjmfdko6z8n0epig0&st=fb46pkao&dl=1",
+    "apkGoogleDrive": "https://drive.google.com/file/d/1IaYbtUR_lsaY6m5rKpnpgZbe0tGVOW-y/view?usp=sharing"
+  },
+  "downloader": {
+    "dropbox": "7607080",
+    "googleDrive": "2336338"
+  }
+}
