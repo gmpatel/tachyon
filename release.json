@@ -1,11 +1,13 @@
 {
   "app": "tachyon",
-  "version": "1.1.6",
-  "build": "2026.10.14.1604",
-  "versionCode": 3569284,
+  "version": "1.1.7",
+  "build": "2026.10.14.1821",
+  "versionCode": 3569421,
   "whatsNew": [
-    "Channels: the player's top bar opens at its full size, with every value pulsing until it loads — no more jumping",
-    "Small fixes for test devices and the update check"
+    "Fixed: channels and movies that couldn't connect on some home networks (\"Can't reach the stream\")",
+    "Multi-audio titles play English first, then Hindi, then Gujarati — or pick a language on the title's page",
+    "Titles no longer show file endings like \".mkv\"",
+    "Emby live channels play, and a new loading animation"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
