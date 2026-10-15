@@ -1,15 +1,16 @@
 {
   "app": "tachyon",
-  "version": "1.1.8",
-  "build": "2026.10.15.1228",
-  "versionCode": 3570508,
+  "version": "1.1.9",
+  "build": "2026.10.15.1635",
+  "versionCode": 3570755,
   "whatsNew": [
-    "Cast movies and channels to a Chromecast from your phone",
-    "Your internet speed on the TV home screen: press it to check again",
-    "Filters: one category, Recently Used and your own Display Group",
-    "Choose up to three audio languages in Settings",
-    "Pin Stream Info on the picture; clearer speed facts while playing",
-    "Fixes: resumed movies show their speeds, lists wrap top to bottom"
+    "Available on many more TVs and devices again",
+    "New look for zap, channel number and seek notices",
+    "Pin Stream Info remembered per service and per kind of content",
+    "Row dots beside Movies and Series show where you are",
+    "New Launch Day backdrop; Warp, Speed Lines and more reworked",
+    "Landing and Home links beside section titles",
+    "Fix: cast and crew photos that showed only initials"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
