@@ -1,11 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.2.1",
-  "build": "2026.10.16.1455",
-  "versionCode": 3572095,
+  "version": "1.2.2",
+  "build": "2026.10.16.1714",
+  "versionCode": 3572234,
   "whatsNew": [
-    "Behind-the-scenes release work: the Android app is the same as 1.2.0",
-    "New on the computer: Tachyon Lens, a small viewer for HDMI capture cards and cameras"
+    "Chromecast: cast straight from a title's page, a clearer device list, and a note saying why when something can't be cast",
+    "More can be cast: MKV movies, more live channels, and subtitles on the TV",
+    "Grouped titles remember the copy you picked",
+    "After a library update, Continue Watching and filters let go of what's gone",
+    "Settings opens on About; on TV your service sits under Landing"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
