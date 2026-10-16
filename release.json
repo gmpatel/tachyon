@@ -1,16 +1,17 @@
 {
   "app": "tachyon",
-  "version": "1.1.9",
-  "build": "2026.10.15.1635",
-  "versionCode": 3570755,
+  "version": "1.2.0",
+  "build": "2026.10.16.1231",
+  "versionCode": 3571951,
   "whatsNew": [
-    "Available on many more TVs and devices again",
-    "New look for zap, channel number and seek notices",
-    "Pin Stream Info remembered per service and per kind of content",
-    "Row dots beside Movies and Series show where you are",
-    "New Launch Day backdrop; Warp, Speed Lines and more reworked",
-    "Landing and Home links beside section titles",
-    "Fix: cast and crew photos that showed only initials"
+    "Latest / Get Latest in the side menu and About",
+    "TV Guide from Live TV and channel menus",
+    "Redesigned player menus",
+    "A picked channel stays lit a moment in the player",
+    "Pop-out player asks before switching",
+    "Remove titles the library no longer has",
+    "Animations off switch with a still night sky",
+    "Settings in the phone bottom bar; tidier lists and tabs"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
