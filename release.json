@@ -1,14 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.2.3",
-  "build": "2026.10.17.1333",
-  "versionCode": 3573453,
+  "version": "1.2.4",
+  "build": "2026.10.17.1550",
+  "versionCode": 3573590,
   "whatsNew": [
-    "Chromecast finds your TV reliably: after the phone sleeps, when Wi-Fi comes back and right after start",
-    "Runs on older Fire TV Sticks (Android 7) and on TVs with Ethernet only",
-    "Movie menus have Go to Details",
-    "Terminate in Settings closes Tachyon completely",
-    "Desktop: the TV app's new look, and Tachyon Lens opens from Landing"
+    "A new look: the Orbit Ring icon, the same on every launcher, TV banner and splash",
+    "Smoother on older TV boxes like the Fire TV Stick and Mi Box: Lite Mode turns on by itself, less memory used",
+    "A disabled service is out of the way until you turn it back on",
+    "Fire TV shows a proper banner tile",
+    "Desktop: very large libraries open again"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
