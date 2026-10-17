@@ -1,14 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.2.2",
-  "build": "2026.10.16.1714",
-  "versionCode": 3572234,
+  "version": "1.2.3",
+  "build": "2026.10.17.1333",
+  "versionCode": 3573453,
   "whatsNew": [
-    "Chromecast: cast straight from a title's page, a clearer device list, and a note saying why when something can't be cast",
-    "More can be cast: MKV movies, more live channels, and subtitles on the TV",
-    "Grouped titles remember the copy you picked",
-    "After a library update, Continue Watching and filters let go of what's gone",
-    "Settings opens on About; on TV your service sits under Landing"
+    "Chromecast finds your TV reliably: after the phone sleeps, when Wi-Fi comes back and right after start",
+    "Runs on older Fire TV Sticks (Android 7) and on TVs with Ethernet only",
+    "Movie menus have Go to Details",
+    "Terminate in Settings closes Tachyon completely",
+    "Desktop: the TV app's new look, and Tachyon Lens opens from Landing"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
