@@ -1,11 +1,13 @@
 {
   "app": "tachyon",
-  "version": "1.2.5",
-  "build": "2026.10.17.1636",
-  "versionCode": 3573636,
+  "version": "1.2.6",
+  "build": "2026.10.18.0011",
+  "versionCode": 3574091,
   "whatsNew": [
-    "The connections badge updates as soon as you open a title, so a stream playing on another device shows straight away",
-    "The buffered part of the seek bar always shows past the playhead, even when only a little is buffered"
+    "App Lock on Android: an optional 4-digit PIN when the app starts, with fingerprint unlock on phones",
+    "The service you pick on the start screen now opens on the first press, even on a slow start",
+    "The Tachyon logo gently glows",
+    "Download says why when a title can't be downloaded"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
