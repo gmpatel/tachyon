@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tachyon: Fast IPTV Player for Phone and TV</title>
-<meta name="description" content="Tachyon is a fast, private media player for the Xtream Codes, M3U and Emby services you already have. One app for phones, tablets, Android TV, Google TV and Fire TV.">
+<title>Tachyon: Fast IPTV Player for TV, Phone and Computer</title>
+<meta name="description" content="Tachyon is a fast, private media player for the Xtream Codes, M3U and Emby services you already have. One app for Android TV, Google TV, Fire TV, phones, tablets, Windows, macOS and Linux.">
 <link rel="canonical" href="https://gmpatel.github.io/tachyon/">
 <meta name="theme-color" content="#06070b">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tachyon">
-<meta property="og:title" content="Tachyon: Fast IPTV Player for Phone and TV">
-<meta property="og:description" content="Tachyon is a fast, private media player for the Xtream Codes, M3U and Emby services you already have. One app for phones, tablets, Android TV, Google TV and Fire TV.">
+<meta property="og:title" content="Tachyon: Fast IPTV Player for TV, Phone and Computer">
+<meta property="og:description" content="Tachyon is a fast, private media player for the Xtream Codes, M3U and Emby services you already have. One app for Android TV, Google TV, Fire TV, phones, tablets, Windows, macOS and Linux.">
 <meta property="og:url" content="https://gmpatel.github.io/tachyon/">
 <meta property="og:image" content="https://gmpatel.github.io/tachyon/img/og-image.png">
 <meta property="og:image:width" content="1024">
@@ -25,104 +25,171 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="assets/site.css?v=7b58fb02">
+<link rel="stylesheet" href="assets/v2.css?v=488304e7">
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
-<script src="assets/site.js?v=e1fb6ffa" defer></script>
+<script src="assets/site.js?v=64870a82" defer></script>
 </head>
-<body>
+<body class="v2">
 <a class="skip" href="#main">Skip to Content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Tachyon home"><img src="img/icon-512.png" alt="" width="34" height="34">TACHYON</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-    <nav class="nav" id="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="install.html">Install</a><a href="docs.html">Manual</a><a href="privacy.html">Privacy</a><a class="btn btn-sm btn-primary" href="https://play.google.com/store/apps/details?id=app.tachyon.android" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.7 8.7 5 2.3c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg>Google Play</a></nav>
+    <nav class="nav" id="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="install.html">Download</a><a href="docs.html">Manual</a><a href="privacy.html">Privacy</a><a class="btn btn-sm btn-primary" href="https://play.google.com/store/apps/details?id=app.tachyon.android" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.7 8.7 5 2.3c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg>Google Play</a></nav>
   </div>
 </header>
 
 <main id="main">
   <!-- ============ hero ============ -->
-  <section class="hero">
-    <div class="streaks" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Faster-Than-Light TV</span>
-        <h1>Your TV Services. <span class="grad-text">One Fast, Private App.</span></h1>
-        <p class="lead">
-          Tachyon plays the Xtream Codes accounts, M3U playlists and Emby servers you already have, on your phone, tablet,
-          Android TV, Google TV and Fire TV. It's built to stay quick even on low-cost TV boxes, and it keeps what you watch
-          on your device.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=app.tachyon.android" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.7 8.7 5 2.3c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg><span class="play-text"><small>Get It On</small><b>Google Play</b></span></a>
-          <a class="btn" href="install.html#downloader">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
-            Install With Downloader
-          </a>
+  <section class="v2-hero">
+    <div class="v2-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="v2-hero-copy reveal">
+        <a class="v2-pill" href="install.html"><span class="rb-live" aria-hidden="true"></span>New · v1.2.7</a>
+        <h1>Your TV services.<br><span class="grad-text">Faster than light.</span></h1>
+        <p class="v2-lead">One calm, quick player for the Xtream Codes, M3U and Emby services you already have — on your TV, phone and computer. Private by design, free forever.</p>
+        <div class="cta-row v2-cta">
+          <a class="btn btn-primary btn-lg" href="install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Download Tachyon</a>
+          <a class="btn btn-ghost btn-lg" href="#screenshots">See It</a>
         </div>
-        <div class="hero-meta">
-          <span class="chip"><span class="dot" style="color:var(--ok)"></span>Freeware Forever</span>
-          <span class="chip">No UI Ads</span>
-          <span class="chip">No Account Needed</span>
-          <span class="chip">Phone · Tablet · TV</span>
-        </div>
-        <p class="version-line">Android 7.0 or newer · Phones, tablets, Android TV, Google TV and Fire TV</p>
-      </div>
-
-      <div class="hero-side">
-      <!-- the latest release, big and clear (user, 2026-10-13): the version and the build, each with its icon -->
-      <div class="release-badges" aria-label="Latest release">
-        <a class="release-badge" href="install.html">
-          <span class="rb-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
-          </span>
-          <span class="rb-text">
-            <span class="rb-label"><span class="rb-live" aria-hidden="true"></span>Latest Version</span>
-            <span class="rb-value grad-text">v1.2.6</span>
-          </span>
-        </a>
-        <a class="release-badge" href="install.html">
-          <span class="rb-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>
-          </span>
-          <span class="rb-text">
-            <span class="rb-label">Build</span>
-            <span class="rb-value rb-mono">2026.10.18.0011</span>
-          </span>
-        </a>
-      </div>
-
-      <div class="devices reveal" aria-label="Tachyon on a TV and a phone">
-        <div class="tv">
-          <div class="screen" data-rotate="5200">
-            <img class="on" src="img/tv/02-home-rows.png" alt="Tachyon home on a TV: a featured movie and the Top Rated This Year row" width="1920" height="1080" fetchpriority="high">
-            <img src="img/tv/07-guide.png" alt="Tachyon's TV guide" width="1920" height="1080" loading="lazy">
-            <img src="img/tv/05-movie-details.png" alt="A movie's details page on a TV" width="1920" height="1080" loading="lazy">
-            <img src="img/tv/03-live.png" alt="Live TV channels on a TV" width="1920" height="1080" loading="lazy">
-          </div>
-        </div>
-        <div class="phone">
-          <div class="screen" data-rotate="4300">
-            <img class="on" src="img/captures/phone-home.png" alt="Tachyon home on a phone" width="1080" height="2400">
-            <img src="img/captures/phone-movies.png" alt="Movies on a phone" width="1080" height="2400" loading="lazy">
-            <img src="img/captures/phone-live.png" alt="Live TV on a phone" width="1080" height="2400" loading="lazy">
-          </div>
+        <div class="v2-platforms" aria-label="Available for">
+          <a href="install.html#android-tv">Google TV</a><a href="install.html#android-tv">Android TV</a><a href="install.html#fire-tv">Fire TV</a><a href="install.html#android">Android</a><a href="install.html#windows">Windows</a><a href="install.html#mac">macOS</a><a href="install.html#linux">Linux</a>
         </div>
       </div>
+      <div class="v2-hero-shot reveal">
+        <div class="slides frame-desktop" data-slides="5200" role="region" aria-roledescription="carousel" aria-label="Screenshots">
+<div class="slides-track">
+<figure class="slide on"><img src="img/desktop/landing.webp" alt="Landing: Pick a service, with a new speed scene every visit" width="1920" height="1141" fetchpriority="high"><figcaption><b>Landing</b><span>Pick a service, with a new speed scene every visit</span></figcaption></figure>
+<figure class="slide"><img src="img/desktop/home.webp" alt="Home: On Now, your channels and the newest movies" width="1920" height="1141" loading="lazy"><figcaption><b>Home</b><span>On Now, your channels and the newest movies</span></figcaption></figure>
+<figure class="slide"><img src="img/desktop/live.webp" alt="Live TV: Every channel with what’s on now" width="1920" height="1141" loading="lazy"><figcaption><b>Live TV</b><span>Every channel with what’s on now</span></figcaption></figure>
+<figure class="slide"><img src="img/desktop/movies.webp" alt="Movies: Posters, ratings, sort and pages" width="1920" height="1141" loading="lazy"><figcaption><b>Movies</b><span>Posters, ratings, sort and pages</span></figcaption></figure>
+<figure class="slide"><img src="img/desktop/movie.webp" alt="A Movie’s Page: Plot, cast, tracks and Play" width="1920" height="1141" loading="lazy"><figcaption><b>A Movie’s Page</b><span>Plot, cast, tracks and Play</span></figcaption></figure>
+<figure class="slide"><img src="img/desktop/series.webp" alt="A Series: Seasons, episodes and Next Up" width="1920" height="1141" loading="lazy"><figcaption><b>A Series</b><span>Seasons, episodes and Next Up</span></figcaption></figure>
+<figure class="slide"><img src="img/desktop/guide.webp" alt="TV Guide: A full guide, now and next" width="1920" height="1141" loading="lazy"><figcaption><b>TV Guide</b><span>A full guide, now and next</span></figcaption></figure>
+<figure class="slide"><img src="img/desktop/about.webp" alt="About: Version, build and your line speed" width="1920" height="1141" loading="lazy"><figcaption><b>About</b><span>Version, build and your line speed</span></figcaption></figure>
+</div>
+<button type="button" class="snav sprev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+<button type="button" class="snav snext" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+<div class="sdots"><button type="button" class="sdot on" aria-label="Show screenshot 1"></button><button type="button" class="sdot" aria-label="Show screenshot 2"></button><button type="button" class="sdot" aria-label="Show screenshot 3"></button><button type="button" class="sdot" aria-label="Show screenshot 4"></button><button type="button" class="sdot" aria-label="Show screenshot 5"></button><button type="button" class="sdot" aria-label="Show screenshot 6"></button><button type="button" class="sdot" aria-label="Show screenshot 7"></button><button type="button" class="sdot" aria-label="Show screenshot 8"></button></div>
+</div>
       </div>
     </div>
   </section>
 
-  <div class="strip">
+  <!-- ============ features ============ -->
+  <section class="v2-block" id="features">
     <div class="wrap">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Xtream Codes</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>M3U / M3U8</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>Emby</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg>XMLTV Guides</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>Android TV · Google TV · Fire TV</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>Phones &amp; Tablets</span>
+      <div class="v2-head reveal"><span class="eyebrow">Why Tachyon</span><h2>Everything you watch, without the wait.</h2></div>
+      <div class="v2-features">
+        <div class="v2-feature reveal"><span class="v2-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Instant Everything</h3><p>Channels start fast, zapping is smooth, and huge libraries stay quick — even on low-cost TV boxes.</p></div>
+        <div class="v2-feature reveal"><span class="v2-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="m8 2 4 3 4-3M8 21h8"/></svg></span><h3>Live, Guide and Catch-Up</h3><p>A full TV guide with categories, reminders, Start Over and catch-up where your provider has it.</p></div>
+        <div class="v2-feature reveal"><span class="v2-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5M16 4v5"/></svg></span><h3>Movies and Series</h3><p>Posters, ratings, cast and crew, Continue Watching, Next Up, and one card per title across services.</p></div>
+        <div class="v2-feature reveal"><span class="v2-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><h3>Private by Design</h3><p>No account, no UI ads, no ad tracking. What you watch stays on your device.</p></div>
+        <div class="v2-feature reveal"><span class="v2-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span><h3>One Stream per Service</h3><p>Built for single-connection plans: never a second connection behind your back.</p></div>
+        <div class="v2-feature reveal"><span class="v2-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg></span><h3>Plays What Others Stumble On</h3><p>Picture repair for tricky streams, tracks you pick are kept, subtitles from three services, Chromecast.</p></div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ============ Australia only (site.js shows it for an Australian time zone, or ?au) ============ -->
+  <!-- ============ screenshots ============ -->
+  <section class="v2-block v2-alt" id="screenshots">
+    <div class="wrap">
+      <div class="v2-head reveal"><span class="eyebrow">See It</span><h2>Made for every screen.</h2></div>
+      <div class="v2-showcase" id="tv">
+        <div class="v2-show-copy reveal"><h3>On Your TV</h3><p>Built for the remote: big, calm screens, a focus you can always see, and Back that always does what you expect.</p></div>
+        <div class="reveal"><div class="slides frame-tv" data-slides="5200" role="region" aria-roledescription="carousel" aria-label="Screenshots">
+<div class="slides-track">
+<figure class="slide on"><img src="img/tv/01-home.webp" alt="Home: A featured title, front and centre" width="1600" height="900" fetchpriority="high"><figcaption><b>Home</b><span>A featured title, front and centre</span></figcaption></figure>
+<figure class="slide"><img src="img/tv/02-home-rows.webp" alt="Home Rows: Top Rated This Year, Continue Watching and more" width="1600" height="900" loading="lazy"><figcaption><b>Home Rows</b><span>Top Rated This Year, Continue Watching and more</span></figcaption></figure>
+<figure class="slide"><img src="img/tv/03-live.webp" alt="Live TV: Channels with what’s on now" width="1600" height="900" loading="lazy"><figcaption><b>Live TV</b><span>Channels with what’s on now</span></figcaption></figure>
+<figure class="slide"><img src="img/tv/04-movies.webp" alt="Movies: Posters, ratings and Browse By" width="1600" height="900" loading="lazy"><figcaption><b>Movies</b><span>Posters, ratings and Browse By</span></figcaption></figure>
+<figure class="slide"><img src="img/tv/05-movie-details.webp" alt="Movie Details: Plot, cast and tracks before you press Play" width="1600" height="900" loading="lazy"><figcaption><b>Movie Details</b><span>Plot, cast and tracks before you press Play</span></figcaption></figure>
+<figure class="slide"><img src="img/tv/06-series-details.webp" alt="Series Details: Seasons, episodes and Next Up" width="1600" height="900" loading="lazy"><figcaption><b>Series Details</b><span>Seasons, episodes and Next Up</span></figcaption></figure>
+<figure class="slide"><img src="img/tv/07-guide.webp" alt="TV Guide: A full XMLTV guide with categories" width="1600" height="900" loading="lazy"><figcaption><b>TV Guide</b><span>A full XMLTV guide with categories</span></figcaption></figure>
+<figure class="slide"><img src="img/tv/08-player-controls.webp" alt="Player Controls: Stream details at a glance" width="1600" height="900" loading="lazy"><figcaption><b>Player Controls</b><span>Stream details at a glance</span></figcaption></figure>
+</div>
+<button type="button" class="snav sprev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+<button type="button" class="snav snext" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+<div class="sdots"><button type="button" class="sdot on" aria-label="Show screenshot 1"></button><button type="button" class="sdot" aria-label="Show screenshot 2"></button><button type="button" class="sdot" aria-label="Show screenshot 3"></button><button type="button" class="sdot" aria-label="Show screenshot 4"></button><button type="button" class="sdot" aria-label="Show screenshot 5"></button><button type="button" class="sdot" aria-label="Show screenshot 6"></button><button type="button" class="sdot" aria-label="Show screenshot 7"></button><button type="button" class="sdot" aria-label="Show screenshot 8"></button></div>
+</div></div>
+      </div>
+      <div class="v2-showcase v2-flip" id="phone">
+        <div class="v2-show-copy reveal"><h3>In Your Pocket</h3><p>Your whole library on the phone, with Chromecast to the big screen when you want it.</p></div>
+        <div class="reveal"><div class="slides frame-phone" data-slides="5200" role="region" aria-roledescription="carousel" aria-label="Screenshots">
+<div class="slides-track">
+<figure class="slide on"><img src="img/phone-app/home.webp" alt="Home: On Now, your channels and the newest movies" width="720" height="1600" fetchpriority="high"><figcaption><b>Home</b><span>On Now, your channels and the newest movies</span></figcaption></figure>
+<figure class="slide"><img src="img/phone-app/live.webp" alt="Live TV: Recently watched first, then every channel" width="720" height="1600" loading="lazy"><figcaption><b>Live TV</b><span>Recently watched first, then every channel</span></figcaption></figure>
+<figure class="slide"><img src="img/phone-app/movies.webp" alt="Movies: Posters, ratings and quick sorting" width="720" height="1600" loading="lazy"><figcaption><b>Movies</b><span>Posters, ratings and quick sorting</span></figcaption></figure>
+<figure class="slide"><img src="img/phone-app/movie-0.webp" alt="A Movie: Plot, tracks, cast and Play" width="720" height="1600" loading="lazy"><figcaption><b>A Movie</b><span>Plot, tracks, cast and Play</span></figcaption></figure>
+<figure class="slide"><img src="img/phone-app/show-0.webp" alt="A Series: Seasons and episodes at a glance" width="720" height="1600" loading="lazy"><figcaption><b>A Series</b><span>Seasons and episodes at a glance</span></figcaption></figure>
+<figure class="slide"><img src="img/phone-app/guide.webp" alt="TV Guide: What’s on now and next" width="720" height="1600" loading="lazy"><figcaption><b>TV Guide</b><span>What’s on now and next</span></figcaption></figure>
+<figure class="slide"><img src="img/phone-app/settings-about.webp" alt="About: Freeware Forever, no UI ads" width="720" height="1600" loading="lazy"><figcaption><b>About</b><span>Freeware Forever, no UI ads</span></figcaption></figure>
+</div>
+<button type="button" class="snav sprev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+<button type="button" class="snav snext" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+<div class="sdots"><button type="button" class="sdot on" aria-label="Show screenshot 1"></button><button type="button" class="sdot" aria-label="Show screenshot 2"></button><button type="button" class="sdot" aria-label="Show screenshot 3"></button><button type="button" class="sdot" aria-label="Show screenshot 4"></button><button type="button" class="sdot" aria-label="Show screenshot 5"></button><button type="button" class="sdot" aria-label="Show screenshot 6"></button><button type="button" class="sdot" aria-label="Show screenshot 7"></button></div>
+</div></div>
+      </div>
+      <div class="v2-showcase" id="player">
+        <div class="v2-show-copy reveal"><h3>The Player</h3><p>Swipe for volume and brightness, slide sideways through your channels — the list says what you’re browsing and how many. Pin <b>Stream Info</b> to see at a glance whether a slowdown is the provider, the stream or your line.</p></div>
+        <div class="reveal"><div class="slides frame-wide" data-slides="5200" role="region" aria-roledescription="carousel" aria-label="Screenshots">
+<div class="slides-track">
+<figure class="slide on"><img src="img/phone/player-controls.webp" alt="Player Controls: Stream details, tracks and the live bar" width="1600" height="720" fetchpriority="high"><figcaption><b>Player Controls</b><span>Stream details, tracks and the live bar</span></figcaption></figure>
+<figure class="slide"><img src="img/phone/player-stream-info.webp" alt="Pin Stream Info: Needs · Provider · Arriving · Buffered · Line, kept on the picture where you choose — where a slowdown is, at a glance" width="1600" height="720" loading="lazy"><figcaption><b>Pin Stream Info</b><span>Needs · Provider · Arriving · Buffered · Line, kept on the picture where you choose — where a slowdown is, at a glance</span></figcaption></figure>
+<figure class="slide"><img src="img/phone/player-swipe-channels.webp" alt="Swipe for Channels: What you’re browsing and how many, without leaving the picture" width="1600" height="720" loading="lazy"><figcaption><b>Swipe for Channels</b><span>What you’re browsing and how many, without leaving the picture</span></figcaption></figure>
+<figure class="slide"><img src="img/phone/player-swipe-volume.webp" alt="Swipe for Volume: Slide up or down on the right" width="1600" height="720" loading="lazy"><figcaption><b>Swipe for Volume</b><span>Slide up or down on the right</span></figcaption></figure>
+<figure class="slide"><img src="img/phone/player-swipe-brightness.webp" alt="Swipe for Brightness: Slide up or down on the left" width="1600" height="720" loading="lazy"><figcaption><b>Swipe for Brightness</b><span>Slide up or down on the left</span></figcaption></figure>
+<figure class="slide"><img src="img/phone/player-exit-confirm.webp" alt="No Accidental Exits: Exit asks first, and carries on by itself" width="1600" height="720" loading="lazy"><figcaption><b>No Accidental Exits</b><span>Exit asks first, and carries on by itself</span></figcaption></figure>
+</div>
+<button type="button" class="snav sprev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+<button type="button" class="snav snext" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+<div class="sdots"><button type="button" class="sdot on" aria-label="Show screenshot 1"></button><button type="button" class="sdot" aria-label="Show screenshot 2"></button><button type="button" class="sdot" aria-label="Show screenshot 3"></button><button type="button" class="sdot" aria-label="Show screenshot 4"></button><button type="button" class="sdot" aria-label="Show screenshot 5"></button><button type="button" class="sdot" aria-label="Show screenshot 6"></button></div>
+</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ get it ============ -->
+  <section class="v2-block" id="install">
+    <div class="wrap">
+      <div class="v2-head reveal"><span class="eyebrow">Get Tachyon</span><h2>Pick your device.</h2><p class="v2-sub">Always the latest release, signed by the developer, with a backup link for every download.</p></div>
+      <div class="v2-device-grid">
+        <a class="v2-device reveal" href="install.html#android-tv"><b>Google TV · Android TV</b><span>Downloader code or Google Play</span></a>
+        <a class="v2-device reveal" href="install.html#fire-tv"><b>Fire TV</b><span>Downloader code</span></a>
+        <a class="v2-device reveal" href="install.html#android"><b>Android Phone · Tablet</b><span>APK or Google Play</span></a>
+        <a class="v2-device reveal" href="install.html#windows"><b>Windows</b><span>Portable .exe</span></a>
+        <a class="v2-device reveal" href="install.html#mac"><b>macOS</b><span>Apple Silicon or Intel</span></a>
+        <a class="v2-device reveal" href="install.html#linux"><b>Linux</b><span>AppImage</span></a>
+      </div>
+      <div id="codes" class="v2-codes reveal"><div class="section-head center reveal codes-head">
+  <h3>Your Downloader Codes</h3>
+  <p class="lead">Open <b>Downloader</b>, type a code in the box on its <b>Home</b> tab and select <b>Go</b>. Both codes install the same, newest Tachyon: if one doesn’t work, use the other.</p>
+</div>
+<div class="codes">
+  <div class="card code-card reveal">
+    <span class="host"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m6 2 6 3.8L6 9.7 0 5.8zm12 0 6 3.8-6 3.9-6-3.9zM0 13.6l6-3.9 6 3.9-6 3.9zm18-3.9 6 3.9-6 3.9-6-3.9zM6 18.8l6-3.9 6 3.9-6 3.9z"/></svg>Shared From Dropbox</span>
+    <div class="code-num" aria-label="Downloader code 7 6 0 7 0 8 0">7607080</div>
+    <p class="short">or open <b>aftv.news/7607080</b> in any browser</p>
+    <div class="cta-row code-actions">
+      <button class="btn btn-sm" type="button" data-copy="7607080"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Code</span></button>
+      <a class="btn btn-sm" href="http://aftv.news/7607080" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Open Link</a>
+    </div>
+    <p class="note">If you see a Dropbox page, select its <b>Download</b> button.</p>
+  </div>
+<div class="card code-card reveal">
+    <span class="host"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 3h7l6.5 11.5-3.5 6h-13L2 14.5z"/><path d="M8.5 3 15 14.5H2M15.5 3 9 14.5l-3.5 6M22 14.5h-7l3.5 6"/></svg>Shared From Google Drive</span>
+    <div class="code-num" aria-label="Downloader code 2 3 3 6 3 3 8">2336338</div>
+    <p class="short">or open <b>aftv.news/2336338</b> in any browser</p>
+    <div class="cta-row code-actions">
+      <button class="btn btn-sm" type="button" data-copy="2336338"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Code</span></button>
+      <a class="btn btn-sm" href="http://aftv.news/2336338" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Open Link</a>
+    </div>
+    <p class="note">Google Drive says it can’t scan the file for viruses: select <b>Download Anyway</b>. It says this about every app file of this size.</p>
+  </div>
+</div></div>
+    </div>
+  </section>
+
   <section class="block aussie" id="aussie-live" hidden data-au-only>
     <div class="wrap aussie-band">
       <div class="aussie-copy">
@@ -181,259 +248,7 @@
     </div>
   </section>
 
-  <!-- ============ features ============ -->
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Features</span>
-        <h2>Everything You Watch, <span class="grad-text">Without the Wait</span></h2>
-        <p class="lead">One app for every service you have, made to feel instant on a phone and on the big screen.</p>
-      </div>
-      <div class="grid grid-3">
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></div><h3>All Your Services, One Place</h3><p>Add Xtream Codes, M3U and Emby services and switch between them, or browse everything merged into one library.</p></div>
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></div><h3>Live TV and a Real Guide</h3><p>What's on now, a full XMLTV guide with categories and reminders, and catch-up or Start Over where your provider supports it.</p></div>
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M17 3v18M3 8h4M3 16h4M17 8h4M17 16h4"/></svg></div><h3>Movies &amp; Series, Done Right</h3><p>Posters, ratings, cast &amp; crew, seasons, Next Up and Continue Watching. Copies of the same title are grouped into one card.</p></div>
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Built for Speed</h3><p>Libraries of 100,000+ titles load in the background while you browse, and the next start opens straight from a compact on-device cache.</p></div>
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div><h3>Self-Healing Playback</h3><p>Stalls, frozen pictures and network drops are spotted and recovered automatically, so you keep watching instead of restarting.</p></div>
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>One Stream per Service</h3><p>Tachyon never opens a second connection, so shared and single-connection plans keep working, even while it loads details in the background.</p></div>
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Made for the Big Screen</h3><p>A 10-foot interface that works with the simplest remote: D-pad, OK and Back. Hold OK for options, zap with up / down.</p></div>
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></div><h3>Subtitles &amp; Tracks</h3><p>Pick audio and subtitle tracks before you press Play, and search OpenSubtitles, SubDL and Podnapisi with your own account.</p></div>
-        <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Private by Design</h3><p>No account needed, no ad SDKs, no trackers. Your services, logins, favorites and history stay on your device.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ showcase: TV ============ -->
-  <section class="block alt" id="tv">
-    <div class="wrap split">
-      <div class="split-media reveal">
-        <button class="shot" data-lightbox="tv" data-index="6" aria-label="Open the TV guide screenshot"><img src="img/tv/07-guide.png" alt="Tachyon's TV guide on Android TV" width="1920" height="1080" loading="lazy"></button>
-      </div>
-      <div class="reveal">
-        <span class="eyebrow">Android TV · Google TV · Fire TV</span>
-        <h2>A TV App That Respects Your Remote</h2>
-        <p class="lead">Everything is reachable with up, down, left, right, OK and Back. No pointer, no hunting for tiny buttons.</p>
-        <ul class="ticks">
-          <li><b>Zap like a set-top box:</b> up / down changes channel, with a channel list one press away.</li>
-          <li><b>Hold OK for options</b> on any card: favorite, versions, details.</li>
-          <li><b>Google TV Continue Watching:</b> pick up where you left off straight from the home screen.</li>
-          <li><b>Starts on your last channel</b> if you like, and keeps a parental PIN on adult categories.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ showcase: phone ============ -->
-  <section class="block" id="phone">
-    <div class="wrap split rev">
-      <div class="split-media reveal">
-        <div class="phones-row">
-          <button class="shot" data-lightbox="phone" data-index="3" aria-label="Open the movie details screenshot"><img src="img/phone/04-movie-details.png" alt="A movie's details on a phone" width="1080" height="1920" loading="lazy"></button>
-          <button class="shot" data-lightbox="phone" data-index="0" aria-label="Open the phone home screenshot"><img src="img/phone/01-home.png" alt="Home on a phone" width="1080" height="1920" loading="lazy"></button>
-          <button class="shot" data-lightbox="phone" data-index="4" aria-label="Open the series details screenshot"><img src="img/phone/05-series-details.png" alt="A series' seasons and episodes on a phone" width="1080" height="1920" loading="lazy"></button>
-        </div>
-      </div>
-      <div class="reveal">
-        <span class="eyebrow">Phones &amp; Tablets</span>
-        <h2>Your Whole Library in Your Pocket</h2>
-        <p class="lead">The same services and favorites, laid out for one hand, with a full-screen player when you want it.</p>
-        <ul class="ticks">
-          <li><b>Search everything</b> across all your services at once.</li>
-          <li><b>Swipe gestures in the player:</b> seek, volume, brightness, and channel browsing on live TV.</li>
-          <li><b>Seasons, episodes and Next Up</b> with watched marks that follow you.</li>
-          <li><b>Picture-in-picture</b> so a match keeps playing while you check something else.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ showcase: player ============ -->
-  <section class="block alt" id="player">
-    <div class="wrap split">
-      <div class="split-media reveal">
-        <button class="shot" data-lightbox="tv" data-index="7" aria-label="Open the player controls screenshot"><img src="img/tv/08-player-controls.png" alt="The player's controls with stream details: SD, H.264, 25 fps, AAC 2.0, MP4, HW Decoder" width="1920" height="1080" loading="lazy"></button>
-      </div>
-      <div class="reveal">
-        <span class="eyebrow">The Player</span>
-        <h2>Plays What Others Stumble On</h2>
-        <p class="lead">Hardware-accelerated playback with a software fallback, tuned for real-world IPTV streams.</p>
-        <ul class="ticks">
-          <li><b>HLS, MPEG-TS, MP4, MKV and more</b>, with picture repair for broken streams.</li>
-          <li><b>Stream details on screen:</b> resolution, codecs, frame rate and decoder, at a glance.</li>
-          <li><b>Volume Leveling</b> evens out loud adverts and quiet films.</li>
-          <li><b>Watched marks at 90 %</b>, resume points, and the next episode lined up.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ gallery ============ -->
-  <section class="block" id="screenshots">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Screenshots</span>
-        <h2>See It in Action</h2>
-        <p class="lead">Every screenshot is from Tachyon's built-in offline demo, so you can try all of this before adding a service.</p>
-      </div>
-      <div class="tabs-row reveal"><div class="tabs" role="tablist" aria-label="Screenshots"><button type="button" role="tab" id="tab-tv" aria-controls="gal-tv" aria-selected="true" tabindex="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>TV</button><button type="button" role="tab" id="tab-phone" aria-controls="gal-phone" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>Phone</button><button type="button" role="tab" id="tab-screens" aria-controls="gal-screens" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="2" width="10" height="17" rx="2"/><path d="M17 6h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-1"/></svg>Phone Screens</button><button type="button" role="tab" id="tab-player" aria-controls="gal-player" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>Player</button></div></div>
-<div class="gallery gallery-tv" id="gal-tv" role="tabpanel" aria-labelledby="tab-tv">
-  <figure><button class="shot" type="button" data-lightbox="tv" data-index="0" aria-label="Open screenshot: Home"><img src="img/tv/01-home.png" alt="Home on a TV: A featured title, front and centre" width="1920" height="1080" loading="lazy"></button><figcaption><b>Home</b>A featured title, front and centre</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="tv" data-index="1" aria-label="Open screenshot: Home Rows"><img src="img/tv/02-home-rows.png" alt="Home Rows on a TV: Top Rated This Year, Continue Watching and more" width="1920" height="1080" loading="lazy"></button><figcaption><b>Home Rows</b>Top Rated This Year, Continue Watching and more</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="tv" data-index="2" aria-label="Open screenshot: Live TV"><img src="img/tv/03-live.png" alt="Live TV on a TV: Channels with what’s on now" width="1920" height="1080" loading="lazy"></button><figcaption><b>Live TV</b>Channels with what’s on now</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="tv" data-index="3" aria-label="Open screenshot: Movies"><img src="img/tv/04-movies.png" alt="Movies on a TV: Posters, ratings and Browse By" width="1920" height="1080" loading="lazy"></button><figcaption><b>Movies</b>Posters, ratings and Browse By</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="tv" data-index="4" aria-label="Open screenshot: Movie Details"><img src="img/tv/05-movie-details.png" alt="Movie Details on a TV: Plot, cast and tracks before you press Play" width="1920" height="1080" loading="lazy"></button><figcaption><b>Movie Details</b>Plot, cast and tracks before you press Play</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="tv" data-index="5" aria-label="Open screenshot: Series Details"><img src="img/tv/06-series-details.png" alt="Series Details on a TV: Seasons, episodes and Next Up" width="1920" height="1080" loading="lazy"></button><figcaption><b>Series Details</b>Seasons, episodes and Next Up</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="tv" data-index="6" aria-label="Open screenshot: TV Guide"><img src="img/tv/07-guide.png" alt="TV Guide on a TV: A full XMLTV guide with categories" width="1920" height="1080" loading="lazy"></button><figcaption><b>TV Guide</b>A full XMLTV guide with categories</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="tv" data-index="7" aria-label="Open screenshot: Player Controls"><img src="img/tv/08-player-controls.png" alt="Player Controls on a TV: Stream details at a glance" width="1920" height="1080" loading="lazy"></button><figcaption><b>Player Controls</b>Stream details at a glance</figcaption></figure>
-</div>
-<div class="gallery gallery-phone" id="gal-phone" role="tabpanel" aria-labelledby="tab-phone" hidden>
-  <figure><button class="shot" type="button" data-lightbox="phone" data-index="0" aria-label="Open screenshot: Home"><img src="img/phone/01-home.png" alt="Home on a phone: All your TV in one place" width="1080" height="1920" loading="lazy"></button><figcaption><b>Home</b>All your TV in one place</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="phone" data-index="1" aria-label="Open screenshot: Live TV"><img src="img/phone/02-live.png" alt="Live TV on a phone: Channels and what’s on now" width="1080" height="1920" loading="lazy"></button><figcaption><b>Live TV</b>Channels and what’s on now</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="phone" data-index="2" aria-label="Open screenshot: Movies"><img src="img/phone/03-movies.png" alt="Movies on a phone: Your whole movie library" width="1080" height="1920" loading="lazy"></button><figcaption><b>Movies</b>Your whole movie library</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="phone" data-index="3" aria-label="Open screenshot: Movie Details"><img src="img/phone/04-movie-details.png" alt="Movie Details on a phone: Ratings, cast and crew" width="1080" height="1920" loading="lazy"></button><figcaption><b>Movie Details</b>Ratings, cast and crew</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="phone" data-index="4" aria-label="Open screenshot: Series Details"><img src="img/phone/05-series-details.png" alt="Series Details on a phone: Seasons and episodes" width="1080" height="1920" loading="lazy"></button><figcaption><b>Series Details</b>Seasons and episodes</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="phone" data-index="5" aria-label="Open screenshot: Favorites"><img src="img/phone/06-favorites.png" alt="Favorites on a phone: Everything you love, one tap away" width="1080" height="1920" loading="lazy"></button><figcaption><b>Favorites</b>Everything you love, one tap away</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="phone" data-index="6" aria-label="Open screenshot: Settings"><img src="img/phone/07-settings.png" alt="Settings on a phone: Sober, simple settings" width="1080" height="1920" loading="lazy"></button><figcaption><b>Settings</b>Sober, simple settings</figcaption></figure>
-</div>
-<div class="gallery gallery-phone" id="gal-screens" role="tabpanel" aria-labelledby="tab-screens" hidden>
-  <figure><button class="shot" type="button" data-lightbox="screens" data-index="0" aria-label="Open screenshot: Channel Filters"><img src="img/captures/phone-channel-filters.png" alt="Channel Filters on a phone: Categories, favorites and sorting" width="1080" height="2400" loading="lazy"></button><figcaption><b>Channel Filters</b>Categories, favorites and sorting</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="screens" data-index="1" aria-label="Open screenshot: Home"><img src="img/captures/phone-home.png" alt="Home on a phone: On Now, recent channels and new movies" width="1080" height="2400" loading="lazy"></button><figcaption><b>Home</b>On Now, recent channels and new movies</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="screens" data-index="2" aria-label="Open screenshot: Landing"><img src="img/captures/phone-landing.png" alt="Landing on a phone: Pick a service, or add one" width="1080" height="2400" loading="lazy"></button><figcaption><b>Landing</b>Pick a service, or add one</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="screens" data-index="3" aria-label="Open screenshot: Live TV"><img src="img/captures/phone-live.png" alt="Live TV on a phone: Channels with their programmes" width="1080" height="2400" loading="lazy"></button><figcaption><b>Live TV</b>Channels with their programmes</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="screens" data-index="4" aria-label="Open screenshot: Movie Details"><img src="img/captures/phone-movie-details.png" alt="Movie Details on a phone: Everything about a title" width="1080" height="2400" loading="lazy"></button><figcaption><b>Movie Details</b>Everything about a title</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="screens" data-index="5" aria-label="Open screenshot: Movie Filters"><img src="img/captures/phone-movie-filters.png" alt="Movie Filters on a phone: Sort, search and hide categories" width="1080" height="2400" loading="lazy"></button><figcaption><b>Movie Filters</b>Sort, search and hide categories</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="screens" data-index="6" aria-label="Open screenshot: Movies"><img src="img/captures/phone-movies.png" alt="Movies on a phone: Sort switches and pages" width="1080" height="2400" loading="lazy"></button><figcaption><b>Movies</b>Sort switches and pages</figcaption></figure>
-</div>
-<div class="gallery gallery-tv" id="gal-player" role="tabpanel" aria-labelledby="tab-player" hidden>
-  <figure><button class="shot" type="button" data-lightbox="player" data-index="0" aria-label="Open screenshot: Player Controls"><img src="img/captures/player-controls-phone.png" alt="Player Controls in the phone player: Stream details, seek and tracks" width="2400" height="1080" loading="lazy"></button><figcaption><b>Player Controls</b>Stream details, seek and tracks</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="player" data-index="1" aria-label="Open screenshot: Exit Playback"><img src="img/captures/player-exit-confirm.png" alt="Exit Playback in the phone player: No accidental exits: it continues by itself" width="2400" height="1080" loading="lazy"></button><figcaption><b>Exit Playback</b>No accidental exits: it continues by itself</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="player" data-index="2" aria-label="Open screenshot: Swipe for Brightness"><img src="img/captures/player-swipe-brightness.png" alt="Swipe for Brightness in the phone player: Slide up or down on the left" width="2400" height="1080" loading="lazy"></button><figcaption><b>Swipe for Brightness</b>Slide up or down on the left</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="player" data-index="3" aria-label="Open screenshot: Swipe to Seek"><img src="img/captures/player-swipe-seek.png" alt="Swipe to Seek in the phone player: Slide left or right to jump" width="2400" height="1080" loading="lazy"></button><figcaption><b>Swipe to Seek</b>Slide left or right to jump</figcaption></figure>
-  <figure><button class="shot" type="button" data-lightbox="player" data-index="4" aria-label="Open screenshot: Swipe for Volume"><img src="img/captures/player-swipe-volume.png" alt="Swipe for Volume in the phone player: Slide up or down on the right" width="2400" height="1080" loading="lazy"></button><figcaption><b>Swipe for Volume</b>Slide up or down on the right</figcaption></figure>
-</div>
-    </div>
-  </section>
-
-  <!-- ============ install ============ -->
-  <section class="block alt" id="install">
-    <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Get Tachyon</span>
-        <h2>Which Way Should I Install?</h2>
-        <p class="lead">Pick the way that suits your device. All of them give you the same app.</p>
-      </div>
-      <div class="ways">
-        <div class="card way featured reveal">
-          <div class="way-top"><h3>Google Play</h3><span class="chip chip-rec">Recommended</span></div>
-          <p class="for">For <b>Android phones &amp; tablets</b>, <b>Google TV</b> and <b>Android TV</b> boxes that have the Play Store.</p>
-          <ul>
-            <li>The easiest install, one tap</li>
-            <li><b>Updates itself automatically</b></li>
-            <li>Verified by Google Play Protect</li>
-          </ul>
-          <p class="play-note"><span class="chip chip-soon">Closed Testing</span> Tachyon is in closed testing on Google Play, so the listing opens for testers only for now. The public release is coming soon. Until then, a Downloader code or the direct download gets you the same app.</p>
-          <div class="actions"><a class="btn btn-sm btn-primary" href="https://play.google.com/store/apps/details?id=app.tachyon.android" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.7 8.7 5 2.3c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg>Google Play</a><a class="btn btn-sm" href="install.html#google-play">How To</a></div>
-        </div>
-        <div class="card way reveal">
-          <div class="way-top"><h3>Downloader Code</h3><span class="chip">No Play Store</span></div>
-          <p class="for">For <b>Fire TV</b> and <b>TV boxes without Google Play</b>.</p>
-          <ul>
-            <li>Type one short code in the free Downloader app</li>
-            <li>Always installs the newest Tachyon</li>
-            <li>Use the same code again to update</li>
-          </ul>
-          <div class="actions"><a class="btn btn-sm btn-primary" href="#codes">See the Codes</a><a class="btn btn-sm" href="install.html#downloader">How To</a></div>
-        </div>
-        <div class="card way reveal">
-          <div class="way-top"><h3>Direct Download</h3><span class="chip">APK File</span></div>
-          <p class="for">For <b>phones</b> without Google Play, or putting the file on a box yourself.</p>
-          <ul>
-            <li>The same file the codes install</li>
-            <li>Open it on the device to install</li>
-            <li>Download again to update</li>
-          </ul>
-          <div class="actions"><a class="btn btn-sm btn-primary" href="https://www.dropbox.com/scl/fi/aeuu95e36p7jmti7dlcu2/Tachyon-latest-android-native-universal.apk?rlkey=19ch5si1hjmfdko6z8n0epig0&amp;st=fb46pkao&amp;dl=1" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Download From Dropbox</a><a class="btn btn-sm" href="https://drive.google.com/file/d/1IaYbtUR_lsaY6m5rKpnpgZbe0tGVOW-y/view?usp=sharing" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>From Google Drive</a></div>
-        </div>
-      </div>
-
-      <div id="codes" style="margin-top:44px">
-        <div class="section-head center reveal codes-head">
-  <h3>Your Downloader Codes</h3>
-  <p class="lead">Open <b>Downloader</b>, type a code in the box on its <b>Home</b> tab and select <b>Go</b>. Both codes install the same, newest Tachyon: if one doesn’t work, use the other.</p>
-</div>
-<div class="codes">
-  <div class="card code-card reveal">
-    <span class="host"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m6 2 6 3.8L6 9.7 0 5.8zm12 0 6 3.8-6 3.9-6-3.9zM0 13.6l6-3.9 6 3.9-6 3.9zm18-3.9 6 3.9-6 3.9-6-3.9zM6 18.8l6-3.9 6 3.9-6 3.9z"/></svg>Shared From Dropbox</span>
-    <div class="code-num" aria-label="Downloader code 7 6 0 7 0 8 0">7607080</div>
-    <p class="short">or open <b>aftv.news/7607080</b> in any browser</p>
-    <div class="cta-row code-actions">
-      <button class="btn btn-sm" type="button" data-copy="7607080"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Code</span></button>
-      <a class="btn btn-sm" href="http://aftv.news/7607080" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Open Link</a>
-    </div>
-    <p class="note">If you see a Dropbox page, select its <b>Download</b> button.</p>
-  </div>
-<div class="card code-card reveal">
-    <span class="host"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 3h7l6.5 11.5-3.5 6h-13L2 14.5z"/><path d="M8.5 3 15 14.5H2M15.5 3 9 14.5l-3.5 6M22 14.5h-7l3.5 6"/></svg>Shared From Google Drive</span>
-    <div class="code-num" aria-label="Downloader code 2 3 3 6 3 3 8">2336338</div>
-    <p class="short">or open <b>aftv.news/2336338</b> in any browser</p>
-    <div class="cta-row code-actions">
-      <button class="btn btn-sm" type="button" data-copy="2336338"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Code</span></button>
-      <a class="btn btn-sm" href="http://aftv.news/2336338" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>Open Link</a>
-    </div>
-    <p class="note">Google Drive says it can’t scan the file for viruses: select <b>Download Anyway</b>. It says this about every app file of this size.</p>
-  </div>
-</div>
-      </div>
-
-      <div class="callout reveal">
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
-        <div>
-          <h4>Updating Is the Same Step Again</h4>
-          <p><b>Installed with a Downloader code? Use the same code again.</b> It always installs the newest Tachyon over your current copy, and <b>your services and settings stay</b>. There's no need to uninstall first. Installed from Google Play? It updates itself.</p>
-        </div>
-      </div>
-      <div class="callout warn reveal">
-        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
-        <div>
-          <h4>Pick One Way and Keep to It</h4>
-          <p>If you installed from Google Play, update from Google Play. If you installed with a code or the APK, update the same way. Switching between the two can mean uninstalling Tachyon first, which removes your services and settings.</p>
-        </div>
-      </div>
-
-      <h3 style="margin:48px 0 16px;font-size:24px" class="reveal">Your Device, Our Recommendation</h3>
-      <div class="table-wrap reveal"><table class="device-table">
-<thead><tr><th scope="col">Your Device</th><th scope="col">Best Way</th><th scope="col">Also Works</th></tr></thead>
-<tbody>
-<tr><td class="dev">Android Phone or Tablet<span class="muted dev-sub">With the Google Play Store</span></td><td><span class="chip chip-rec">Google Play</span></td><td class="muted">Direct Download</td></tr>
-<tr><td class="dev">Google TV / Android TV<span class="muted dev-sub">Chromecast with Google TV, Sony, TCL, Philips, Nvidia Shield and other boxes with Google Play</span></td><td><span class="chip chip-rec">Google Play</span></td><td class="muted">Downloader Code</td></tr>
-<tr><td class="dev">Fire TV / Fire TV Stick<span class="muted dev-sub">Amazon’s TVs and sticks</span></td><td><span class="chip chip-ok">Downloader Code</span></td><td class="muted">Direct Download (from a USB stick or a file manager)</td></tr>
-<tr><td class="dev">TV Box Without Google Play<span class="muted dev-sub">Android TV boxes with their own app store</span></td><td><span class="chip chip-ok">Downloader Code</span></td><td class="muted">Direct Download</td></tr>
-<tr><td class="dev">Phone Without Google Play<span class="muted dev-sub">Android phones and tablets without the Play Store</span></td><td><span class="chip chip-ok">Direct Download</span></td><td class="muted">aftv.news/7607080 in the phone’s browser</td></tr>
-</tbody></table></div>
-<p class="small muted table-foot">While Google Play is in closed testing, testers install from Google Play and everyone else uses a Downloader code or the direct download. Tachyon needs Android 7.0 or newer.</p>
-    </div>
-  </section>
-
-  <!-- ============ privacy ============ -->
-  <section class="block" id="privacy">
-    <div class="wrap privacy-band">
-      <div class="reveal">
-        <span class="eyebrow">Privacy</span>
-        <h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:800">What You Watch Stays Yours</h2>
-        <p class="lead">Tachyon talks straight to the services you add. There's no Tachyon server between you and your streams.</p>
-        <a class="btn" href="privacy.html">Read the Privacy Policy</a>
-      </div>
-      <div class="grid grid-2">
-        <div class="card reveal"><h3>On Your Device Only</h3><p>Services, logins, favorites, watch history and resume points never leave it. Saved passwords use Android's secure storage.</p></div>
-        <div class="card reveal"><h3>No Ad Tracking</h3><p>No ad SDKs and no third-party trackers. Free to use with No UI Ads.</p></div>
-        <div class="card reveal"><h3>Never Your Viewing</h3><p>What you watch, your history and favorites are never collected.</p></div>
-        <div class="card reveal"><h3>Diagnostics You Control</h3><p>A short encrypted daily report helps fix problems (device, settings, your services' names and addresses, never passwords). Turn it off in Settings → Data.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
-  <section class="block alt" id="faq">
+  <section class="v2-block" id="faq">
     <div class="wrap">
       <div class="section-head center reveal">
         <span class="eyebrow">FAQ</span>
@@ -442,9 +257,10 @@
       <div class="faq">
         <details class="q reveal"><summary>Does Tachyon come with channels or movies?</summary><div class="a"><p>No. Tachyon is a media player only. It doesn't provide, host, sell or recommend any content, and it isn't affiliated with any IPTV provider. You add the services you're entitled to use. A built-in offline demo shows how everything works first.</p></div></details>
         <details class="q reveal"><summary>Is it free?</summary><div class="a"><p>Yes: Freeware Forever, with no subscriptions and No UI Ads.</p></div></details>
-        <details class="q reveal"><summary>Which devices does it run on?</summary><div class="a"><p>Android phones and tablets, Android TV, Google TV (including Chromecast with Google TV) and Fire TV, on Android 7.0 or newer. It's tuned to stay smooth on low-cost TV boxes with little memory.</p></div></details>
+        <details class="q reveal"><summary>Which devices does it run on?</summary><div class="a"><p>Android phones and tablets, Android TV, Google TV (including Chromecast with Google TV) and Fire TV on Android 7.0 or newer, plus Windows, macOS and Linux computers. It's tuned to stay smooth on low-cost TV boxes with little memory.</p></div></details>
         <details class="q reveal"><summary>Which services can I add?</summary><div class="a"><p>Xtream Codes accounts (server, username and password), M3U / M3U8 playlist links (or an M3U built from a panel login), and Emby servers. You can add several and switch between them, or browse them merged.</p></div></details>
-        <details class="q reveal"><summary>How do I update?</summary><div class="a"><p>From Google Play, it updates itself. Installed with a Downloader code or the APK? Repeat the same step: the code always installs the newest Tachyon over your copy, and your services and settings stay.</p></div></details>
+        <details class="q reveal"><summary>How do I update?</summary><div class="a"><p>Tachyon shows <b>New Release</b> on its start screen when there is one: select it, then <b>Update Now</b>. It downloads the new version from the developer's signed source, checks it and installs it, on TVs, phones and computers alike. From Google Play, it updates itself.</p></div></details>
+        <details class="q reveal"><summary>Why does my Mac (or Windows) warn about the app?</summary><div class="a"><p>Tachyon is signed with the developer's own key, not a paid Apple or Microsoft certificate, so macOS asks you to confirm once (<b>Privacy &amp; Security → Open Anyway</b>) and Windows SmartScreen shows <b>More Info → Run Anyway</b>. <a href="install.html#mac">Step by step</a>. Updates from inside the app don't ask again.</p></div></details>
         <details class="q reveal"><summary>Why does Google Drive warn that it can't scan the file?</summary><div class="a"><p>Google Drive says this about every app file of this size. Select <b>Download Anyway</b>: the file is the official Tachyon app, signed with the same key as every release.</p></div></details>
         <details class="q reveal"><summary>Android says "App not installed". What now?</summary><div class="a"><p>Usually a copy from another source (for example Google Play versus a code) is already installed with a different signature. Keep updating the way you first installed, or uninstall that copy first (this removes its services and settings).</p></div></details>
         <details class="q reveal"><summary>Will it open a second connection on my plan?</summary><div class="a"><p>No. Tachyon keeps to one stream per service, so single-connection and shared plans keep working.</p></div></details>
@@ -453,12 +269,12 @@
   </section>
 
   <!-- ============ final CTA ============ -->
-  <section class="block">
+  <section class="v2-block">
     <div class="wrap">
       <div class="cta-band reveal">
-        <h2>Ready When You Are</h2>
-        <p class="lead" style="margin-inline:auto">Install Tachyon in a minute, try the offline demo, then add your own services.</p>
-        <div class="cta-row"><a class="btn btn-play" href="https://play.google.com/store/apps/details?id=app.tachyon.android" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.7 8.7 5 2.3c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg><span class="play-text"><small>Get It On</small><b>Google Play</b></span></a><a class="btn" href="install.html">All Install Options</a><a class="btn" href="docs.html">Read the Manual</a></div>
+        <h2>Ready when you are.</h2>
+        <p class="lead" style="margin-inline:auto">Install in a minute, try the offline demo, then add your own services.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="install.html">Download Tachyon</a><a class="btn" href="docs.html">Read the Manual</a></div>
       </div>
     </div>
   </section>
@@ -469,15 +285,16 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="img/logo-horizontal.png" alt="Tachyon, Faster-Than-Light TV" width="180" height="50" loading="lazy">
-        <p>A fast, private media player for the Xtream Codes, M3U and Emby services you already have.</p>
+        <p>A fast, private media player for the Xtream Codes, M3U and Emby services you already have — on TV, phone and computer.</p>
         <div class="badges"><span class="chip chip-ok"><span class="dot"></span>Freeware Forever</span><span class="chip">No UI Ads</span><span class="chip">No Account Needed</span></div>
       </div>
       <div>
         <h4>Get Tachyon</h4>
         <ul>
-          <li><a href="install.html#google-play">Google Play</a></li>
-          <li><a href="install.html#downloader">Downloader Codes</a></li>
-          <li><a href="install.html#apk">Direct Download</a></li>
+          <li><a href="install.html#android-tv">Google TV · Android TV</a></li>
+          <li><a href="install.html#fire-tv">Fire TV</a></li>
+          <li><a href="install.html#android">Android Phone</a></li>
+          <li><a href="install.html#windows">Windows</a> · <a href="install.html#mac">macOS</a> · <a href="install.html#linux">Linux</a></li>
           <li><a href="install.html#update">Updating</a></li>
         </ul>
       </div>
@@ -501,7 +318,7 @@
     </div>
     <div class="legal">
       <p><b>Tachyon is a media player only; it provides no content.</b> It doesn’t provide, host, sell or recommend any channels, movies or series, and it isn’t affiliated with any IPTV provider. You add the services you’re entitled to use.</p>
-      <p>Latest release v1.2.6 · Build 2026.10.18.0011 · © 2026 GDroid, Sydney, Australia. Google Play, Android and Google TV are trademarks of Google LLC. Fire TV is a trademark of Amazon.com, Inc. or its affiliates.</p>
+      <p>Latest release v1.2.7 · Build 2026.10.18.1208 · © 2026 GDroid, Sydney, Australia. Google Play, Android and Google TV are trademarks of Google LLC. Fire TV is a trademark of Amazon.com, Inc. or its affiliates.</p>
     </div>
   </div>
 </footer>

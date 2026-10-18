@@ -252,6 +252,92 @@
     })
   })
 
+
+  // ---------- slideshows (v2): <div class="slides" data-slides="ms"> — crossfade, auto-advance while on screen,
+  // pause on hover / focus, swipe, arrows, dots, ← → keys
+  $$('[data-slides]').forEach((box) => {
+    const slides = $$('.slide', box)
+    const dots = $$('.sdot', box)
+    if (slides.length < 2) return
+    let at = 0
+    let timer = 0
+    let visible = false
+    let hold = false
+    const every = Number(box.getAttribute('data-slides')) || 5200
+    const show = (n) => {
+      at = (n + slides.length) % slides.length
+      slides.forEach((s, i) => s.classList.toggle('on', i === at))
+      dots.forEach((x, i) => x.classList.toggle('on', i === at))
+      const next = slides[(at + 1) % slides.length].querySelector('img')
+      if (next && next.loading === 'lazy') next.loading = 'eager'
+    }
+    const stop = () => clearInterval(timer)
+    const run = () => {
+      stop()
+      if (!reduce && visible && !hold && !d.hidden) timer = setInterval(() => show(at + 1), every)
+    }
+    box.querySelector('.sprev')?.addEventListener('click', () => (show(at - 1), run()))
+    box.querySelector('.snext')?.addEventListener('click', () => (show(at + 1), run()))
+    dots.forEach((x, i) => x.addEventListener('click', () => (show(i), run())))
+    box.addEventListener('mouseenter', () => ((hold = true), stop()))
+    box.addEventListener('mouseleave', () => ((hold = false), run()))
+    box.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') (show(at - 1), run())
+      if (e.key === 'ArrowRight') (show(at + 1), run())
+    })
+    let x0 = null
+    const track = box.querySelector('.slides-track')
+    track.addEventListener('touchstart', (e) => (x0 = e.touches[0].clientX), { passive: true })
+    track.addEventListener('touchend', (e) => {
+      if (x0 === null) return
+      const dx = e.changedTouches[0].clientX - x0
+      x0 = null
+      if (Math.abs(dx) > 40) (show(at + (dx < 0 ? 1 : -1)), run())
+    })
+    if ('IntersectionObserver' in window)
+      new IntersectionObserver((es) => es.forEach((en) => ((visible = en.isIntersecting), run())), { threshold: 0.35 }).observe(box)
+    else (visible = true), run()
+    d.addEventListener('visibilitychange', run)
+  })
+
+  // ---------- Download page: the platform picker (#mac / #windows … open that one; first visit: this device's)
+  const pick = $$('.platform-pick [data-platform]')
+  if (pick.length) {
+    const ids = pick.map((b) => b.getAttribute('data-platform'))
+    const select = (id, scroll) => {
+      if (!ids.includes(id)) return false
+      pick.forEach((b) => b.setAttribute('aria-selected', String(b.getAttribute('data-platform') === id)))
+      ids.forEach((x) => {
+        const p = d.getElementById(x)
+        if (p) p.hidden = x !== id
+      })
+      const btn = pick[ids.indexOf(id)]
+      btn.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduce ? 'auto' : 'smooth' })
+      if (scroll) d.querySelector('.platform-pick').scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' })
+      return true
+    }
+    pick.forEach((b) =>
+      b.addEventListener('click', () => {
+        const id = b.getAttribute('data-platform')
+        select(id, false)
+        history.replaceState(null, '', '#' + id)
+      })
+    )
+    const guess = () => {
+      const ua = navigator.userAgent
+      if (/AFT|Fire TV|Silk/i.test(ua)) return 'fire-tv'
+      if (/Android/i.test(ua) && /TV|BRAVIA|AFT|GoogleTV|SmartTV/i.test(ua)) return 'android-tv'
+      if (/Android/i.test(ua)) return 'android'
+      if (/Macintosh|Mac OS X/i.test(ua) && !/Mobile/i.test(ua)) return 'mac'
+      if (/Windows/i.test(ua)) return 'windows'
+      if (/Linux|X11|CrOS/i.test(ua)) return 'linux'
+      return null
+    }
+    const fromHash = () => select(location.hash.slice(1), true)
+    if (!fromHash()) select(guess() ?? ids[0], false)
+    window.addEventListener('hashchange', fromHash)
+  }
+
   // ---------- Manual: search, topic list, current topic
   const docsMain = d.querySelector('.docs-main')
   if (docsMain) {

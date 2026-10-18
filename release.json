@@ -1,13 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.2.6",
-  "build": "2026.10.18.0011",
-  "versionCode": 3574091,
+  "version": "1.2.7",
+  "build": "2026.10.18.1208",
+  "versionCode": 3574808,
   "whatsNew": [
-    "App Lock on Android: an optional 4-digit PIN when the app starts, with fingerprint unlock on phones",
-    "The service you pick on the start screen now opens on the first press, even on a slow start",
-    "The Tachyon logo gently glows",
-    "Download says why when a title can't be downloaded"
+    "The player's channel list now says what you're browsing and how many channels",
+    "Chromecast looks for TVs only on Wi-Fi, and far less often (every 10 minutes when none is found, or at once when you press Cast)",
+    "Computers: Update Now installs new releases from the developer's signed source",
+    "A new website with downloads for every device",
+    "Launch Day comes up less often, with less smoke"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
@@ -19,5 +20,53 @@
   "downloader": {
     "dropbox": "7607080",
     "googleDrive": "2336338"
+  },
+  "packages": {
+    "manifest": {
+      "dropbox": "https://www.dropbox.com/scl/fi/iq106ot5lum4f5aqjqv6r/Tachyon-latest.json?rlkey=cvpp4anx0l7x7apc10kwbzlqn&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1lBqF-a90EbAmZYf5Sy5CrgkooptvEoWF&export=download&confirm=t"
+    },
+    "signature": {
+      "dropbox": "https://www.dropbox.com/scl/fi/2v5vkyg6mggnkykg6prwn/Tachyon-latest.json.sig?rlkey=4qtb1h8gegv91vsgs2ureoey5&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1Jrbs4B9uK_4GifSrjlM-WZyAQLQhSrGw&export=download&confirm=t"
+    }
+  },
+  "downloads": {
+    "Tachyon-latest-android-native-universal.apk": {
+      "dropbox": "https://www.dropbox.com/scl/fi/aeuu95e36p7jmti7dlcu2/Tachyon-latest-android-native-universal.apk?rlkey=19ch5si1hjmfdko6z8n0epig0&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1IaYbtUR_lsaY6m5rKpnpgZbe0tGVOW-y&export=download&confirm=t"
+    },
+    "Tachyon-latest-macos-arm64.dmg": {
+      "dropbox": "https://www.dropbox.com/scl/fi/10sg4fxx5isx96nus8sbp/Tachyon-latest-macos-arm64.dmg?rlkey=vi1656icw0qf33nqu44d79o8n&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1sSNkOMN4idBOtkDTlf58cz9PqOc7xKEo&export=download&confirm=t"
+    },
+    "Tachyon-latest-macos-x64.dmg": {
+      "dropbox": "https://www.dropbox.com/scl/fi/h3316zbd77fl5jgzzavtp/Tachyon-latest-macos-x64.dmg?rlkey=9f02qsiwgrlzx91axmgxs01my&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1f1jUnX_PNh6j6UJHjGgnlmqUSN-wXq7Z&export=download&confirm=t"
+    },
+    "Tachyon-latest-linux-arm64.AppImage": {
+      "dropbox": "https://www.dropbox.com/scl/fi/ghx09at145gg91ksanijt/Tachyon-latest-linux-arm64.AppImage?rlkey=fgj9gam9pp0s1ql9bzkhsc1gm&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=10tUpccXL2qU2U0EloyIgJkxHudwPBG5V&export=download&confirm=t"
+    },
+    "Tachyon-latest-linux-x86_64.AppImage": {
+      "dropbox": "https://www.dropbox.com/scl/fi/nfby1y5lu5p7qoy3hmmnu/Tachyon-latest-linux-x86_64.AppImage?rlkey=xowd2knb4f0tx2ktl6y9mfcl6&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1gE5_iZ6KzYbDJUAEtpjFa8BdTtnhq3fP&export=download&confirm=t"
+    },
+    "TachyonLens-latest-macos-arm64.dmg": {
+      "dropbox": "https://www.dropbox.com/scl/fi/t071tbljh3v9edeglc53d/TachyonLens-latest-macos-arm64.dmg?rlkey=bq7n1k4f4q3exwkyh9shc4n2y&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1nYWzU-9NDdR6ZJTvBVUizGpiyUsW4k_G&export=download&confirm=t"
+    },
+    "TachyonLens-latest-macos-x64.dmg": {
+      "dropbox": "https://www.dropbox.com/scl/fi/qeg8f1nytpbki46bb3o4i/TachyonLens-latest-macos-x64.dmg?rlkey=4u9tequ2veceqjg7byrvasr7n&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1XthJ8qJ79xzs6eb9cv8XYnlLRBSayo8T&export=download&confirm=t"
+    },
+    "TachyonLens-latest-linux-arm64.AppImage": {
+      "dropbox": "https://www.dropbox.com/scl/fi/cewmnymwdcvcp0t3uno9s/TachyonLens-latest-linux-arm64.AppImage?rlkey=f30ki2dv49coqldgi4lcppsgc&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1AfCgHGOaCQ2cksc0OUzTjaV39RoFhRH1&export=download&confirm=t"
+    },
+    "TachyonLens-latest-linux-x86_64.AppImage": {
+      "dropbox": "https://www.dropbox.com/scl/fi/s1k1uee8fsfsztrql0rv0/TachyonLens-latest-linux-x86_64.AppImage?rlkey=rq1sy2hxqz1jmhoyfmv86m8qq&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1bhDUeVuQmbE-q2HpZTvWnOXpixExz5lh&export=download&confirm=t"
+    }
   }
 }
