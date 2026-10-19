@@ -1,14 +1,15 @@
 {
   "app": "tachyon",
-  "version": "1.2.7",
-  "build": "2026.10.18.1208",
-  "versionCode": 3574808,
+  "version": "1.2.8",
+  "build": "2026.10.19.1452",
+  "versionCode": 3576412,
   "whatsNew": [
-    "The player's channel list now says what you're browsing and how many channels",
-    "Chromecast looks for TVs only on Wi-Fi, and far less often (every 10 minutes when none is found, or at once when you press Cast)",
-    "Computers: Update Now installs new releases from the developer's signed source",
-    "A new website with downloads for every device",
-    "Launch Day comes up less often, with less smoke"
+    "One set of Player Options in every app: quality, audio, subtitles, speed, volume, sleep timer and more",
+    "Volume up to 250 %, pausing at 100 % first; Android gets a Volume button, phones a Brightness one",
+    "A title you just watched starts again at once: what was loaded is kept for 3 hours",
+    "Emby channels: change channel while watching",
+    "Libraries update by themselves every 7 days; Refresh updates at once",
+    "Chromecast lets go of your connection when a film ends"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
@@ -44,6 +45,14 @@
       "dropbox": "https://www.dropbox.com/scl/fi/h3316zbd77fl5jgzzavtp/Tachyon-latest-macos-x64.dmg?rlkey=9f02qsiwgrlzx91axmgxs01my&dl=1",
       "drive": "https://drive.usercontent.google.com/download?id=1f1jUnX_PNh6j6UJHjGgnlmqUSN-wXq7Z&export=download&confirm=t"
     },
+    "Tachyon-latest-windows-x64-setup.exe": {
+      "dropbox": "https://www.dropbox.com/scl/fi/oqizm6i9y00zh8daeatyf/Tachyon-latest-windows-x64-setup.exe?rlkey=l656gi2stf5o25zm5prnv8hu8&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1EhJ5XzKGo4KRDQOuiEP9jqYKpe1gCg6y&export=download&confirm=t"
+    },
+    "Tachyon-latest-windows-x64.exe": {
+      "dropbox": "https://www.dropbox.com/scl/fi/f0wpd3ujoex5vlnchgx8n/Tachyon-latest-windows-x64.exe?rlkey=uw5moym2nm16nd65dxnzurnhg&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=12MwbjeKi2OXJYCNWs_1mDK4G8Q7cZevv&export=download&confirm=t"
+    },
     "Tachyon-latest-linux-arm64.AppImage": {
       "dropbox": "https://www.dropbox.com/scl/fi/ghx09at145gg91ksanijt/Tachyon-latest-linux-arm64.AppImage?rlkey=fgj9gam9pp0s1ql9bzkhsc1gm&dl=1",
       "drive": "https://drive.usercontent.google.com/download?id=10tUpccXL2qU2U0EloyIgJkxHudwPBG5V&export=download&confirm=t"
@@ -59,6 +68,10 @@
     "TachyonLens-latest-macos-x64.dmg": {
       "dropbox": "https://www.dropbox.com/scl/fi/qeg8f1nytpbki46bb3o4i/TachyonLens-latest-macos-x64.dmg?rlkey=4u9tequ2veceqjg7byrvasr7n&dl=1",
       "drive": "https://drive.usercontent.google.com/download?id=1XthJ8qJ79xzs6eb9cv8XYnlLRBSayo8T&export=download&confirm=t"
+    },
+    "TachyonLens-latest-windows-x64.exe": {
+      "dropbox": "https://www.dropbox.com/scl/fi/bznugujqufqq1xywehz3j/TachyonLens-latest-windows-x64.exe?rlkey=j9imr232vj16p3mzl9462jq2m&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1Fgj4zsAvFHvwMoDcXZdFnsoGpF06z7Mu&export=download&confirm=t"
     },
     "TachyonLens-latest-linux-arm64.AppImage": {
       "dropbox": "https://www.dropbox.com/scl/fi/cewmnymwdcvcp0t3uno9s/TachyonLens-latest-linux-arm64.AppImage?rlkey=f30ki2dv49coqldgi4lcppsgc&dl=1",

@@ -36,7 +36,9 @@
     }
   })()
   const auPreview = /[?&]au\b/.test(location.search)
-  const inAu = /^Australia\//.test(tz) || tz === 'Antarctica/Macquarie'
+  // an Australian time zone; with none known (a locked-down browser), an Australian English setting
+  const auLang = (navigator.languages || [navigator.language || '']).some((l) => /^en-AU$/i.test(l))
+  const inAu = /^Australia\//.test(tz) || tz === 'Antarctica/Macquarie' || (!tz && auLang)
   if (inAu || auPreview) $$('[data-au-only]').forEach((el) => (el.hidden = false))
   const chips = $$('.city-chip')
   if (chips.length) {
@@ -253,6 +255,146 @@
   })
 
 
+  // ---------- the full-screen viewer (user, 2026-10-19: "open a full-screen overlay slideshow to feel the screenshots
+  // better", "should look professional and navigate ALL images, not just one set"): every slideshow on the page in one
+  // viewer — a tab per set (Desktop · TV · Phone · Player), the picture as large as the screen allows, its title and
+  // words, n / N, a thumbnail strip of the set; ‹ › and ← → run through every picture of every set, ↑ ↓ / the tabs
+  // jump between sets, Home / End, swipe; Esc, ✕ or a click outside closes. Neighbours are fetched ahead; focus stays
+  // inside and goes back where it was.
+  let viewer = null
+  function openViewer(groups, startG, startI, onClose) {
+    const icon = (path) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${path}"/></svg>`
+    if (!viewer) {
+      viewer = d.createElement('div')
+      viewer.className = 'sviewer'
+      viewer.setAttribute('role', 'dialog')
+      viewer.setAttribute('aria-modal', 'true')
+      viewer.setAttribute('aria-label', 'Screenshots')
+      viewer.innerHTML =
+        `<div class="sv-top"><div class="sv-tabs" role="tablist" aria-label="Screenshot sets"></div><span class="sv-count" aria-live="polite"></span><button class="sv-btn sv-close" type="button" aria-label="Close" title="Close (Esc)">${icon('M6 6l12 12M18 6 6 18')}</button></div>` +
+        `<div class="sv-stage"><img class="sv-img" alt=""><img class="sv-img" alt=""><button class="sv-btn sv-nav sv-prev" type="button" aria-label="Previous" title="Previous (←)">${icon('m15 6-6 6 6 6')}</button><button class="sv-btn sv-nav sv-next" type="button" aria-label="Next" title="Next (→)">${icon('m9 6 6 6-6 6')}</button></div>` +
+        `<div class="sv-foot"><p class="sv-cap"><b></b><span></span></p><div class="sv-thumbs" role="listbox" aria-label="Pictures"></div></div>`
+      d.body.appendChild(viewer)
+    }
+    const v = viewer
+    const imgs = $$('.sv-img', v)
+    const count = v.querySelector('.sv-count')
+    const capB = v.querySelector('.sv-cap b')
+    const capS = v.querySelector('.sv-cap span')
+    const tabsBox = v.querySelector('.sv-tabs')
+    const thumbsBox = v.querySelector('.sv-thumbs')
+    // every picture of every set, in page order: [group, index]
+    const all = groups.flatMap((g, gi) => g.slides.map((_, i) => [gi, i]))
+    const imgOf = (gi, i) => groups[gi].slides[i].querySelector('img')
+    const srcOf = (gi, i) => {
+      const im = imgOf(gi, i)
+      return im ? im.currentSrc || im.src : ''
+    }
+    tabsBox.innerHTML = groups.length > 1 ? groups.map((g, gi) => `<button type="button" role="tab" class="sv-tab" data-g="${gi}">${g.name}<small>${g.slides.length}</small></button>`).join('') : ''
+    const tabs = $$('.sv-tab', tabsBox)
+    let g = -1
+    let at = -1
+    let front = 0
+    let thumbs = []
+    const buildThumbs = () => {
+      thumbsBox.className = `sv-thumbs ${groups[g].frame || ''}`
+      thumbsBox.innerHTML = groups[g].slides
+        .map((_, i) => `<button type="button" role="option" class="sv-thumb" data-i="${i}" aria-label="${(imgOf(g, i)?.alt || `Picture ${i + 1}`).replace(/"/g, '&quot;')}"><img src="${srcOf(g, i)}" alt="" loading="lazy" decoding="async"></button>`)
+        .join('')
+      thumbs = $$('.sv-thumb', thumbsBox)
+    }
+    const preload = (k) => {
+      const [gi, i] = all[(k + all.length) % all.length]
+      const src = srcOf(gi, i)
+      if (src) new Image().src = src
+    }
+    const go = (gi, i) => {
+      if (gi === g && i === at) return
+      const newSet = gi !== g
+      g = gi
+      at = i
+      // crossfade: the new picture on the hidden layer, then the layers swap
+      const back = imgs[1 - front]
+      back.src = srcOf(g, at)
+      back.alt = imgOf(g, at)?.alt || ''
+      back.classList.toggle('portrait', groups[g].frame === 'frame-phone')
+      back.classList.add('on')
+      imgs[front].classList.remove('on')
+      front = 1 - front
+      const cap = groups[g].slides[at].querySelector('figcaption')
+      capB.textContent = cap?.querySelector('b')?.textContent || ''
+      capS.textContent = cap?.querySelector('span')?.textContent || ''
+      count.textContent = `${groups.length > 1 ? `${groups[g].name} · ` : ''}${at + 1} / ${groups[g].slides.length}`
+      tabs.forEach((t, k) => t.setAttribute('aria-selected', String(k === g)))
+      if (newSet) buildThumbs()
+      thumbs.forEach((t, k) => t.setAttribute('aria-selected', String(k === at)))
+      thumbs[at]?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduce || newSet ? 'auto' : 'smooth' })
+      const k = all.findIndex(([a, b]) => a === g && b === at)
+      preload(k + 1)
+      preload(k - 1)
+    }
+    const step = (n) => {
+      const k = all.findIndex(([a, b]) => a === g && b === at)
+      const [gi, i] = all[(k + n + all.length) % all.length]
+      go(gi, i)
+    }
+    const set = (n) => go((g + n + groups.length) % groups.length, 0)
+    const last = d.activeElement
+    const key = (e) => {
+      if (e.key === 'Escape') close()
+      else if (e.key === 'ArrowLeft') step(-1)
+      else if (e.key === 'ArrowRight' || e.key === ' ') step(1)
+      else if (e.key === 'ArrowUp' || e.key === 'PageUp') set(-1)
+      else if (e.key === 'ArrowDown' || e.key === 'PageDown') set(1)
+      else if (e.key === 'Home') go(g, 0)
+      else if (e.key === 'End') go(g, groups[g].slides.length - 1)
+      else if (e.key === 'Tab') {
+        const f = $$('button:not([hidden])', v)
+        const i = f.indexOf(d.activeElement)
+        f[(i + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus()
+      } else return
+      e.preventDefault()
+      e.stopPropagation()
+    }
+    const close = () => {
+      v.classList.remove('open')
+      d.documentElement.style.overflow = ''
+      d.removeEventListener('keydown', key, true)
+      v.onclick = null
+      imgs.forEach((im) => (im.classList.remove('on'), im.removeAttribute('src')))
+      if (last && last.focus) last.focus({ preventScroll: true })
+      onClose(g, at)
+    }
+    v.onclick = (e) => {
+      const t = e.target
+      if (t.closest('.sv-close')) close()
+      else if (t.closest('.sv-prev')) step(-1)
+      else if (t.closest('.sv-next')) step(1)
+      else if (t.closest('.sv-tab')) go(Number(t.closest('.sv-tab').dataset.g), 0)
+      else if (t.closest('.sv-thumb')) go(g, Number(t.closest('.sv-thumb').dataset.i))
+      else if (!t.closest('.sv-img, .sv-cap, .sv-top, .sv-thumbs')) close()
+    }
+    let x0 = null
+    v.ontouchstart = (e) => (x0 = e.touches[0].clientX)
+    v.ontouchend = (e) => {
+      if (x0 === null || e.target.closest('.sv-thumbs')) return (x0 = null)
+      const dx = e.changedTouches[0].clientX - x0
+      x0 = null
+      if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1)
+    }
+    $$('.sv-nav', v).forEach((b) => (b.hidden = all.length < 2))
+    d.addEventListener('keydown', key, true)
+    d.documentElement.style.overflow = 'hidden'
+    v.classList.add('open')
+    go(startG, startI)
+    v.querySelector('.sv-close').focus({ preventScroll: true })
+  }
+  // every slideshow on the page, for the viewer
+  const slideGroups = () =>
+    $$('[data-slides]')
+      .map((box) => ({ box, name: box.getAttribute('data-set-name') || 'Screenshots', frame: [...box.classList].find((c) => c.startsWith('frame-')) || '', slides: $$('.slide', box) }))
+      .filter((x) => x.slides.length)
+
   // ---------- slideshows (v2): <div class="slides" data-slides="ms"> — crossfade, auto-advance while on screen,
   // pause on hover / focus, swipe, arrows, dots, ← → keys
   $$('[data-slides]').forEach((box) => {
@@ -294,11 +436,60 @@
       x0 = null
       if (Math.abs(dx) > 40) (show(at + (dx < 0 ? 1 : -1)), run())
     })
+    // full screen: a click on the picture or the expand button opens the set at this picture; the box holds still while
+    // the viewer is open and is left on the picture last viewed
+    const full = (e) => {
+      if (e) e.preventDefault()
+      stop()
+      hold = true
+      const groups = slideGroups()
+      const mine = groups.findIndex((x) => x.box === box)
+      openViewer(groups, Math.max(0, mine), at, (gi, i) => {
+        hold = false
+        if (gi === mine) show(i)
+        run()
+      })
+    }
+    box.querySelector('.sexpand')?.addEventListener('click', full)
+    slides.forEach((s) => s.querySelector('img')?.addEventListener('click', full))
     if ('IntersectionObserver' in window)
       new IntersectionObserver((es) => es.forEach((en) => ((visible = en.isIntersecting), run())), { threshold: 0.35 }).observe(box)
     else (visible = true), run()
     d.addEventListener('visibilitychange', run)
   })
+
+  // ---------- Download page: the Recommended card for this device (none when the device is unknown), and the cards'
+  // "Install guide" links open that platform's guide tab
+  const recos = $$('[data-reco]')
+  if (recos.length) {
+    const ua = navigator.userAgent
+    const mine = /AFT|Fire TV|Silk/i.test(ua)
+      ? 'fire-tv'
+      : /Android/i.test(ua) && /TV|BRAVIA|GoogleTV|SmartTV/i.test(ua)
+        ? 'android-tv'
+        : /Android/i.test(ua)
+          ? 'android'
+          : /Macintosh|Mac OS X/i.test(ua) && !/Mobile|iPhone|iPad/i.test(ua)
+            ? 'mac'
+            : /Windows/i.test(ua)
+              ? 'windows'
+              : /Linux|X11|CrOS/i.test(ua) && !/Mobile/i.test(ua)
+                ? 'linux'
+                : null
+    recos.forEach((r) => (r.hidden = r.getAttribute('data-reco') !== mine))
+    // this device's card also leads the grid
+    const own = mine && d.getElementById('get-' + mine)
+    if (own) own.classList.add('mine')
+  }
+  $$('[data-guide]').forEach((a) =>
+    a.addEventListener('click', (e) => {
+      const tab = d.querySelector(`.platform-pick [data-platform="${a.getAttribute('data-guide')}"]`)
+      if (!tab) return
+      e.preventDefault()
+      tab.click()
+      d.getElementById('guides')?.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' })
+    })
+  )
 
   // ---------- Download page: the platform picker (#mac / #windows … open that one; first visit: this device's)
   const pick = $$('.platform-pick [data-platform]')
@@ -312,7 +503,14 @@
         if (p) p.hidden = x !== id
       })
       const btn = pick[ids.indexOf(id)]
-      btn.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduce ? 'auto' : 'smooth' })
+      // the picked tab centred in its strip, sideways only — the page itself stays at the top on arrival (user,
+      // 2026-10-19: "install.html scrolls — should load from the top"; scrollIntoView moved the page down to the tabs)
+      const strip = d.querySelector('.platform-pick')
+      if (strip && strip.scrollWidth > strip.clientWidth) {
+        const b = btn.getBoundingClientRect()
+        const sr = strip.getBoundingClientRect()
+        strip.scrollBy({ left: b.left + b.width / 2 - (sr.left + sr.width / 2), behavior: reduce ? 'auto' : 'smooth' })
+      }
       if (scroll) d.querySelector('.platform-pick').scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' })
       return true
     }

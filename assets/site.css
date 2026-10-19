@@ -1399,9 +1399,11 @@ details.q .a p:last-child {
   color: var(--text);
 }
 .footer-brand img {
-  width: 180px;
+  display: block;
+  width: 240px;
+  max-width: 100%;
   height: auto;
-  margin-bottom: 14px;
+  margin: 0 0 16px;
 }
 .badges {
   display: flex;
@@ -1704,15 +1706,6 @@ article.doc caption {
     font-size: 14px;
   }
 }
-.play-note {
-  font-size: 13.5px;
-  color: var(--muted);
-  margin: 0;
-}
-.play-note .chip {
-  margin-right: 4px;
-  vertical-align: 1px;
-}
 .codes-head {
   margin-bottom: 22px;
 }
@@ -1771,9 +1764,6 @@ td.dev .dev-sub {
 .guide > .muted b,
 .guide .small b {
   color: var(--text);
-}
-.guide .play-note {
-  margin-bottom: 4px;
 }
 .guide-sub {
   font-size: 19px;
