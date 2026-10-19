@@ -1,15 +1,15 @@
 {
   "app": "tachyon",
-  "version": "1.2.9",
-  "build": "2026.10.19.1928",
-  "versionCode": 3576688,
+  "version": "1.3.0",
+  "build": "2026.10.20.0952",
+  "versionCode": 3577552,
   "whatsNew": [
-    "Filters: put categories together in a Group, hide the ones you never use",
-    "Browse By: languages, regions, platforms and more, read from your provider",
-    "Search remembers your last 10 searches for each service and page",
-    "One menu for each card everywhere: Remove, Resume Playing, Go to Details",
-    "TV: channel rows get ♥, TV Guide and Play buttons",
-    "The version you pick of a title opens first next time"
+    "TV remote: ▲▼ volume, ◀▶ channel list, OK shows the controls, hold OK pauses",
+    "Volume up to 250 % that really boosts, with a stop at every 25 %",
+    "Remembers volume, audio, subtitles, picture size and speed per channel or title",
+    "Episodes list in the player",
+    "Music and other apps pause when you start watching",
+    "Neater player bar, Cast at the top, a Remote / Keyboard Mapping page"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
