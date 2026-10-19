@@ -1,15 +1,15 @@
 {
   "app": "tachyon",
-  "version": "1.2.8",
-  "build": "2026.10.19.1452",
-  "versionCode": 3576412,
+  "version": "1.2.9",
+  "build": "2026.10.19.1928",
+  "versionCode": 3576688,
   "whatsNew": [
-    "One set of Player Options in every app: quality, audio, subtitles, speed, volume, sleep timer and more",
-    "Volume up to 250 %, pausing at 100 % first; Android gets a Volume button, phones a Brightness one",
-    "A title you just watched starts again at once: what was loaded is kept for 3 hours",
-    "Emby channels: change channel while watching",
-    "Libraries update by themselves every 7 days; Refresh updates at once",
-    "Chromecast lets go of your connection when a film ends"
+    "Filters: put categories together in a Group, hide the ones you never use",
+    "Browse By: languages, regions, platforms and more, read from your provider",
+    "Search remembers your last 10 searches for each service and page",
+    "One menu for each card everywhere: Remove, Resume Playing, Go to Details",
+    "TV: channel rows get ♥, TV Guide and Play buttons",
+    "The version you pick of a title opens first next time"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
