@@ -1,15 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.3.0",
-  "build": "2026.10.20.0952",
-  "versionCode": 3577552,
+  "version": "1.3.1",
+  "build": "2026.10.20.1831",
+  "versionCode": 3578071,
   "whatsNew": [
-    "TV remote: ▲▼ volume, ◀▶ channel list, OK shows the controls, hold OK pauses",
-    "Volume up to 250 % that really boosts, with a stop at every 25 %",
-    "Remembers volume, audio, subtitles, picture size and speed per channel or title",
-    "Episodes list in the player",
-    "Music and other apps pause when you start watching",
-    "Neater player bar, Cast at the top, a Remote / Keyboard Mapping page"
+    "Easy Settings: scan the code on the TV's About page and change every setting from your phone",
+    "Back up and restore your settings on phones and TVs too",
+    "A settings file from another version now brings in all it can and lists what it left out",
+    "Volume above 100 % now works when surround sound goes to your receiver",
+    "The computer app opens where you left it, with a new start screen"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
