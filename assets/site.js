@@ -97,6 +97,28 @@
       }, ms)
     })
 
+  // ---------- videos: a poster with a play button; the YouTube player (no-cookie) loads only on a press, and switching
+  // tabs unloads the hidden one (it stops playing)
+  const vids = $$('.vid-frame[data-yt]')
+  vids.forEach((f) => {
+    const poster = f.innerHTML
+    f.addEventListener('click', () => {
+      if (f.querySelector('iframe')) return
+      f.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${f.dataset.yt}?autoplay=1&rel=0&playsinline=1" title="${f.dataset.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+      f.classList.add('playing')
+    })
+    f.unload = () => {
+      if (!f.querySelector('iframe')) return
+      f.innerHTML = poster
+      f.classList.remove('playing')
+    }
+  })
+  $$('.vid-tabs').forEach((list) => {
+    const sync = () => setTimeout(() => vids.forEach((f) => f.closest('[role="tabpanel"]')?.hidden && f.unload()))
+    list.addEventListener('click', sync)
+    list.addEventListener('keydown', sync)
+  })
+
   // ---------- tabs (screenshot gallery)
   $$('[role="tablist"]').forEach((list) => {
     const tabs = $$('[role="tab"]', list)

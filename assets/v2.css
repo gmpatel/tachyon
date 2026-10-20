@@ -2521,3 +2521,150 @@ details.q .a {
   padding-top: 0;
   border-top: 0;
 }
+
+/* ---------- Watch It (user, 2026-10-20): the three promo videos — Feature Tour by default, tabs for 60 s and the Short.
+   A poster + play button until pressed (then the YouTube no-cookie player); the Short is a phone-shaped frame */
+.vid-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.vid-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: var(--panel);
+  color: var(--muted);
+  font: 600 15px/1 var(--font);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.vid-tabs button svg {
+  width: 18px;
+  height: 18px;
+}
+.vid-tabs button small {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dim);
+  padding-left: 8px;
+  border-left: 1px solid var(--line-2);
+}
+.vid-tabs button:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+.vid-tabs button[aria-selected='true'] {
+  color: #fff;
+  background: linear-gradient(120deg, rgba(139, 108, 255, 0.35), rgba(63, 182, 232, 0.25));
+  border-color: rgba(167, 139, 250, 0.6);
+}
+.vid-tabs button[aria-selected='true'] small {
+  color: #c7d2fe;
+}
+.vid-tabs button:focus-visible {
+  outline: 2px solid var(--ion);
+  outline-offset: 2px;
+}
+.vid-panel {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.vid-panel[hidden] {
+  display: none;
+}
+.vid-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--shadow), 0 0 80px -30px rgba(124, 92, 255, 0.6);
+  cursor: pointer;
+}
+.vid-frame.vid-vert {
+  aspect-ratio: 9 / 16;
+  width: min(100%, 380px, calc((100vh - 220px) * 9 / 16));
+  margin: 0 auto;
+  border-radius: 28px;
+  border: 6px solid #11131c;
+  outline: 1px solid #3b3f55;
+}
+.vid-frame img,
+.vid-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  display: block;
+}
+.vid-frame img {
+  transition: transform 0.6s ease, filter 0.3s ease;
+}
+.vid-frame:hover img {
+  transform: scale(1.025);
+  filter: brightness(1.08);
+}
+.vid-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 84px;
+  height: 84px;
+  margin: -42px 0 0 -42px;
+  border-radius: 50%;
+  border: 0;
+  color: #fff;
+  background: var(--grad);
+  box-shadow: 0 10px 40px -6px rgba(124, 92, 255, 0.8), 0 0 0 8px rgba(255, 255, 255, 0.12);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.vid-play svg {
+  width: 36px;
+  height: 36px;
+  margin-left: 4px;
+}
+.vid-frame:hover .vid-play {
+  transform: scale(1.08);
+  box-shadow: 0 12px 48px -4px rgba(124, 92, 255, 0.95), 0 0 0 12px rgba(255, 255, 255, 0.14);
+}
+.vid-play:focus-visible {
+  outline: 2px solid var(--ion);
+  outline-offset: 4px;
+}
+.vid-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: 16px 0 0;
+}
+@media (max-width: 560px) {
+  .vid-tabs button {
+    padding: 9px 13px;
+    font-size: 14px;
+  }
+  .vid-tabs button small {
+    display: none;
+  }
+  .vid-play {
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+  }
+}
+/* while YouTube's player is up, square corners: its own notices ("Link copied to clipboard", "Subtitles turned on") sit
+   flush in the bottom-left corner, and a rounded frame clipped them oddly */
+.vid-frame.playing,
+.vid-frame.vid-vert.playing {
+  border-radius: 0;
+}
