@@ -28,6 +28,8 @@
   a.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; padding: 12px 20px; border-radius: 14px; background: linear-gradient(135deg, var(--a), var(--b)); color: #fff; font-weight: 700; text-decoration: none; min-width: 220px }
   .addr { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: var(--muted); word-break: break-all }
   .bad { color: #fda4af }
+  .checks { text-align: left; color: var(--muted); font-size: 13.5px; margin: 10px 0 4px; padding-left: 20px } .checks li { margin: 4px 0 }
+  a.link { color: #7dd3fc; font-size: 13px }
   [hidden] { display: none !important }
 </style>
 </head>
@@ -37,11 +39,19 @@
   <div class="brand">TACHYON</div>
   <h1>Easy Settings</h1>
   <div id="go">
-    <p>Opening your TV’s settings…</p>
+    <p id="step">Finding your TV…</p>
     <div class="ring" aria-hidden="true"></div>
-    <a class="btn" id="open" href="#">Open TV Settings</a>
     <p class="addr" id="addr"></p>
-    <p>Your phone needs to be on the same Wi-Fi as the TV, with the TV’s Settings → About page open.</p>
+  </div>
+  <div id="fail" hidden>
+    <p class="bad"><b id="failTitle">Couldn’t reach the TV</b></p>
+    <ul class="checks">
+      <li>Your phone is on the same Wi-Fi as the TV</li>
+      <li>The TV shows Settings → About (the link works only while it does)</li>
+      <li>The code is today’s: scan the TV again if it changed</li>
+    </ul>
+    <a class="btn" id="retry" href="#">Try Again</a>
+    <p><a class="link" id="open" href="#">Open the TV’s address anyway</a></p>
   </div>
   <div id="none" hidden>
     <p class="bad">This link doesn’t name a TV.</p>
@@ -52,14 +62,50 @@
   // only a home-network address with a Tachyon code (and an optional section) — never anywhere else
   const t = decodeURIComponent(location.hash.slice(1))
   const ok = /^((10|127)\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3}):\d{2,5}\/\d{3}-\d{3}(\/[a-z]{3,12})?$/.test(t)
-  if (ok) {
-    const url = 'http://' + t
-    document.getElementById('open').href = url
-    document.getElementById('addr').textContent = url
-    location.replace(url)
-  } else {
-    document.getElementById('go').hidden = true
-    document.getElementById('none').hidden = false
+  const $ = (id) => document.getElementById(id)
+  const url = 'http://' + t
+  const KEY = 'easyTried:' + t
+  const show = (id) => { for (const x of ['go', 'fail', 'none']) $(x).hidden = x !== id }
+  const fail = (title) => { $('failTitle').textContent = title; show('fail') }
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+  /** this page as served over http (the local dev site): the TV can be asked first — an https page can't (mixed content) */
+  async function reachable() {
+    try {
+      const c = new AbortController()
+      setTimeout(() => c.abort(), 5000)
+      await fetch(url, { mode: 'no-cors', cache: 'no-store', signal: c.signal })
+      return true
+    } catch {
+      return false
+    }
+  }
+  // (user, 2026-10-22: "a 2–3 s spin before going on; if the TV can't be reached stay here with the error and a retry")
+  async function go() {
+    show('go')
+    $('step').textContent = 'Finding your TV…'
+    await wait(1300)
+    $('step').textContent = 'Opening its settings…'
+    await wait(1100)
+    if (location.protocol === 'http:') {
+      if (await reachable()) location.replace(url)
+      else fail('Couldn’t reach the TV')
+      return
+    }
+    // https (the published site): the browser can't look before it goes; a failed try that comes Back here shows the error
+    sessionStorage.setItem(KEY, String(Date.now()))
+    location.href = url
+  }
+  if (!ok) show('none')
+  else {
+    $('addr').textContent = url
+    $('open').href = url
+    $('retry').onclick = (e) => { e.preventDefault(); sessionStorage.removeItem(KEY); go() }
+    const cameBack = () => Date.now() - Number(sessionStorage.getItem(KEY) || 0) < 120000
+    // back here right after a try (the browser's error page, or Back from the TV's page): this page can't tell which over
+    // https, so it asks instead of jumping again
+    if (cameBack()) fail('Didn’t open the TV’s settings?')
+    else go()
+    addEventListener('pageshow', (e) => { if (e.persisted && cameBack()) fail('Didn’t open the TV’s settings?') })
   }
 </script>
 </body>
