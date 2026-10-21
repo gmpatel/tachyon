@@ -1,14 +1,15 @@
 {
   "app": "tachyon",
-  "version": "1.3.1",
-  "build": "2026.10.20.1831",
-  "versionCode": 3578071,
+  "version": "1.3.2",
+  "build": "2026.10.21.1853",
+  "versionCode": 3579533,
   "whatsNew": [
-    "Easy Settings: scan the code on the TV's About page and change every setting from your phone",
-    "Back up and restore your settings on phones and TVs too",
-    "A settings file from another version now brings in all it can and lists what it left out",
-    "Volume above 100 % now works when surround sound goes to your receiver",
-    "The computer app opens where you left it, with a new start screen"
+    "Try Open Live TV: free playlists from around the world to try, added in one tap (About → How To)",
+    "Fixed a crash at start-up on some Android TV boxes",
+    "Subtitles: change their look while you watch; sizes a touch smaller and steady when the controls show",
+    "Casting from a phone pauses at once and says where it's going",
+    "A disabled service is never refreshed",
+    "Easy Settings: turn on Owner or Admin Mode from your phone"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
