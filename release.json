@@ -1,15 +1,16 @@
 {
   "app": "tachyon",
-  "version": "1.3.2",
-  "build": "2026.10.21.1853",
-  "versionCode": 3579533,
+  "version": "1.3.3",
+  "build": "2026.10.22.1555",
+  "versionCode": 3580795,
   "whatsNew": [
-    "Try Open Live TV: free playlists from around the world to try, added in one tap (About → How To)",
-    "Fixed a crash at start-up on some Android TV boxes",
-    "Subtitles: change their look while you watch; sizes a touch smaller and steady when the controls show",
-    "Casting from a phone pauses at once and says where it's going",
-    "A disabled service is never refreshed",
-    "Easy Settings: turn on Owner or Admin Mode from your phone"
+    "A fresh look: new icon, cards with details inside, softer names and titles",
+    "Popular Channels on Home for every service",
+    "Phones: video pops out into a small window when you leave the app",
+    "Volume above 100 % is now a setting (off by default)",
+    "Live TV can hide channels Tachyon can't play (YouTube links)",
+    "Terminate closes Tachyon completely",
+    "The computer app uses far less memory"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",

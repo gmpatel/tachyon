@@ -2698,3 +2698,117 @@ details.q .a {
 .vid-frame.vid-vert.playing {
   border-radius: 0;
 }
+
+/* ---------- Try Open Live TV (Home, everyone; Aussie Live inside it for Australian visitors — user, 2026-10-22) */
+.opentv-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.opentv-list li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+}
+.opentv-list li[hidden] {
+  display: none;
+}
+.opentv-list .oi {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, #fb7185, #f59e0b);
+  box-shadow: 0 6px 16px -8px rgba(251, 113, 133, 0.8);
+}
+.opentv-list .oi svg {
+  width: 18px;
+  height: 18px;
+}
+.opentv-list b {
+  display: block;
+  font-size: 15px;
+}
+.opentv-list small {
+  display: block;
+  color: var(--dim);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.opentv-au {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.opentv-au h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+.opentv-go {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 4px;
+}
+.opentv-go > [hidden] {
+  display: none;
+}
+.opentv-card .aussie-note {
+  margin-top: 18px;
+}
+/* open-live.html: the lists table fits the page (names wrap, long links break) */
+.prose-open .md-table td.dev {
+  white-space: normal;
+  min-width: 150px;
+}
+.prose-open .md-table td:last-child {
+  min-width: 240px;
+}
+.prose-open .md-table code {
+  word-break: break-all;
+}
+/* Aussie Live, for Australian visitors only (user, 2026-10-22: "highlight it to bring it to their notice"): a warm glowing
+   edge and a For You badge, first in the list */
+.opentv-list .opentv-hl {
+  order: -1;
+  border-color: transparent;
+  background:
+    linear-gradient(120deg, rgba(40, 16, 24, 0.96), rgba(30, 20, 10, 0.96)) padding-box,
+    linear-gradient(120deg, #fb7185, #f59e0b 55%, #fb7185) border-box;
+  border: 1.5px solid transparent;
+  box-shadow: 0 0 22px -6px rgba(251, 113, 133, 0.55), 0 0 40px -16px rgba(245, 158, 11, 0.6);
+}
+.opentv-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-style: normal;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+  color: #fecdd3;
+  background: rgba(251, 113, 133, 0.2);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .opentv-list .opentv-hl {
+    animation: opentv-glow 2.8s ease-in-out infinite;
+  }
+  @keyframes opentv-glow {
+    50% {
+      box-shadow: 0 0 30px -4px rgba(251, 113, 133, 0.75), 0 0 52px -14px rgba(245, 158, 11, 0.8);
+    }
+  }
+}

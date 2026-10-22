@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="assets/site.css?v=5ee2015e">
-<link rel="stylesheet" href="assets/v2.css?v=bdbf5d91">
+<link rel="stylesheet" href="assets/v2.css?v=ff93eb68">
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 <script src="assets/site.js?v=768b1377" defer></script>
 </head>
@@ -46,7 +46,7 @@
     <div class="wrap">
       <!-- the release, its own centred row on top; the platforms, their own centred bar below (user, 2026-10-19) -->
       <div class="v2-hero-top reveal">
-        <a class="v2-pill v2-release" href="install.html" title="Version 1.3.2 · Build 2026.10.21.1853 — download"><span class="rb-live" aria-hidden="true"></span><b>Latest</b><span class="vr-ver">v1.3.2</span><span class="vr-sep" aria-hidden="true"></span><span class="vr-build">Build 2026.10.21.1853</span></a>
+        <a class="v2-pill v2-release" href="install.html" title="Version 1.3.3 · Build 2026.10.22.1555 — download"><span class="rb-live" aria-hidden="true"></span><b>Latest</b><span class="vr-ver">v1.3.3</span><span class="vr-sep" aria-hidden="true"></span><span class="vr-build">Build 2026.10.22.1555</span></a>
       </div>
       <div class="v2-hero-copy reveal">
         <h1>Your TV services.<br><span class="grad-text">Faster than light.</span></h1>
@@ -223,61 +223,75 @@
     </div>
   </section>
 
-  <section class="block aussie" id="aussie-live" hidden data-au-only>
+  <!-- Try Open Live TV for everyone, Aussie Live inside it for Australian visitors (user, 2026-10-22: "add the open TV
+       thing on the home, sweet and short — rethink Aussie Live, integrated now"). In the apps: About → How To -->
+  <section class="block aussie opentv" id="open-tv">
     <div class="wrap aussie-band">
       <div class="aussie-copy">
-        <span class="eyebrow">For Australia</span>
-        <h2>Watch Australian Live TV, <span class="grad-text">Free</span></h2>
-        <p class="lead">ABC, SBS, Seven, Nine and 10, live with a TV guide, right next to your other services. Copy one link for your city and add it to Tachyon as an M3U playlist. It takes about a minute.</p>
+        <span class="eyebrow">Free Live TV</span>
+        <h2>Try Open Live TV, <span class="grad-text">Free</span></h2>
+        <p class="lead">News, local networks and free app channels from open playlists, added in one tap. Tachyon checks a list answers before it adds it.</p>
         <ol class="aussie-steps">
-          <li><b>Add Service</b> → <b>M3U Playlist</b> → <b>Playlist Link</b></li>
-          <li>Paste your city’s link into <b>Playlist URL</b></li>
-          <li>Select <b>Add Service</b>. The TV guide loads by itself.</li>
+          <li><b>Settings → About → How To → Try Open Live TV</b></li>
+          <li>Pick a list: your country’s come first</li>
+          <li>Select <b>Add</b>. Channels and TV guide load by themselves.</li>
         </ol>
         <p class="aussie-tip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
-          <span><b>Quicker in the app (1.1.2 and newer):</b> <b>Settings → About → How To → Watch Australian Live TV</b>, then <b>Add Aussie Live</b>. No typing, the easiest way on a TV. <a href="aussie-live.html#the-quick-way-add-it-in-the-app">See How</a></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+          <span><b>From your phone:</b> scan <b>Easy Settings</b> on the TV’s About page, then open the <b>Open TV</b> tab.</span>
         </p>
       </div>
-      <div class="card aussie-card">
-        <h3>Your City</h3>
-        <div class="city-pick" role="group" aria-label="Your City"><button class="city-chip" type="button" data-city="sydney" aria-pressed="true">Sydney</button><button class="city-chip" type="button" data-city="melbourne" aria-pressed="false">Melbourne</button><button class="city-chip" type="button" data-city="brisbane" aria-pressed="false">Brisbane</button><button class="city-chip" type="button" data-city="adelaide" aria-pressed="false">Adelaide</button><button class="city-chip" type="button" data-city="perth" aria-pressed="false">Perth</button><button class="city-chip" type="button" data-city="hobart" aria-pressed="false">Hobart</button><button class="city-chip" type="button" data-city="darwin" aria-pressed="false">Darwin</button><button class="city-chip" type="button" data-city="canberra" aria-pressed="false">Canberra</button></div>
+      <div class="card aussie-card opentv-card">
+        <h3>What’s In It</h3>
+        <ul class="opentv-list">
+          <li><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4l8 4 8-4v18"/><path d="M4 12l8 4 8-4"/></svg></span><span><b>Your Country</b><small>Free-to-air channels, from Free TV and iptv-org</small></span></li>
+          <li><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h14a2 2 0 0 0 2-2V4H8v16a2 2 0 0 1-4 0V9h4"/><path d="M12 8h4M12 12h4M12 16h4"/></svg></span><span><b>World News</b><small>The big news channels, in English</small></span></li>
+          <li><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="m17 2-5 5-5-5"/></svg></span><span><b>Free TV Apps</b><small>Pluto TV, Samsung TV Plus, Plex, Roku and Tubi channels</small></span></li>
+          <li class="opentv-hl" data-au-only hidden><span class="oi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><b>Aussie Live <em class="opentv-badge">For You</em></b><small>ABC, SBS, Seven, Nine and 10 for your city, with a TV guide</small></span></li>
+        </ul>
+        <div class="opentv-au" data-au-only hidden>
+          <h4>Aussie Live: Your City</h4>
+          <div class="city-pick" role="group" aria-label="Your City"><button class="city-chip" type="button" data-city="sydney" aria-pressed="true">Sydney</button><button class="city-chip" type="button" data-city="melbourne" aria-pressed="false">Melbourne</button><button class="city-chip" type="button" data-city="brisbane" aria-pressed="false">Brisbane</button><button class="city-chip" type="button" data-city="adelaide" aria-pressed="false">Adelaide</button><button class="city-chip" type="button" data-city="perth" aria-pressed="false">Perth</button><button class="city-chip" type="button" data-city="hobart" aria-pressed="false">Hobart</button><button class="city-chip" type="button" data-city="darwin" aria-pressed="false">Darwin</button><button class="city-chip" type="button" data-city="canberra" aria-pressed="false">Canberra</button></div>
 <p class="city-auto small muted" hidden>Picked from your time zone. Choose another city if it’s not the nearest.</p>
 <div class="city-links" data-city-panel="sydney">
       <div class="city-link"><span class="city-label">Playlist Link</span><span class="copy-link"><code>https://i.mjh.nz/au/Sydney/raw-tv.m3u8</code><button class="btn btn-sm btn-primary" type="button" data-copy="https://i.mjh.nz/au/Sydney/raw-tv.m3u8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Link</span></button></span></div>
-      <div class="city-link"><span class="city-label">TV Guide Link <i>(Optional, Loads by Itself)</i></span><span class="copy-link"><code>https://i.mjh.nz/au/Sydney/epg.xml.gz</code><button class="btn btn-sm" type="button" data-copy="https://i.mjh.nz/au/Sydney/epg.xml.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></span></div>
+      
     </div>
 <div class="city-links" data-city-panel="melbourne" hidden>
       <div class="city-link"><span class="city-label">Playlist Link</span><span class="copy-link"><code>https://i.mjh.nz/au/Melbourne/raw-tv.m3u8</code><button class="btn btn-sm btn-primary" type="button" data-copy="https://i.mjh.nz/au/Melbourne/raw-tv.m3u8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Link</span></button></span></div>
-      <div class="city-link"><span class="city-label">TV Guide Link <i>(Optional, Loads by Itself)</i></span><span class="copy-link"><code>https://i.mjh.nz/au/Melbourne/epg.xml.gz</code><button class="btn btn-sm" type="button" data-copy="https://i.mjh.nz/au/Melbourne/epg.xml.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></span></div>
+      
     </div>
 <div class="city-links" data-city-panel="brisbane" hidden>
       <div class="city-link"><span class="city-label">Playlist Link</span><span class="copy-link"><code>https://i.mjh.nz/au/Brisbane/raw-tv.m3u8</code><button class="btn btn-sm btn-primary" type="button" data-copy="https://i.mjh.nz/au/Brisbane/raw-tv.m3u8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Link</span></button></span></div>
-      <div class="city-link"><span class="city-label">TV Guide Link <i>(Optional, Loads by Itself)</i></span><span class="copy-link"><code>https://i.mjh.nz/au/Brisbane/epg.xml.gz</code><button class="btn btn-sm" type="button" data-copy="https://i.mjh.nz/au/Brisbane/epg.xml.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></span></div>
+      
     </div>
 <div class="city-links" data-city-panel="adelaide" hidden>
       <div class="city-link"><span class="city-label">Playlist Link</span><span class="copy-link"><code>https://i.mjh.nz/au/Adelaide/raw-tv.m3u8</code><button class="btn btn-sm btn-primary" type="button" data-copy="https://i.mjh.nz/au/Adelaide/raw-tv.m3u8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Link</span></button></span></div>
-      <div class="city-link"><span class="city-label">TV Guide Link <i>(Optional, Loads by Itself)</i></span><span class="copy-link"><code>https://i.mjh.nz/au/Adelaide/epg.xml.gz</code><button class="btn btn-sm" type="button" data-copy="https://i.mjh.nz/au/Adelaide/epg.xml.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></span></div>
+      
     </div>
 <div class="city-links" data-city-panel="perth" hidden>
       <div class="city-link"><span class="city-label">Playlist Link</span><span class="copy-link"><code>https://i.mjh.nz/au/Perth/raw-tv.m3u8</code><button class="btn btn-sm btn-primary" type="button" data-copy="https://i.mjh.nz/au/Perth/raw-tv.m3u8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Link</span></button></span></div>
-      <div class="city-link"><span class="city-label">TV Guide Link <i>(Optional, Loads by Itself)</i></span><span class="copy-link"><code>https://i.mjh.nz/au/Perth/epg.xml.gz</code><button class="btn btn-sm" type="button" data-copy="https://i.mjh.nz/au/Perth/epg.xml.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></span></div>
+      
     </div>
 <div class="city-links" data-city-panel="hobart" hidden>
       <div class="city-link"><span class="city-label">Playlist Link</span><span class="copy-link"><code>https://i.mjh.nz/au/Hobart/raw-tv.m3u8</code><button class="btn btn-sm btn-primary" type="button" data-copy="https://i.mjh.nz/au/Hobart/raw-tv.m3u8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Link</span></button></span></div>
-      <div class="city-link"><span class="city-label">TV Guide Link <i>(Optional, Loads by Itself)</i></span><span class="copy-link"><code>https://i.mjh.nz/au/Hobart/epg.xml.gz</code><button class="btn btn-sm" type="button" data-copy="https://i.mjh.nz/au/Hobart/epg.xml.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></span></div>
+      
     </div>
 <div class="city-links" data-city-panel="darwin" hidden>
       <div class="city-link"><span class="city-label">Playlist Link</span><span class="copy-link"><code>https://i.mjh.nz/au/Darwin/raw-tv.m3u8</code><button class="btn btn-sm btn-primary" type="button" data-copy="https://i.mjh.nz/au/Darwin/raw-tv.m3u8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Link</span></button></span></div>
-      <div class="city-link"><span class="city-label">TV Guide Link <i>(Optional, Loads by Itself)</i></span><span class="copy-link"><code>https://i.mjh.nz/au/Darwin/epg.xml.gz</code><button class="btn btn-sm" type="button" data-copy="https://i.mjh.nz/au/Darwin/epg.xml.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></span></div>
+      
     </div>
 <div class="city-links" data-city-panel="canberra" hidden>
       <div class="city-link"><span class="city-label">Playlist Link</span><span class="copy-link"><code>https://i.mjh.nz/au/Canberra/raw-tv.m3u8</code><button class="btn btn-sm btn-primary" type="button" data-copy="https://i.mjh.nz/au/Canberra/raw-tv.m3u8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy Link</span></button></span></div>
-      <div class="city-link"><span class="city-label">TV Guide Link <i>(Optional, Loads by Itself)</i></span><span class="copy-link"><code>https://i.mjh.nz/au/Canberra/epg.xml.gz</code><button class="btn btn-sm" type="button" data-copy="https://i.mjh.nz/au/Canberra/epg.xml.gz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></span></div>
+      
     </div>
-        <p class="small muted aussie-note">Needs an Australian internet connection. The links come from a free community playlist (i.mjh.nz) that isn’t part of Tachyon.</p>
+        </div>
+        <p class="small muted aussie-note">Tachyon provides no channels. The lists come from independent projects, can change or stop at any time, and many channels play only in their own country.</p>
       </div>
-      <a class="btn-flash aussie-go" href="aussie-live.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5zM4 19.5A2.5 2.5 0 0 1 6.5 17H18M9 7h6M9 11h4"/></svg><span>Step-By-Step Guide<small>From your city’s link to the TV guide, one step at a time</small></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="opentv-go">
+        <a class="btn-flash aussie-go" href="open-live.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="m17 2-5 5-5-5"/></svg><span>Every List<small>What each one holds, where it plays, its link</small></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn-flash aussie-go" href="aussie-live.html" data-au-only hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5zM4 19.5A2.5 2.5 0 0 1 6.5 17H18M9 7h6M9 11h4"/></svg><span>Aussie Live, Step by Step<small>Your city’s links, by hand on any device</small></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
     </div>
   </section>
 
@@ -353,6 +367,7 @@
         <ul>
           <li><a href="docs.html">Manual</a></li>
           <li><a href="install.html#troubleshooting">Troubleshooting</a></li>
+          <li><a href="open-live.html">Open Live TV</a></li>
           <li><a href="aussie-live.html">Australian Live TV</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
         </ul>
@@ -370,7 +385,7 @@
     <div class="footer-trust"><div class="badges"><span class="freeware-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>Freeware Forever</span><span class="trust-chip"><svg class="t-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.26 9.26 3 11v3l14.14 3.14"/><path d="M21 15.34V6l-7.31 2.03"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/><path d="m2 2 20 20"/></svg>No UI Ads</span><span class="trust-chip"><svg class="t-sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.73 5.08A10.74 10.74 0 0 1 21.94 11.65a1 1 0 0 1 0 .7 10.75 10.75 0 0 1-1.44 2.49"/><path d="M14.08 14.16a3 3 0 0 1-4.24-4.24"/><path d="M17.48 17.5a10.75 10.75 0 0 1-15.42-5.15 1 1 0 0 1 0-.7 10.75 10.75 0 0 1 4.45-5.14"/><path d="m2 2 20 20"/></svg>No Ad Tracking</span><span class="trust-chip"><svg class="t-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 8 5 5M22 8l-5 5"/></svg>No Account Needed</span><span class="trust-chip"><svg class="t-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><path d="M6 16h.01M10 16h.01"/></svg>Your Data Stays Here</span></div></div>
     <div class="legal">
       <p><b>Tachyon is a media player only; it provides no content.</b> It doesn’t provide, host, sell or recommend any channels, movies or series, and it isn’t affiliated with any IPTV provider. You add the services you’re entitled to use.</p>
-      <p>Latest release v1.3.2 · Build 2026.10.21.1853 · © 2026 GDroid, Sydney, Australia. Google Play, Android and Google TV are trademarks of Google LLC. Fire TV is a trademark of Amazon.com, Inc. or its affiliates.</p>
+      <p>Latest release v1.3.3 · Build 2026.10.22.1555 · © 2026 GDroid, Sydney, Australia. Google Play, Android and Google TV are trademarks of Google LLC. Fire TV is a trademark of Amazon.com, Inc. or its affiliates.</p>
     </div>
   </div>
 </footer>
