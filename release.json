@@ -1,16 +1,17 @@
 {
   "app": "tachyon",
-  "version": "1.3.3",
-  "build": "2026.10.22.1555",
-  "versionCode": 3580795,
+  "version": "1.3.4",
+  "build": "2026.10.23.1210",
+  "versionCode": 3582010,
   "whatsNew": [
-    "A fresh look: new icon, cards with details inside, softer names and titles",
-    "Popular Channels on Home for every service",
-    "Phones: video pops out into a small window when you leave the app",
-    "Volume above 100 % is now a setting (off by default)",
-    "Live TV can hide channels Tachyon can't play (YouTube links)",
-    "Terminate closes Tachyon completely",
-    "The computer app uses far less memory"
+    "Casting to a Chromecast is much more reliable, channels included",
+    "Smoother live TV: fewer reconnects and no false \"Slow Provider\"",
+    "A phone call pauses playback and it plays on after",
+    "The pop-out window works from Home and for movies too",
+    "Removing from Continue Watching is instant",
+    "Easier side menu with Favorites up top, and a Manage Services tile",
+    "Bigger, easier-to-read text on phones and TVs",
+    "Update Now on the TV works again"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
@@ -61,6 +62,14 @@
     "Tachyon-latest-linux-x86_64.AppImage": {
       "dropbox": "https://www.dropbox.com/scl/fi/nfby1y5lu5p7qoy3hmmnu/Tachyon-latest-linux-x86_64.AppImage?rlkey=xowd2knb4f0tx2ktl6y9mfcl6&dl=1",
       "drive": "https://drive.usercontent.google.com/download?id=1gE5_iZ6KzYbDJUAEtpjFa8BdTtnhq3fP&export=download&confirm=t"
+    },
+    "Tachyon-latest-release-notes.md": {
+      "dropbox": "https://www.dropbox.com/scl/fi/7wrbxylhtlui6ecl3bqqe/Tachyon-latest-release-notes.md?rlkey=853xbabzpz7x6q15296grzv3g&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1EawP9bt6cDf8DIfEvKTzfb6ijqsfZ7PA&export=download&confirm=t"
+    },
+    "Tachyon-latest-release-notes.xml": {
+      "dropbox": "https://www.dropbox.com/scl/fi/aejt39surf7qjrv6tp8yt/Tachyon-latest-release-notes.xml?rlkey=h8gzaqsa1s5nqbyhpfhcjqbno&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1UuncXE5cOvQ90BAbuJWJXYSvnGk0qmBy&export=download&confirm=t"
     },
     "TachyonLens-latest-macos-arm64.dmg": {
       "dropbox": "https://www.dropbox.com/scl/fi/t071tbljh3v9edeglc53d/TachyonLens-latest-macos-arm64.dmg?rlkey=bq7n1k4f4q3exwkyh9shc4n2y&dl=1",
