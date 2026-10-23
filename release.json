@@ -1,17 +1,15 @@
 {
   "app": "tachyon",
-  "version": "1.3.4",
-  "build": "2026.10.23.1210",
-  "versionCode": 3582010,
+  "version": "1.3.5",
+  "build": "2026.10.23.1817",
+  "versionCode": 3582377,
   "whatsNew": [
-    "Casting to a Chromecast is much more reliable, channels included",
-    "Smoother live TV: fewer reconnects and no false \"Slow Provider\"",
-    "A phone call pauses playback and it plays on after",
-    "The pop-out window works from Home and for movies too",
-    "Removing from Continue Watching is instant",
-    "Easier side menu with Favorites up top, and a Manage Services tile",
-    "Bigger, easier-to-read text on phones and TVs",
-    "Update Now on the TV works again"
+    "Service Sync: set your services up once and use them on your TV, phone and computer, encrypted",
+    "Smoother live channels: less \"Low Buffer\", late pieces asked again instead of reconnecting",
+    "Casting says why a channel can't go to the TV",
+    "Clearer account check in Owner Mode; tap the account badge to see why it was chosen",
+    "The new start-up screen on Android too",
+    "Easy Settings pages have their own links"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
