@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>The Tachyon Blog</title>
+  <subtitle>Tips, guides and know-how for Tachyon, the fast IPTV player for TV, phone and computer.</subtitle>
+  <link href="https://gmpatel.github.io/tachyon/blog/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://gmpatel.github.io/tachyon/blog/" rel="alternate" type="text/html"/>
+  <id>https://gmpatel.github.io/tachyon/blog/</id>
+  <updated>2026-10-24T00:00:00Z</updated>
+  <author><name>GDroid</name><uri>https://gmpatel.github.io/tachyon/</uri></author>
+  <icon>https://gmpatel.github.io/tachyon/img/icon-512.png</icon>
+  <entry>
+    <title>Getting Started With Tachyon: Your First Ten Minutes</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/getting-started.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/getting-started.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Getting Started"/>
+    <summary>New to Tachyon? Install it, explore the built-in demo, add your own service and find your way around Home, Live TV, the guide and the player.</summary>
+  </entry>
+  <entry>
+    <title>How to Add Your Xtream Codes, M3U or Emby Service</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/add-a-service.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/add-a-service.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Getting Started"/>
+    <summary>Step by step: add an Xtream Codes login, an M3U playlist link or an Emby server to Tachyon, test it, and use the advanced options when you need them.</summary>
+  </entry>
+  <entry>
+    <title>Try Every Feature With the Built-In Demo</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/demo-service.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/demo-service.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Getting Started"/>
+    <summary>GDroid Fake is Tachyon's offline demo service: live channels with a guide, movies, series and music to try every screen before you add your own service.</summary>
+  </entry>
+  <entry>
+    <title>Install Tachyon on Fire TV and Google TV With Downloader</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/install-with-downloader.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/install-with-downloader.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Your Devices"/>
+    <summary>Install Tachyon on a Fire TV Stick, Google TV, Android TV or TV box in a few minutes with the free Downloader app and one of two short codes.</summary>
+  </entry>
+  <entry>
+    <title>All Services: Watch Several IPTV Services as One Library</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/all-services-landing.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/all-services-landing.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Getting Started"/>
+    <summary>Use several Xtream Codes, M3U and Emby services in Tachyon: switch on the Landing screen, or merge them into one Home, one channel list and one guide.</summary>
+  </entry>
+  <entry>
+    <title>Keeping Tachyon Up to Date</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/updating-tachyon.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/updating-tachyon.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Getting Started"/>
+    <summary>How Tachyon tells you about a new version, how Update Now installs it on TVs, phones and computers, and how Google Play copies update.</summary>
+  </entry>
+  <entry>
+    <title>A Quick Tour of Tachyon's Settings</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/settings-tour.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/settings-tour.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Settings"/>
+    <summary>What every Settings page in Tachyon does — Services, Playback, Subtitles, Appearance, Parental and Data — and the settings worth changing.</summary>
+  </entry>
+  <entry>
+    <title>Service Sync: Set Up Your Services Once, Use Them Everywhere</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/service-sync.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/service-sync.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Settings"/>
+    <summary>Service Sync shares one set of IPTV services across your TV, phone and computer. Change a login on your main device and every other device follows.</summary>
+  </entry>
+  <entry>
+    <title>Easy Settings: Change Your TV's Settings From Your Phone</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/easy-settings.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/easy-settings.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Settings"/>
+    <summary>Scan the QR code on your TV and every Tachyon setting opens on your phone. Add services with a real keyboard, back up the TV and save straight to it.</summary>
+  </entry>
+  <entry>
+    <title>Back Up and Move Your Settings to a New Device</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/backup-transfer.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/backup-transfer.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Settings"/>
+    <summary>Save your services, settings, favorites and history to one encrypted file, and load it on a new phone, TV or computer — or after a reinstall.</summary>
+  </entry>
+  <entry>
+    <title>App Lock and the Parental PIN</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/app-lock-parental-pin.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/app-lock-parental-pin.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Settings"/>
+    <summary>Lock Tachyon with a 4-digit PIN, open it with your fingerprint, Windows Hello or Touch ID, and keep adult categories hidden behind the same PIN.</summary>
+  </entry>
+  <entry>
+    <title>Watching on TV: Every Remote Key in Tachyon's Player</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/tv-remote-player.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/tv-remote-player.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="The Player"/>
+    <summary>How to use Tachyon's player with a Google TV, Android TV or Fire TV remote — volume, the channel list, skipping, pausing and Player Options, key by key.</summary>
+  </entry>
+  <entry>
+    <title>Watching on a Phone: Swipes, Pop-Out Window and More</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/phone-player.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/phone-player.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="The Player"/>
+    <summary>Use Tachyon's player on an Android phone or tablet: swipe for volume, brightness, skipping and channels, keep watching in a pop-out window, and cast to a TV.</summary>
+  </entry>
+  <entry>
+    <title>Tachyon on Your Computer: The Desktop App for Windows, macOS and Linux</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/desktop-app.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/desktop-app.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Your Devices"/>
+    <summary>Everything about Tachyon's desktop app — installing it, the window buttons, Big-Screen Mode, the mini player, external players, Lens and staying up to date.</summary>
+  </entry>
+  <entry>
+    <title>Every Keyboard Shortcut in Tachyon's Desktop App</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/desktop-keyboard-shortcuts.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/desktop-keyboard-shortcuts.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="The Player"/>
+    <summary>The complete list of keyboard shortcuts in Tachyon for Windows, macOS and Linux — browsing, zapping, volume, skipping, subtitles, the mini player and more.</summary>
+  </entry>
+  <entry>
+    <title>Tachyon Lens: Watch HDMI and USB Video on Your Computer</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/tachyon-lens.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/tachyon-lens.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Your Devices"/>
+    <summary>Tachyon Lens shows an HDMI capture card or a camera in a clean window on Windows, macOS and Linux — with sound where you want it, a TV frame and pin on top.</summary>
+  </entry>
+  <entry>
+    <title>Player Options: Quality, Picture Size, Sleep Timer and More</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/player-options.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/player-options.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="The Player"/>
+    <summary>A guide to Tachyon's Player Options on TV, phone and computer: Start Over, quality, audio, subtitles, speed, Picture Size, Sleep Timer and more.</summary>
+  </entry>
+  <entry>
+    <title>Subtitles in Tachyon: Online Search, Your Own Files and the Look</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/subtitles.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/subtitles.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="The Player"/>
+    <summary>Turn on online subtitles from OpenSubtitles, SubDL and Podnapisi, pick subtitles before you press Play, and make them easy to read with fonts, sizes and colours.</summary>
+  </entry>
+  <entry>
+    <title>Audio Languages: Hear Every Title in Your Language</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/audio-languages.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/audio-languages.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="The Player"/>
+    <summary>Set up to three audio languages in Tachyon so movies and channels with several soundtracks play in your language first, and switch tracks any time.</summary>
+  </entry>
+  <entry>
+    <title>Sound Stabilizer and Volume Up to 250 %</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/sound-stabilizer-volume.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/sound-stabilizer-volume.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="The Player"/>
+    <summary>No more reaching for the remote when an ad blares: Tachyon's Sound Stabilizer evens out every channel, and its own volume goes up to 250 % for quiet streams.</summary>
+  </entry>
+  <entry>
+    <title>Cast to Your TV With Chromecast</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/chromecast.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/chromecast.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Your Devices"/>
+    <summary>Send a channel, movie or episode from Tachyon on your phone or computer to a Chromecast or Google TV — how to start, what can be cast, and fixes when it can't.</summary>
+  </entry>
+  <entry>
+    <title>Using the TV Guide: Filters, Programme Details and Catch-Up</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/tv-guide.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/tv-guide.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Watching"/>
+    <summary>Find your way around Tachyon's TV Guide — the timeline, filters for movies, sports, kids and news, programme details, Start Over, and fixing guide times.</summary>
+  </entry>
+  <entry>
+    <title>Catch-Up and Start Over: Watch What Already Aired</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/catch-up-start-over.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/catch-up-start-over.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Watching"/>
+    <summary>Missed the start of a show? Use Start Over and catch-up in Tachyon to watch programmes from the beginning or days later, where your provider keeps an archive.</summary>
+  </entry>
+  <entry>
+    <title>Favorites, Continue Watching and Next Up in Tachyon</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/favorites-continue-watching-next-up.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/favorites-continue-watching-next-up.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Watching"/>
+    <summary>Keep your channels and titles one press away, pick up movies where you stopped, and let Next Up line up the next episode of every show you watch.</summary>
+  </entry>
+  <entry>
+    <title>Make Home Yours: Home Rows and Popular Channels</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/home-rows-popular-channels.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/home-rows-popular-channels.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Watching"/>
+    <summary>Choose which rows Tachyon's Home shows and in what order — Continue Watching, Next Up, On Now, Favorites, new movies and Popular Channels.</summary>
+  </entry>
+  <entry>
+    <title>Finding Anything Fast: Search in Tachyon</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/search.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/search.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Watching"/>
+    <summary>Search channels, movies and series across your services in Tachyon, narrow a big list with Search in This List, and use your recent searches.</summary>
+  </entry>
+  <entry>
+    <title>Big Libraries Made Easy: Updates, Sorting, Pages and Versions</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/big-libraries.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/big-libraries.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Watching"/>
+    <summary>How Tachyon handles libraries of 100,000 titles — the weekly library update, Refresh Library, sorting, pages of 100, categories and grouped versions of a title.</summary>
+  </entry>
+  <entry>
+    <title>Reading the Stream Details: Tags and the Stream Info Line</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/stream-details.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/stream-details.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Help"/>
+    <summary>What Tachyon's stream tags and the Stream Info line (Needs, Provider, Arriving, Buffered, Line) tell you, and where a slowdown comes from.</summary>
+  </entry>
+  <entry>
+    <title>Buffering and Playback Problems: A Troubleshooting Guide</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/buffering-troubleshooting.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/buffering-troubleshooting.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Help"/>
+    <summary>Fix buffering, freezing, no sound, black pictures and connection-limit messages in Tachyon — what each message means and what to try, step by step.</summary>
+  </entry>
+  <entry>
+    <title>One Connection Per Service: Why Tachyon Never Opens a Second Stream</title>
+    <link href="https://gmpatel.github.io/tachyon/blog/one-connection.html" rel="alternate" type="text/html"/>
+    <id>https://gmpatel.github.io/tachyon/blog/one-connection.html</id>
+    <published>2026-10-24T00:00:00Z</published>
+    <updated>2026-10-24T00:00:00Z</updated>
+    <category term="Help"/>
+    <summary>Tachyon holds at most one stream connection per IPTV account, so single-connection and shared plans keep working. Here's how it works and what it means for you.</summary>
+  </entry>
+</feed>

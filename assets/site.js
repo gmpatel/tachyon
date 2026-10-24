@@ -624,4 +624,25 @@
       articles.forEach((a) => io.observe(a))
     }
   }
+
+  // ---------- Blog: the category chips show one category's cards (all show without the script); blog/#watching
+  // (an article's breadcrumb) opens that category, and the chosen one is kept in the address
+  const blogChips = $$('[data-blog-cat]')
+  if (blogChips.length) {
+    const cards = $$('.blog-list .post-card')
+    const pick = (cat, keep) => {
+      if (cat && !blogChips.some((c) => c.getAttribute('data-blog-cat') === cat)) cat = ''
+      blogChips.forEach((c) => c.setAttribute('aria-pressed', String(c.getAttribute('data-blog-cat') === cat)))
+      cards.forEach((c) => (c.hidden = !!cat && c.getAttribute('data-cat') !== cat))
+      if (keep) history.replaceState(null, '', cat ? `#${cat}` : location.pathname + location.search)
+    }
+    blogChips.forEach((c) => c.addEventListener('click', () => pick(c.getAttribute('data-blog-cat'), true)))
+    const fromHash = () => pick(decodeURIComponent(location.hash.slice(1)), false)
+    if (location.hash) {
+      fromHash()
+      // the chip's id is the category: keep the page at the top instead of scrolling to the chip
+      window.scrollTo(0, 0)
+    }
+    window.addEventListener('hashchange', fromHash)
+  }
 })()

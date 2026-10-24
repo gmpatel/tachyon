@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buffering and Playback Problems: A Troubleshooting Guide · Tachyon</title>
+<meta name="description" content="Fix buffering, freezing, no sound, black pictures and connection-limit messages in Tachyon — what each message means and what to try, step by step.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://gmpatel.github.io/tachyon/blog/buffering-troubleshooting.html">
+<meta name="theme-color" content="#06070b">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tachyon">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="Buffering and Playback Problems: A Troubleshooting Guide · Tachyon">
+<meta property="og:description" content="Fix buffering, freezing, no sound, black pictures and connection-limit messages in Tachyon — what each message means and what to try, step by step.">
+<meta property="og:url" content="https://gmpatel.github.io/tachyon/blog/buffering-troubleshooting.html">
+<meta property="og:image" content="https://gmpatel.github.io/tachyon/img/tv/08-live-player.png">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="A live channel in Tachyon's player with the channel list over the picture">
+<meta property="article:published_time" content="2026-10-24">
+<meta property="article:modified_time" content="2026-10-24">
+<meta property="article:section" content="Help">
+<meta property="article:tag" content="Buffering">
+<meta property="article:tag" content="Troubleshooting">
+<meta property="article:tag" content="No Sound">
+<meta property="article:tag" content="Black Screen">
+<meta property="article:tag" content="Connection Limit">
+<meta property="article:tag" content="Freezing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Buffering and Playback Problems: A Troubleshooting Guide · Tachyon">
+<meta name="twitter:description" content="Fix buffering, freezing, no sound, black pictures and connection-limit messages in Tachyon — what each message means and what to try, step by step.">
+<meta name="twitter:image" content="https://gmpatel.github.io/tachyon/img/tv/08-live-player.png">
+<meta name="twitter:image:alt" content="A live channel in Tachyon's player with the channel list over the picture">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../img/icon-512.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Tachyon Blog" href="../blog/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=5ee2015e">
+<link rel="stylesheet" href="../assets/v2.css?v=ff93eb68">
+<link rel="stylesheet" href="../assets/blog.css?v=ebaf7f9c">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<script src="../assets/site.js?v=ce329bc0" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://gmpatel.github.io/tachyon/blog/buffering-troubleshooting.html#article","headline":"Buffering and Playback Problems: A Troubleshooting Guide","description":"Fix buffering, freezing, no sound, black pictures and connection-limit messages in Tachyon — what each message means and what to try, step by step.","image":["https://gmpatel.github.io/tachyon/img/tv/08-live-player.png"],"datePublished":"2026-10-24","dateModified":"2026-10-24","author":{"@type":"Organization","@id":"https://gmpatel.github.io/tachyon/#org","name":"GDroid","url":"https://gmpatel.github.io/tachyon/","logo":{"@type":"ImageObject","url":"https://gmpatel.github.io/tachyon/img/icon-512.png","width":512,"height":512}},"publisher":{"@type":"Organization","@id":"https://gmpatel.github.io/tachyon/#org","name":"GDroid","url":"https://gmpatel.github.io/tachyon/","logo":{"@type":"ImageObject","url":"https://gmpatel.github.io/tachyon/img/icon-512.png","width":512,"height":512}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://gmpatel.github.io/tachyon/blog/buffering-troubleshooting.html"},"articleSection":"Help","keywords":"Buffering, Troubleshooting, No Sound, Black Screen, Connection Limit, Freezing","wordCount":776,"inLanguage":"en","isPartOf":{"@id":"https://gmpatel.github.io/tachyon/blog/#blog"},"about":{"@type":"SoftwareApplication","name":"Tachyon","applicationCategory":"MultimediaApplication","url":"https://gmpatel.github.io/tachyon/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gmpatel.github.io/tachyon/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://gmpatel.github.io/tachyon/blog/"},{"@type":"ListItem","position":3,"name":"Buffering and Playback Problems: A Troubleshooting Guide","item":"https://gmpatel.github.io/tachyon/blog/buffering-troubleshooting.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does a channel take a few seconds to open on a one-connection account?","acceptedAnswer":{"@type":"Answer","text":"Many panels keep counting the last stream for a few seconds after it closed. Tachyon quietly asks again for about 8 seconds before it shows a connection-limit message. See One Connection Per Service."}},{"@type":"Question","name":"Does a faster internet plan fix buffering?","acceptedAnswer":{"@type":"Answer","text":"Only when Line is the slow part. If Provider is below Needs while your line is fast, the provider's server is the bottleneck."}}]}]}</script>
+</head>
+<body class="v2">
+<a class="skip" href="#main">Skip to Content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Tachyon home"><img src="../img/icon-512.png" alt="" width="34" height="34">TACHYON</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a><a href="../install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download</a><a href="../docs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Manual</a><a href="../blog/index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg>Blog</a><a href="../privacy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Privacy</a><a class="btn btn-sm btn-primary" href="https://play.google.com/store/apps/details?id=app.tachyon.android" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.7 8.7 5 2.3c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg>Google Play</a></nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+<header class="post-hero">
+  <div class="v2-glow" aria-hidden="true"></div>
+  <div class="wrap post-col">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../blog/index.html#help">Help</a></li></ol></nav>
+    <h1>Buffering and Playback Problems: A Troubleshooting Guide</h1>
+    <p class="post-lead">Fix buffering, freezing, no sound, black pictures and connection-limit messages in Tachyon — what each message means and what to try, step by step.</p>
+    <p class="post-meta"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</span><time datetime="2026-10-24">24 October 2026</time><span>4 Min Read</span><span class="post-plats"><span class="pill p-plat pf-tv">TV</span><span class="pill p-plat pf-phones">Phone</span><span class="pill p-plat pf-desktop">Desktop</span></span></p>
+  </div>
+</header>
+<div class="wrap post-col">
+  <figure class="post-cover"><img src="../img/tv/08-live-player.webp" alt="A live channel in Tachyon's player with the channel list over the picture" width="1600" height="900" fetchpriority="high" decoding="async"></figure>
+  <div class="post-body">
+<p>Tachyon fixes most stream problems by itself while you watch: stalls, frozen pictures, broken clocks and dropped connections are noticed and handled, and a ring in the middle of the picture is all you usually see. When something still isn't right, this guide helps you find where the problem is — and what to do.</p>
+<h2 id="first-where-is-the-problem">First: Where Is the Problem?</h2>
+<p>Show the player's controls and look at the <strong>Stream Info line</strong> (Needs · Provider · Arriving · Buffered · Line). It tells you whether the trouble is your internet, the provider or the device. See <a href="../blog/stream-details.html">Reading the Stream Details</a>.</p>
+<h2 id="live-channels-buffer">Live Channels Buffer</h2>
+<ol><li><strong>Check the badge</strong> at the start of the bottom bar. A red <strong>Slow Provider</strong> or <strong>Low Buffer</strong> points at the provider; <strong>Reconnecting</strong> at the connection.</li><li><strong>Try another version</strong> of the channel (HD, FHD, SD). Turn on <strong>Settings → Playback → Fall Back to Other Versions of a Channel</strong> to do it by itself when a channel keeps failing.</li><li><strong>Give it more cushion.</strong> <span class="pill p-plat pf-android">Android</span> <strong>Settings → Playback → Video Player → Buffer</strong>: Large or Very Large rides out shaky connections (channels take a moment longer to start). <span class="pill p-plat pf-desktop">Desktop</span> <strong>Buffering Profile → Stable</strong> or a longer <strong>Live Buffer</strong>.</li><li><strong>Your own network:</strong> move closer to the Wi-Fi router, use a cable, and pause other downloads or streams at home.</li></ol>
+<aside class="post-note pn-info" role="note"><b class="t">Good to Know</b><p>Some providers send a channel slower than real time. No player can play that without pauses; Tachyon makes them fewer and longer instead of stopping every few seconds, and says so.</p></aside>
+<h2 id="movies-stop-to-buffer">Movies Stop to Buffer</h2>
+<ul><li>When a provider sends a title slower than it plays, the player says by how much and offers <strong>Buffer Ahead</strong>: it fills enough, once, to watch to the end without stops, with a countdown.</li><li><strong>Settings → Playback → Deeper Buffer for Movies &amp; Series</strong> makes each refill longer: one longer pause instead of many short ones.</li><li><strong>Movie Index Cache</strong> (All Titles) makes a title you open again start without the index wait.</li></ul>
+<h2 id="no-sound-on-some-channels">No Sound on Some Channels</h2>
+<ul><li><span class="pill p-plat pf-android">Android</span> Set <strong>Settings → Playback → Video Player → Surround Passthrough</strong> to <strong>Off</strong> if your TV or receiver doesn't take Dolby or DTS.</li><li>Try another track with the <strong>Audio</strong> button: some channels' first track is empty (Tachyon usually switches by itself).</li><li><span class="pill p-plat pf-desktop">Desktop</span> Dolby, DTS and MP2 sound is converted automatically; the first start can take a moment longer.</li><li>Check the volume isn't muted — the Volume button in the player mutes with one press.</li></ul>
+<h2 id="black-or-frozen-picture-with-sound">Black or Frozen Picture With Sound</h2>
+<ul><li><span class="pill p-plat pf-android">Android</span> <strong>Player Options → Decoder → Prefer Software</strong> for that channel. Tachyon also tries this by itself once.</li><li><strong>Player Options → Refresh Stream</strong> (on a computer: <kbd>R</kbd>).</li><li>Try another version of the channel.</li></ul>
+<h2 id="messages-and-what-they-mean">Messages and What They Mean</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Message</th><th scope="col">What It Means</th><th scope="col">What to Do</th></tr></thead>
+<tbody>
+<tr><td>Waiting for the provider to start this channel…</td><td>The provider is slow to start this channel.</td><td>Wait — up to half a minute the first time.</td></tr>
+<tr><td><span class="pill p-plat pf-desktop">Desktop</span> The provider refused the stream… connection limit may be reached · <span class="pill p-plat pf-android">Android</span> The provider's connection limit is reached — trying again shortly…</td><td>The panel turned the stream down.</td><td>Check whether the account is playing on another device; check the subscription.</td></tr>
+<tr><td><span class="pill p-plat pf-desktop">Desktop</span> Too many connections</td><td>The plan's connections are all in use.</td><td>Stop playback elsewhere; Tachyon tries again gently.</td></tr>
+<tr><td>This channel isn't sending anything right now</td><td>No data, while the provider answers.</td><td>The channel is probably off air. Try later or another version.</td></tr>
+<tr><td><span class="pill p-plat pf-desktop">Desktop</span> This channel is offline at the provider right now</td><td>The provider doesn't have this stream at the moment.</td><td>Try later or another version.</td></tr>
+<tr><td>The provider's picture is breaking up — keeping the sound</td><td>The provider is dropping pictures.</td><td>Nothing in the app can fix the source; it usually recovers.</td></tr>
+<tr><td><span class="pill p-plat pf-android">Android</span> This stream can't be decoded on this device</td><td>The device's decoder failed on it.</td><td>Decoder → Prefer Software, or another version.</td></tr>
+<tr><td>Sign-in failed — check the username and password</td><td>The server rejected the login.</td><td>Check the details and the subscription.</td></tr>
+<tr><td>Can't reach the server</td><td>No answer from that address.</td><td>Check the address, the port and your internet.</td></tr>
+</tbody></table></div>
+<h2 id="subscription-expired-when-you-play">&quot;Subscription Expired&quot; When You Play</h2>
+<p>Tachyon knows the subscription has ended, so it asks before playing: <strong>Try Anyway</strong> checks the account again (if it's renewed, it plays), <strong>Edit Service</strong> opens its settings, and <strong>Cancel</strong> closes the question.</p>
+<h2 id="still-stuck-report-it">Still Stuck? Report It</h2>
+<p>When you report a problem, give the version and build shown in <strong>Settings → About</strong>, the kind of service, and what you saw. <span class="pill p-plat pf-desktop">Desktop</span> <strong>Settings → About → System &amp; Diagnostics → Export Diagnostics</strong> makes one file to send along: passwords, tokens and e-mail addresses are masked, and titles aren't recorded.</p>
+<h2 id="questions-and-answers">Questions and Answers</h2>
+<h3 id="why-does-a-channel-take-a-few-seconds-to-open-on-a-one-connection-account">Why does a channel take a few seconds to open on a one-connection account?</h3>
+<p>Many panels keep counting the last stream for a few seconds after it closed. Tachyon quietly asks again for about 8 seconds before it shows a connection-limit message. See <a href="../blog/one-connection.html">One Connection Per Service</a>.</p>
+<h3 id="does-a-faster-internet-plan-fix-buffering">Does a faster internet plan fix buffering?</h3>
+<p>Only when <strong>Line</strong> is the slow part. If <strong>Provider</strong> is below <strong>Needs</strong> while your line is fast, the provider's server is the bottleneck.</p>
+  </div>
+  <ul class="post-tags" aria-label="Topics"><li>Buffering</li><li>Troubleshooting</li><li>No Sound</li><li>Black Screen</li><li>Connection Limit</li><li>Freezing</li></ul>
+  <aside class="post-cta" aria-label="Get Tachyon">
+    <img src="../img/icon-512.png" alt="" width="48" height="48">
+    <div><b>Tachyon is free on every screen.</b><span>TV, phone and computer — No UI Ads, no account needed. Tachyon is a player only: it comes with no channels or content.</span></div>
+    <a class="btn btn-sm btn-primary" href="../install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Get Tachyon</a>
+  </aside>
+</div>
+</article>
+<section class="v2-block v2-tight post-related" aria-labelledby="related-head">
+  <div class="wrap">
+    <h2 id="related-head" class="related-head">Keep Reading</h2>
+    <div class="post-grid post-grid-3">
+<article class="post-card" data-cat="help">
+<a href="../blog/stream-details.html">
+<span class="pc-img"><img src="../img/hero/04-stream-details.webp" alt="Tachyon's player with the Stream Info line and the stream tags over a live channel" width="1600" height="900" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</span><h2 class="pc-title">Reading the Stream Details: Tags and the Stream Info Line</h2><span class="pc-desc">What Tachyon's stream tags and the Stream Info line (Needs, Provider, Arriving, Buffered, Line) tell you, and where a slowdown comes from.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 4 Min Read</span></span>
+</a>
+</article>
+<article class="post-card" data-cat="help">
+<a href="../blog/one-connection.html">
+<span class="pc-img"><img src="../img/phone/player-live.webp" alt="Tachyon's phone player with the live stream details" width="1600" height="720" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</span><h2 class="pc-title">One Connection Per Service: Why Tachyon Never Opens a Second Stream</h2><span class="pc-desc">Tachyon holds at most one stream connection per IPTV account, so single-connection and shared plans keep working. Here's how it works and what it means for you.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 2 Min Read</span></span>
+</a>
+</article>
+<article class="post-card" data-cat="player">
+<a href="../blog/player-options.html">
+<span class="pc-img"><img src="../img/hero/02-player-movies.webp" alt="Tachyon's player on a movie: the controls, the skip rings, audio tracks and the speed page" width="1600" height="900" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>The Player</span><h2 class="pc-title">Player Options: Quality, Picture Size, Sleep Timer and More</h2><span class="pc-desc">A guide to Tachyon's Player Options on TV, phone and computer: Start Over, quality, audio, subtitles, speed, Picture Size, Sleep Timer and more.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 3 Min Read</span></span>
+</a>
+</article>
+    </div>
+    <p class="related-all"><a class="btn btn-ghost" href="../blog/index.html">Every Article</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../img/logo-horizontal.png" alt="Tachyon, Faster-Than-Light TV" width="240" height="65">
+        <p>A fast, private media player for the Xtream Codes, M3U and Emby services you already have — on TV, phone and computer.</p>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Get Tachyon</h4>
+        <ul>
+          <li><a href="../install.html#android-tv">Google TV · Android TV</a></li>
+          <li><a href="../install.html#fire-tv">Fire TV</a></li>
+          <li><a href="../install.html#android">Android Phone</a></li>
+          <li><a href="../install.html#windows">Windows</a> · <a href="../install.html#mac">macOS</a> · <a href="../install.html#linux">Linux</a></li>
+          <li><a href="../install.html#update">Updating</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</h4>
+        <ul>
+          <li><a href="../docs.html">Manual</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../install.html#troubleshooting">Troubleshooting</a></li>
+          <li><a href="../open-live.html">Open Live TV</a></li>
+          <li><a href="../aussie-live.html">Australian Live TV</a></li>
+          <li><a href="../index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>About</h4>
+        <ul>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../index.html#videos">Videos</a></li>
+          <li><a href="../index.html#screenshots">Screenshots</a></li>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-trust"><div class="badges"><span class="freeware-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>Freeware Forever</span><span class="trust-chip"><svg class="t-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.26 9.26 3 11v3l14.14 3.14"/><path d="M21 15.34V6l-7.31 2.03"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/><path d="m2 2 20 20"/></svg>No UI Ads</span><span class="trust-chip"><svg class="t-sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.73 5.08A10.74 10.74 0 0 1 21.94 11.65a1 1 0 0 1 0 .7 10.75 10.75 0 0 1-1.44 2.49"/><path d="M14.08 14.16a3 3 0 0 1-4.24-4.24"/><path d="M17.48 17.5a10.75 10.75 0 0 1-15.42-5.15 1 1 0 0 1 0-.7 10.75 10.75 0 0 1 4.45-5.14"/><path d="m2 2 20 20"/></svg>No Ad Tracking</span><span class="trust-chip"><svg class="t-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 8 5 5M22 8l-5 5"/></svg>No Account Needed</span><span class="trust-chip"><svg class="t-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><path d="M6 16h.01M10 16h.01"/></svg>Your Data Stays Here</span></div></div>
+    <div class="legal">
+      <p><b>Tachyon is a media player only; it provides no content.</b> It doesn’t provide, host, sell or recommend any channels, movies or series, and it isn’t affiliated with any IPTV provider. You add the services you’re entitled to use.</p>
+      <p>Latest release v1.3.6 · Build 2026.10.24.1941 · © 2026 GDroid, Sydney, Australia. Google Play, Android and Google TV are trademarks of Google LLC. Fire TV is a trademark of Amazon.com, Inc. or its affiliates.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

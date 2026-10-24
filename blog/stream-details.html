@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading the Stream Details: Tags and the Stream Info Line · Tachyon</title>
+<meta name="description" content="What Tachyon's stream tags and the Stream Info line (Needs, Provider, Arriving, Buffered, Line) tell you, and where a slowdown comes from.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://gmpatel.github.io/tachyon/blog/stream-details.html">
+<meta name="theme-color" content="#06070b">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tachyon">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="Reading the Stream Details: Tags and the Stream Info Line · Tachyon">
+<meta property="og:description" content="What Tachyon's stream tags and the Stream Info line (Needs, Provider, Arriving, Buffered, Line) tell you, and where a slowdown comes from.">
+<meta property="og:url" content="https://gmpatel.github.io/tachyon/blog/stream-details.html">
+<meta property="og:image" content="https://gmpatel.github.io/tachyon/img/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="Tachyon's player with the Stream Info line and the stream tags over a live channel">
+<meta property="article:published_time" content="2026-10-24">
+<meta property="article:modified_time" content="2026-10-24">
+<meta property="article:section" content="Help">
+<meta property="article:tag" content="Stream Details">
+<meta property="article:tag" content="Stream Info">
+<meta property="article:tag" content="Codecs">
+<meta property="article:tag" content="Bitrate">
+<meta property="article:tag" content="Buffering">
+<meta property="article:tag" content="Troubleshooting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reading the Stream Details: Tags and the Stream Info Line · Tachyon">
+<meta name="twitter:description" content="What Tachyon's stream tags and the Stream Info line (Needs, Provider, Arriving, Buffered, Line) tell you, and where a slowdown comes from.">
+<meta name="twitter:image" content="https://gmpatel.github.io/tachyon/img/og-image.png">
+<meta name="twitter:image:alt" content="Tachyon's player with the Stream Info line and the stream tags over a live channel">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../img/icon-512.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Tachyon Blog" href="../blog/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=5ee2015e">
+<link rel="stylesheet" href="../assets/v2.css?v=ff93eb68">
+<link rel="stylesheet" href="../assets/blog.css?v=ebaf7f9c">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<script src="../assets/site.js?v=ce329bc0" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://gmpatel.github.io/tachyon/blog/stream-details.html#article","headline":"Reading the Stream Details: Tags and the Stream Info Line","description":"What Tachyon's stream tags and the Stream Info line (Needs, Provider, Arriving, Buffered, Line) tell you, and where a slowdown comes from.","image":["https://gmpatel.github.io/tachyon/img/og-image.png"],"datePublished":"2026-10-24","dateModified":"2026-10-24","author":{"@type":"Organization","@id":"https://gmpatel.github.io/tachyon/#org","name":"GDroid","url":"https://gmpatel.github.io/tachyon/","logo":{"@type":"ImageObject","url":"https://gmpatel.github.io/tachyon/img/icon-512.png","width":512,"height":512}},"publisher":{"@type":"Organization","@id":"https://gmpatel.github.io/tachyon/#org","name":"GDroid","url":"https://gmpatel.github.io/tachyon/","logo":{"@type":"ImageObject","url":"https://gmpatel.github.io/tachyon/img/icon-512.png","width":512,"height":512}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://gmpatel.github.io/tachyon/blog/stream-details.html"},"articleSection":"Help","keywords":"Stream Details, Stream Info, Codecs, Bitrate, Buffering, Troubleshooting","wordCount":731,"inLanguage":"en","isPartOf":{"@id":"https://gmpatel.github.io/tachyon/blog/#blog"},"about":{"@type":"SoftwareApplication","name":"Tachyon","applicationCategory":"MultimediaApplication","url":"https://gmpatel.github.io/tachyon/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gmpatel.github.io/tachyon/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://gmpatel.github.io/tachyon/blog/"},{"@type":"ListItem","position":3,"name":"Reading the Stream Details: Tags and the Stream Info Line","item":"https://gmpatel.github.io/tachyon/blog/stream-details.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where can I read this in the app?","acceptedAnswer":{"@type":"Answer","text":"About → How To → Read the Stream Info Line explains every part, with the same cases as above."}},{"@type":"Question","name":"Do the speed checks use my provider connection?","acceptedAnswer":{"@type":"Answer","text":"No. Line is measured against a speed-test service, never against your provider, so it never takes a stream slot."}}]}]}</script>
+</head>
+<body class="v2">
+<a class="skip" href="#main">Skip to Content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Tachyon home"><img src="../img/icon-512.png" alt="" width="34" height="34">TACHYON</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a><a href="../install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download</a><a href="../docs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Manual</a><a href="../blog/index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg>Blog</a><a href="../privacy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Privacy</a><a class="btn btn-sm btn-primary" href="https://play.google.com/store/apps/details?id=app.tachyon.android" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.7 8.7 5 2.3c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg>Google Play</a></nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+<header class="post-hero">
+  <div class="v2-glow" aria-hidden="true"></div>
+  <div class="wrap post-col">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../blog/index.html#help">Help</a></li></ol></nav>
+    <h1>Reading the Stream Details: Tags and the Stream Info Line</h1>
+    <p class="post-lead">What Tachyon's stream tags and the Stream Info line (Needs, Provider, Arriving, Buffered, Line) tell you, and where a slowdown comes from.</p>
+    <p class="post-meta"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</span><time datetime="2026-10-24">24 October 2026</time><span>4 Min Read</span><span class="post-plats"><span class="pill p-plat pf-tv">TV</span><span class="pill p-plat pf-phones">Phone</span><span class="pill p-plat pf-desktop">Desktop</span></span></p>
+  </div>
+</header>
+<div class="wrap post-col">
+  <figure class="post-cover"><img src="../img/hero/04-stream-details.webp" alt="Tachyon's player with the Stream Info line and the stream tags over a live channel" width="1600" height="900" fetchpriority="high" decoding="async"></figure>
+  <div class="post-body">
+<p>When a channel stutters, the big question is <em>why</em>: your internet, the provider, or the device? Tachyon's player shows what it knows, so you can tell at a glance.</p>
+<figure class="post-fig"><button class="shot" type="button" data-lightbox="post" aria-label="Enlarge: The Stream Info line on a phone: Needs, Provider, Arriving, Buffered and Line, with the stream tags under it"><img src="../img/phone/player-live.webp" alt="The Stream Info line on a phone: Needs, Provider, Arriving, Buffered and Line, with the stream tags under it" width="1600" height="720" loading="lazy" decoding="async"></button><figcaption>The Stream Info line on a phone: Needs, Provider, Arriving, Buffered and Line, with the stream tags under it</figcaption></figure>
+<h2 id="where-they-show">Where They Show</h2>
+<p>With the player's controls up — and for a few seconds after a channel starts — the header shows:</p>
+<ul><li>the <strong>Stream Info line</strong>: Needs · Provider · Arriving · Buffered · Line;</li><li>a row of <strong>stream tags</strong> under it: the picture, the sound and how it's delivered.</li></ul>
+<p>Both come with <strong>Settings → Playback → Show Stream Details</strong> (on by default). The <strong>Pin Stream Info</strong> button (a gauge) in the bottom bar pins the line on the picture; each press moves it, from the top to the bottom, or off. Channels, movies and series each keep their own spot.</p>
+<h2 id="the-stream-info-line">The Stream Info Line</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Part</th><th scope="col">What It Means</th></tr></thead>
+<tbody>
+<tr><td>Needs</td><td>How fast the stream has to arrive to play smoothly: its own bitrate.</td></tr>
+<tr><td>Provider</td><td>How fast the provider sends it to you, measured from the stream itself. The letters after it are the country its server is in.</td></tr>
+<tr><td>Arriving</td><td>What arrives this very moment. It jumps while the buffer fills; on a movie it reads <strong>Buffer Full</strong> once full, and <strong>From Storage</strong> while it plays a part already stored on the device.</td></tr>
+<tr><td>Buffered</td><td>Seconds of picture stored ahead of you — the cushion that rides out a hiccup.</td></tr>
+<tr><td>Line</td><td>Your internet, two ways, taking turns: your own line, and the route toward the stream's server. Dots: not measured yet.</td></tr>
+<tr><td>The bar</td><td>Green fills as far as the provider's speed reaches; the white mark is what the stream needs.</td></tr>
+<tr><td>The LIVE strip</td><td>Green: smooth. Amber: a close call. Red: falling behind.</td></tr>
+</tbody></table></div>
+<h2 id="what-its-telling-you">What It's Telling You</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">What You See</th><th scope="col">Most Likely</th><th scope="col">Try</th></tr></thead>
+<tbody>
+<tr><td>Provider well above Needs, Buffered holding or growing</td><td>The stream is fine.</td><td>If the picture still stutters, it's the device: try another <strong>Decoder</strong>, or another version of the channel.</td></tr>
+<tr><td>Provider below Needs, Line well above it</td><td>The provider (or the route to it) is too slow.</td><td>Another version of the channel or title, later, or tell your provider.</td></tr>
+<tr><td>Your line close to Needs or below it</td><td>Your internet.</td><td>Move closer to the Wi-Fi router or use a cable; pause other downloads at home.</td></tr>
+<tr><td>Provider and Arriving stay at dots, Buffered stuck at 0 s</td><td>Nothing is coming from the provider.</td><td>The channel may be off air: try another; if none play, check the service.</td></tr>
+<tr><td>Your line is fast, but the route to another country is slow</td><td>The long way to the provider's server.</td><td>A copy from a closer server, another time of day, or <strong>Deeper Buffer for Movies &amp; Series</strong>.</td></tr>
+</tbody></table></div>
+<h2 id="the-stream-tags">The Stream Tags</h2>
+<p>Tags say only what the stream itself reported. If something isn't known, no tag is shown — a picture whose scan type wasn't reported shows <strong>FHD</strong>, never a guessed <strong>1080p</strong>.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Tag</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td><code>1080p</code> · <code>1080i</code> · <code>720p</code></td><td><span class="pill p-plat pf-desktop">Desktop</span> Picture size; p = progressive, i = interlaced.</td></tr>
+<tr><td><code>4K</code> · <code>QHD</code> · <code>FHD</code> · <code>HD</code> · <code>SD</code></td><td>The picture size (on Android always; on a computer when the stream didn't say progressive or interlaced).</td></tr>
+<tr><td><code>H.264</code> · <code>HEVC</code> · <code>AV1</code> · <code>MPEG-2</code></td><td>The video codec.</td></tr>
+<tr><td><code>HDR10</code> · <code>HLG</code> · <code>Dolby Vision</code></td><td>A high-dynamic-range picture.</td></tr>
+<tr><td><code>50 fps</code></td><td>Frames per second.</td></tr>
+<tr><td><code>AAC</code> · <code>AC-3</code> · <code>E-AC-3</code> · <code>DTS</code> · <code>MP2</code></td><td>The sound's codec.</td></tr>
+<tr><td><code>2.0</code> · <code>5.1</code> · <code>7.1</code></td><td>Sound channels.</td></tr>
+<tr><td><code>3 Tracks</code></td><td>More than one audio track — pick one with <strong>Audio</strong>.</td></tr>
+<tr><td><code>TS</code> · <code>MP4</code> · <code>MKV</code></td><td>The container: what the stream or file is.</td></tr>
+<tr><td><code>HLS</code> · <code>DASH</code> · <code>RTSP</code></td><td>How it's delivered.</td></tr>
+<tr><td><span class="pill p-plat pf-desktop">Desktop</span> <code>Index First</code> · <code>Index At End</code> · <code>Index Cached</code></td><td>Where a movie's index sits — at the end means a slower start; cached means this start skipped the wait.</td></tr>
+<tr><td><code>HW Decoder</code> · <code>SW Decoder</code></td><td><span class="pill p-plat pf-android">Android</span> Hardware or software decoding.</td></tr>
+<tr><td><code>Picture Repair</code> · <code>Audio → AAC</code></td><td><span class="pill p-plat pf-desktop">Desktop</span> The picture or sound is converted on the fly.</td></tr>
+</tbody></table></div>
+<p>Amber tags point to problems in the stream itself — <strong>Clock Jump</strong> on every device, and <span class="pill p-plat pf-desktop">Desktop</span> <strong>Slow Provider</strong>, <strong>Picture Gaps</strong> and <strong>Dead Audio Track</strong> — so you know the trouble comes from the provider, not your connection or the app. On Android, a slow provider shows in the LIVE strip and as a notice.</p>
+<aside class="post-note pn-tip" role="note"><b class="t">Tip</b><p><span class="pill p-plat pf-desktop">Desktop</span> <strong>Stats for Nerds</strong> (<kbd>I</kbd>) shows even more: dropped frames, the bitrate, the buffer, live latency and auto-recoveries.</p></aside>
+<h2 id="questions-and-answers">Questions and Answers</h2>
+<h3 id="where-can-i-read-this-in-the-app">Where can I read this in the app?</h3>
+<p><strong>About → How To → Read the Stream Info Line</strong> explains every part, with the same cases as above.</p>
+<h3 id="do-the-speed-checks-use-my-provider-connection">Do the speed checks use my provider connection?</h3>
+<p>No. <strong>Line</strong> is measured against a speed-test service, never against your provider, so it never takes a stream slot.</p>
+  </div>
+  <ul class="post-tags" aria-label="Topics"><li>Stream Details</li><li>Stream Info</li><li>Codecs</li><li>Bitrate</li><li>Buffering</li><li>Troubleshooting</li></ul>
+  <aside class="post-cta" aria-label="Get Tachyon">
+    <img src="../img/icon-512.png" alt="" width="48" height="48">
+    <div><b>Tachyon is free on every screen.</b><span>TV, phone and computer — No UI Ads, no account needed. Tachyon is a player only: it comes with no channels or content.</span></div>
+    <a class="btn btn-sm btn-primary" href="../install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Get Tachyon</a>
+  </aside>
+</div>
+</article>
+<section class="v2-block v2-tight post-related" aria-labelledby="related-head">
+  <div class="wrap">
+    <h2 id="related-head" class="related-head">Keep Reading</h2>
+    <div class="post-grid post-grid-3">
+<article class="post-card" data-cat="help">
+<a href="../blog/buffering-troubleshooting.html">
+<span class="pc-img"><img src="../img/tv/08-live-player.webp" alt="A live channel in Tachyon's player with the channel list over the picture" width="1600" height="900" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</span><h2 class="pc-title">Buffering and Playback Problems: A Troubleshooting Guide</h2><span class="pc-desc">Fix buffering, freezing, no sound, black pictures and connection-limit messages in Tachyon — what each message means and what to try, step by step.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 4 Min Read</span></span>
+</a>
+</article>
+<article class="post-card" data-cat="help">
+<a href="../blog/one-connection.html">
+<span class="pc-img"><img src="../img/phone/player-live.webp" alt="Tachyon's phone player with the live stream details" width="1600" height="720" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</span><h2 class="pc-title">One Connection Per Service: Why Tachyon Never Opens a Second Stream</h2><span class="pc-desc">Tachyon holds at most one stream connection per IPTV account, so single-connection and shared plans keep working. Here's how it works and what it means for you.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 2 Min Read</span></span>
+</a>
+</article>
+<article class="post-card" data-cat="player">
+<a href="../blog/player-options.html">
+<span class="pc-img"><img src="../img/hero/02-player-movies.webp" alt="Tachyon's player on a movie: the controls, the skip rings, audio tracks and the speed page" width="1600" height="900" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>The Player</span><h2 class="pc-title">Player Options: Quality, Picture Size, Sleep Timer and More</h2><span class="pc-desc">A guide to Tachyon's Player Options on TV, phone and computer: Start Over, quality, audio, subtitles, speed, Picture Size, Sleep Timer and more.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 3 Min Read</span></span>
+</a>
+</article>
+    </div>
+    <p class="related-all"><a class="btn btn-ghost" href="../blog/index.html">Every Article</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../img/logo-horizontal.png" alt="Tachyon, Faster-Than-Light TV" width="240" height="65">
+        <p>A fast, private media player for the Xtream Codes, M3U and Emby services you already have — on TV, phone and computer.</p>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Get Tachyon</h4>
+        <ul>
+          <li><a href="../install.html#android-tv">Google TV · Android TV</a></li>
+          <li><a href="../install.html#fire-tv">Fire TV</a></li>
+          <li><a href="../install.html#android">Android Phone</a></li>
+          <li><a href="../install.html#windows">Windows</a> · <a href="../install.html#mac">macOS</a> · <a href="../install.html#linux">Linux</a></li>
+          <li><a href="../install.html#update">Updating</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</h4>
+        <ul>
+          <li><a href="../docs.html">Manual</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../install.html#troubleshooting">Troubleshooting</a></li>
+          <li><a href="../open-live.html">Open Live TV</a></li>
+          <li><a href="../aussie-live.html">Australian Live TV</a></li>
+          <li><a href="../index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>About</h4>
+        <ul>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../index.html#videos">Videos</a></li>
+          <li><a href="../index.html#screenshots">Screenshots</a></li>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-trust"><div class="badges"><span class="freeware-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>Freeware Forever</span><span class="trust-chip"><svg class="t-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.26 9.26 3 11v3l14.14 3.14"/><path d="M21 15.34V6l-7.31 2.03"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/><path d="m2 2 20 20"/></svg>No UI Ads</span><span class="trust-chip"><svg class="t-sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.73 5.08A10.74 10.74 0 0 1 21.94 11.65a1 1 0 0 1 0 .7 10.75 10.75 0 0 1-1.44 2.49"/><path d="M14.08 14.16a3 3 0 0 1-4.24-4.24"/><path d="M17.48 17.5a10.75 10.75 0 0 1-15.42-5.15 1 1 0 0 1 0-.7 10.75 10.75 0 0 1 4.45-5.14"/><path d="m2 2 20 20"/></svg>No Ad Tracking</span><span class="trust-chip"><svg class="t-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 8 5 5M22 8l-5 5"/></svg>No Account Needed</span><span class="trust-chip"><svg class="t-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><path d="M6 16h.01M10 16h.01"/></svg>Your Data Stays Here</span></div></div>
+    <div class="legal">
+      <p><b>Tachyon is a media player only; it provides no content.</b> It doesn’t provide, host, sell or recommend any channels, movies or series, and it isn’t affiliated with any IPTV provider. You add the services you’re entitled to use.</p>
+      <p>Latest release v1.3.6 · Build 2026.10.24.1941 · © 2026 GDroid, Sydney, Australia. Google Play, Android and Google TV are trademarks of Google LLC. Fire TV is a trademark of Amazon.com, Inc. or its affiliates.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

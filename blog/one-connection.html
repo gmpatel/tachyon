@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Connection Per Service: Why Tachyon Never Opens a Second Stream</title>
+<meta name="description" content="Tachyon holds at most one stream connection per IPTV account, so single-connection and shared plans keep working. Here's how it works and what it means for you.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://gmpatel.github.io/tachyon/blog/one-connection.html">
+<meta name="theme-color" content="#06070b">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tachyon">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="One Connection Per Service: Why Tachyon Never Opens a Second Stream">
+<meta property="og:description" content="Tachyon holds at most one stream connection per IPTV account, so single-connection and shared plans keep working. Here's how it works and what it means for you.">
+<meta property="og:url" content="https://gmpatel.github.io/tachyon/blog/one-connection.html">
+<meta property="og:image" content="https://gmpatel.github.io/tachyon/img/og-image.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="Tachyon's phone player with the live stream details">
+<meta property="article:published_time" content="2026-10-24">
+<meta property="article:modified_time" content="2026-10-24">
+<meta property="article:section" content="Help">
+<meta property="article:tag" content="Connection Limit">
+<meta property="article:tag" content="Max Connections">
+<meta property="article:tag" content="Single Connection">
+<meta property="article:tag" content="IPTV Plan">
+<meta property="article:tag" content="Zapping">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One Connection Per Service: Why Tachyon Never Opens a Second Stream">
+<meta name="twitter:description" content="Tachyon holds at most one stream connection per IPTV account, so single-connection and shared plans keep working. Here's how it works and what it means for you.">
+<meta name="twitter:image" content="https://gmpatel.github.io/tachyon/img/og-image.png">
+<meta name="twitter:image:alt" content="Tachyon's phone player with the live stream details">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../img/icon-512.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="Tachyon Blog" href="../blog/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=5ee2015e">
+<link rel="stylesheet" href="../assets/v2.css?v=ff93eb68">
+<link rel="stylesheet" href="../assets/blog.css?v=ebaf7f9c">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<script src="../assets/site.js?v=ce329bc0" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://gmpatel.github.io/tachyon/blog/one-connection.html#article","headline":"One Connection Per Service: Why Tachyon Never Opens a Second Stream","description":"Tachyon holds at most one stream connection per IPTV account, so single-connection and shared plans keep working. Here's how it works and what it means for you.","image":["https://gmpatel.github.io/tachyon/img/og-image.png"],"datePublished":"2026-10-24","dateModified":"2026-10-24","author":{"@type":"Organization","@id":"https://gmpatel.github.io/tachyon/#org","name":"GDroid","url":"https://gmpatel.github.io/tachyon/","logo":{"@type":"ImageObject","url":"https://gmpatel.github.io/tachyon/img/icon-512.png","width":512,"height":512}},"publisher":{"@type":"Organization","@id":"https://gmpatel.github.io/tachyon/#org","name":"GDroid","url":"https://gmpatel.github.io/tachyon/","logo":{"@type":"ImageObject","url":"https://gmpatel.github.io/tachyon/img/icon-512.png","width":512,"height":512}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://gmpatel.github.io/tachyon/blog/one-connection.html"},"articleSection":"Help","keywords":"Connection Limit, Max Connections, Single Connection, IPTV Plan, Zapping","wordCount":401,"inLanguage":"en","isPartOf":{"@id":"https://gmpatel.github.io/tachyon/blog/#blog"},"about":{"@type":"SoftwareApplication","name":"Tachyon","applicationCategory":"MultimediaApplication","url":"https://gmpatel.github.io/tachyon/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gmpatel.github.io/tachyon/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://gmpatel.github.io/tachyon/blog/"},{"@type":"ListItem","position":3,"name":"One Connection Per Service: Why Tachyon Never Opens a Second Stream","item":"https://gmpatel.github.io/tachyon/blog/one-connection.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I watch on my TV and my phone at the same time?","acceptedAnswer":{"@type":"Answer","text":"Yes, if your plan allows two connections. Each device uses one. With a one-connection plan, the second device's stream is refused while the first one plays."}},{"@type":"Question","name":"Does Service Sync or the TV Guide use a connection?","acceptedAnswer":{"@type":"Answer","text":"No. Syncing services, downloading the guide and updating the library are data requests, not streams."}},{"@type":"Question","name":"Does casting use a second connection?","acceptedAnswer":{"@type":"Answer","text":"No. The phone or computer stops its own stream before the TV starts."}}]}]}</script>
+</head>
+<body class="v2">
+<a class="skip" href="#main">Skip to Content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Tachyon home"><img src="../img/icon-512.png" alt="" width="34" height="34">TACHYON</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a><a href="../install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download</a><a href="../docs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Manual</a><a href="../blog/index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg>Blog</a><a href="../privacy.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Privacy</a><a class="btn btn-sm btn-primary" href="https://play.google.com/store/apps/details?id=app.tachyon.android" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#ffce00" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.7 15.3 13.4 12l-9.8 9.8c.4.2.9.2 1.4-.1z"/><path fill="#00f076" d="M16.7 8.7 5 2.3c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg>Google Play</a></nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="post">
+<header class="post-hero">
+  <div class="v2-glow" aria-hidden="true"></div>
+  <div class="wrap post-col">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../blog/index.html#help">Help</a></li></ol></nav>
+    <h1>One Connection Per Service: Why Tachyon Never Opens a Second Stream</h1>
+    <p class="post-lead">Tachyon holds at most one stream connection per IPTV account, so single-connection and shared plans keep working. Here's how it works and what it means for you.</p>
+    <p class="post-meta"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</span><time datetime="2026-10-24">24 October 2026</time><span>2 Min Read</span><span class="post-plats"><span class="pill p-plat pf-tv">TV</span><span class="pill p-plat pf-phones">Phone</span><span class="pill p-plat pf-desktop">Desktop</span></span></p>
+  </div>
+</header>
+<div class="wrap post-col">
+  <figure class="post-cover"><img src="../img/phone/player-live.webp" alt="Tachyon's phone player with the live stream details" width="1600" height="720" fetchpriority="high" decoding="async"></figure>
+  <div class="post-body">
+<p>Many IPTV plans allow <strong>one stream at a time</strong>, and some are shared by a household or a group. A second connection — even for a moment — takes someone else's slot or trips the provider's limit, and then nothing plays. So Tachyon holds <strong>at most one stream connection per account, at any moment</strong>.</p>
+<h2 id="how-tachyon-keeps-to-one">How Tachyon Keeps to One</h2>
+<ul><li><strong>One player.</strong> The channel preview and full screen are the same stream; on a computer, the mini player too.</li><li><strong>Zapping closes first.</strong> Changing channel closes the old connection, waits a short gap, then opens the new one. Rapid presses open only the channel you stop on.</li><li><strong>No probing.</strong> Retries never overlap, and Tachyon never &quot;tests&quot; stream links in the background.</li><li><strong>The same account twice counts once.</strong> An Xtream login and its M3U link share the one connection.</li><li><strong>Handing over.</strong> Casting to a TV or opening an external player stops Tachyon's own stream first.</li><li><strong>Letting go.</strong> A paused stream gives its slot back after a while (on Android: 60 seconds for live TV, 5 minutes for movies), and so do going to the background, sleep and quitting.</li><li>Only one copy of Tachyon runs per device.</li></ul>
+<h2 id="what-it-means-for-you">What It Means for You</h2>
+<ul><li>Watching on <strong>two devices at once</strong> needs a plan with two connections; each device uses one.</li><li><strong>Browsing, the TV Guide, account details and subtitles</strong> are data, not streams. They never use a slot.</li><li>A stream that keeps closing every few seconds on a one-connection account is typically <strong>another viewer on the same login</strong>.</li><li>A connection-limit message (&quot;The provider refused the stream…&quot; on a computer, &quot;The provider's connection limit is reached&quot; on Android) usually means the account is playing somewhere else right now.</li></ul>
+<h2 id="slot-lag-why-a-quick-zap-can-take-a-few-seconds">Slot Lag: Why a Quick Zap Can Take a Few Seconds</h2>
+<p>Many panels keep counting a closed stream for a few seconds. When a channel is refused before it started, Tachyon quietly asks again a few times over about 8.5 seconds — still showing <strong>Connecting…</strong> — and only then shows the connection-limit message. On a busy one-connection account, that's why a fast zap sometimes waits a moment.</p>
+<aside class="post-note pn-tip" role="note"><b class="t">Tip</b><p>With several services added, each one gets its own single connection. Watching a channel from one service never blocks another service.</p></aside>
+<h2 id="questions-and-answers">Questions and Answers</h2>
+<h3 id="can-i-watch-on-my-tv-and-my-phone-at-the-same-time">Can I watch on my TV and my phone at the same time?</h3>
+<p>Yes, if your plan allows two connections. Each device uses one. With a one-connection plan, the second device's stream is refused while the first one plays.</p>
+<h3 id="does-service-sync-or-the-tv-guide-use-a-connection">Does Service Sync or the TV Guide use a connection?</h3>
+<p>No. Syncing services, downloading the guide and updating the library are data requests, not streams.</p>
+<h3 id="does-casting-use-a-second-connection">Does casting use a second connection?</h3>
+<p>No. The phone or computer stops its own stream before the TV starts.</p>
+  </div>
+  <ul class="post-tags" aria-label="Topics"><li>Connection Limit</li><li>Max Connections</li><li>Single Connection</li><li>IPTV Plan</li><li>Zapping</li></ul>
+  <aside class="post-cta" aria-label="Get Tachyon">
+    <img src="../img/icon-512.png" alt="" width="48" height="48">
+    <div><b>Tachyon is free on every screen.</b><span>TV, phone and computer — No UI Ads, no account needed. Tachyon is a player only: it comes with no channels or content.</span></div>
+    <a class="btn btn-sm btn-primary" href="../install.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Get Tachyon</a>
+  </aside>
+</div>
+</article>
+<section class="v2-block v2-tight post-related" aria-labelledby="related-head">
+  <div class="wrap">
+    <h2 id="related-head" class="related-head">Keep Reading</h2>
+    <div class="post-grid post-grid-3">
+<article class="post-card" data-cat="help">
+<a href="../blog/buffering-troubleshooting.html">
+<span class="pc-img"><img src="../img/tv/08-live-player.webp" alt="A live channel in Tachyon's player with the channel list over the picture" width="1600" height="900" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</span><h2 class="pc-title">Buffering and Playback Problems: A Troubleshooting Guide</h2><span class="pc-desc">Fix buffering, freezing, no sound, black pictures and connection-limit messages in Tachyon — what each message means and what to try, step by step.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 4 Min Read</span></span>
+</a>
+</article>
+<article class="post-card" data-cat="devices">
+<a href="../blog/chromecast.html">
+<span class="pc-img"><img src="../img/tv/04-player.webp" alt="Tachyon's player on a TV showing every detail of the stream" width="1600" height="900" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="2" width="10" height="17" rx="2"/><path d="M17 6h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-1"/></svg>Your Devices</span><h2 class="pc-title">Cast to Your TV With Chromecast</h2><span class="pc-desc">Send a channel, movie or episode from Tachyon on your phone or computer to a Chromecast or Google TV — how to start, what can be cast, and fixes when it can't.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 2 Min Read</span></span>
+</a>
+</article>
+<article class="post-card" data-cat="getting-started">
+<a href="../blog/all-services-landing.html">
+<span class="pc-img"><img src="../img/hero/01-every-page.webp" alt="Tachyon's Home, Movies, Series and Live TV pages, four screens in one picture" width="1600" height="900" loading="lazy" decoding="async"></span>
+<span class="pc-body"><span class="pc-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>Getting Started</span><h2 class="pc-title">All Services: Watch Several IPTV Services as One Library</h2><span class="pc-desc">Use several Xtream Codes, M3U and Emby services in Tachyon: switch on the Landing screen, or merge them into one Home, one channel list and one guide.</span><span class="pc-meta"><time datetime="2026-10-24">24 October 2026</time> · 2 Min Read</span></span>
+</a>
+</article>
+    </div>
+    <p class="related-all"><a class="btn btn-ghost" href="../blog/index.html">Every Article</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../img/logo-horizontal.png" alt="Tachyon, Faster-Than-Light TV" width="240" height="65">
+        <p>A fast, private media player for the Xtream Codes, M3U and Emby services you already have — on TV, phone and computer.</p>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Get Tachyon</h4>
+        <ul>
+          <li><a href="../install.html#android-tv">Google TV · Android TV</a></li>
+          <li><a href="../install.html#fire-tv">Fire TV</a></li>
+          <li><a href="../install.html#android">Android Phone</a></li>
+          <li><a href="../install.html#windows">Windows</a> · <a href="../install.html#mac">macOS</a> · <a href="../install.html#linux">Linux</a></li>
+          <li><a href="../install.html#update">Updating</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>Help</h4>
+        <ul>
+          <li><a href="../docs.html">Manual</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../install.html#troubleshooting">Troubleshooting</a></li>
+          <li><a href="../open-live.html">Open Live TV</a></li>
+          <li><a href="../aussie-live.html">Australian Live TV</a></li>
+          <li><a href="../index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>About</h4>
+        <ul>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../index.html#videos">Videos</a></li>
+          <li><a href="../index.html#screenshots">Screenshots</a></li>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-trust"><div class="badges"><span class="freeware-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>Freeware Forever</span><span class="trust-chip"><svg class="t-rose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.26 9.26 3 11v3l14.14 3.14"/><path d="M21 15.34V6l-7.31 2.03"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/><path d="m2 2 20 20"/></svg>No UI Ads</span><span class="trust-chip"><svg class="t-sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.73 5.08A10.74 10.74 0 0 1 21.94 11.65a1 1 0 0 1 0 .7 10.75 10.75 0 0 1-1.44 2.49"/><path d="M14.08 14.16a3 3 0 0 1-4.24-4.24"/><path d="M17.48 17.5a10.75 10.75 0 0 1-15.42-5.15 1 1 0 0 1 0-.7 10.75 10.75 0 0 1 4.45-5.14"/><path d="m2 2 20 20"/></svg>No Ad Tracking</span><span class="trust-chip"><svg class="t-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 8 5 5M22 8l-5 5"/></svg>No Account Needed</span><span class="trust-chip"><svg class="t-emerald" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><path d="M6 16h.01M10 16h.01"/></svg>Your Data Stays Here</span></div></div>
+    <div class="legal">
+      <p><b>Tachyon is a media player only; it provides no content.</b> It doesn’t provide, host, sell or recommend any channels, movies or series, and it isn’t affiliated with any IPTV provider. You add the services you’re entitled to use.</p>
+      <p>Latest release v1.3.6 · Build 2026.10.24.1941 · © 2026 GDroid, Sydney, Australia. Google Play, Android and Google TV are trademarks of Google LLC. Fire TV is a trademark of Amazon.com, Inc. or its affiliates.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
