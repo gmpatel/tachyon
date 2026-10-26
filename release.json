@@ -1,15 +1,16 @@
 {
   "app": "tachyon",
-  "version": "1.3.9",
-  "build": "2026.10.26.1453",
-  "versionCode": 3586493,
+  "version": "1.4.0",
+  "build": "2026.10.26.1758",
+  "versionCode": 3586678,
   "whatsNew": [
-    "TV volume now works on every box, Chromecast with Google TV included",
-    "Volume kept per service, or per channel and title",
-    "Hold an arrow to run through cards, rows and pages",
-    "Easy Settings while watching, from Player Options",
-    "Settings opens where you were; a press on the side bar lists every section",
-    "New layout options for Live TV, posters and shortcuts"
+    "Sound & Subtitle Timing while watching, kept per channel and title",
+    "Subtitle services: clearer set-up, logins and keys checked before they're saved",
+    "Linked devices share subtitle services too",
+    "When syncing stops, your own setup comes back",
+    "New subtitle default: Noto Serif, Small",
+    "New accents: Stardust, Lunar, Silver, Titanium, Champagne, Pearl",
+    "Mac: in-app updates no longer blocked on restart"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
