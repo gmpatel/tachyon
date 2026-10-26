@@ -1,15 +1,15 @@
 {
   "app": "tachyon",
-  "version": "1.3.8",
-  "build": "2026.10.25.2010",
-  "versionCode": 3585370,
+  "version": "1.3.9",
+  "build": "2026.10.26.1453",
+  "versionCode": 3586493,
   "whatsNew": [
-    "Live TV: up to 5 columns, from channel bars to logo tiles, kept per service",
-    "Player channel list turns like a wheel; hold OK for All Channels",
-    "Badges sit on the \"on now\" line; shorter counts on phones",
-    "Scrolling keeps up when you hold an arrow",
-    "Accounts: keeps working when one has ended, asks before playing when all are full",
-    "New Google Drive Downloader code 2162618 (Dropbox 7607080 first)"
+    "TV volume now works on every box, Chromecast with Google TV included",
+    "Volume kept per service, or per channel and title",
+    "Hold an arrow to run through cards, rows and pages",
+    "Easy Settings while watching, from Player Options",
+    "Settings opens where you were; a press on the side bar lists every section",
+    "New layout options for Live TV, posters and shortcuts"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",

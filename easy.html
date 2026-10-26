@@ -28,6 +28,8 @@
   a.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; padding: 12px 20px; border-radius: 14px; background: linear-gradient(135deg, var(--a), var(--b)); color: #fff; font-weight: 700; text-decoration: none; min-width: 220px }
   .addr { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; color: var(--muted); word-break: break-all }
   .bad { color: #fda4af }
+  .note { margin: 14px 0 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.03); font-size: 13.5px; text-align: center }
+  .note b { color: var(--fg) }
   .checks { text-align: left; color: var(--muted); font-size: 13.5px; margin: 10px 0 4px; padding-left: 20px } .checks li { margin: 4px 0 }
   a.link { color: #7dd3fc; font-size: 13px }
   [hidden] { display: none !important }
@@ -42,6 +44,9 @@
     <p id="step">Finding your TV…</p>
     <div class="ring" aria-hidden="true"></div>
     <p class="addr" id="addr"></p>
+    <!-- what happens next (user, 2026-10-26: "tell the user it's connecting to the TV app, and that once connected they
+         see and set the TV app's settings") -->
+    <p class="note">You’re connecting to your <b>TV’s Tachyon settings</b> — what you change or save here on your phone is saved on your TV.</p>
   </div>
   <div id="fail" hidden>
     <p class="bad"><b id="failTitle">Couldn’t reach the TV</b></p>
