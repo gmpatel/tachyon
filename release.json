@@ -1,16 +1,12 @@
 {
   "app": "tachyon",
-  "version": "1.4.0",
-  "build": "2026.10.26.1758",
-  "versionCode": 3586678,
+  "version": "1.4.1",
+  "build": "2026.10.27.1005",
+  "versionCode": 3587645,
   "whatsNew": [
-    "Sound & Subtitle Timing while watching, kept per channel and title",
-    "Subtitle services: clearer set-up, logins and keys checked before they're saved",
-    "Linked devices share subtitle services too",
-    "When syncing stops, your own setup comes back",
-    "New subtitle default: Noto Serif, Small",
-    "New accents: Stardust, Lunar, Silver, Titanium, Champagne, Pearl",
-    "Mac: in-app updates no longer blocked on restart"
+    "Subtitles always follow your Subtitle Look: size, font and colours, whatever the file says",
+    "The subtitle size no longer shrinks while the controls show",
+    "Pick subtitles from your subtitle services while watching, even when the title has its own"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
