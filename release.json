@@ -1,10 +1,15 @@
 {
   "app": "tachyon",
-  "version": "1.4.2",
-  "build": "2026.10.27.1207",
-  "versionCode": 3587767,
+  "version": "1.4.3",
+  "build": "2026.10.27.1533",
+  "versionCode": 3587973,
   "whatsNew": [
-    "Service Sync improvements behind the scenes: your synced services are fetched more reliably when the app starts"
+    "Libraries load only when you pick a service to watch, and only that one stays in memory — smoother on every TV",
+    "All Services works with up to 2 Xtream Codes / M3U services",
+    "Synced services show their expiry and connections",
+    "Landing starts on the service you used last",
+    "More providers load: damaged lists are repaired, and older secure servers connect",
+    "Clearer messages when a device runs out of memory or its date is wrong"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
