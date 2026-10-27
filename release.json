@@ -1,12 +1,10 @@
 {
   "app": "tachyon",
-  "version": "1.4.1",
-  "build": "2026.10.27.1005",
-  "versionCode": 3587645,
+  "version": "1.4.2",
+  "build": "2026.10.27.1207",
+  "versionCode": 3587767,
   "whatsNew": [
-    "Subtitles always follow your Subtitle Look: size, font and colours, whatever the file says",
-    "The subtitle size no longer shrinks while the controls show",
-    "Pick subtitles from your subtitle services while watching, even when the title has its own"
+    "Service Sync improvements behind the scenes: your synced services are fetched more reliably when the app starts"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
