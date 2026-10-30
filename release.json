@@ -1,15 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.4.3",
-  "build": "2026.10.27.1533",
-  "versionCode": 3587973,
+  "version": "1.4.4",
+  "build": "2026.10.30.1751",
+  "versionCode": 3592431,
   "whatsNew": [
-    "Libraries load only when you pick a service to watch, and only that one stays in memory — smoother on every TV",
-    "All Services works with up to 2 Xtream Codes / M3U services",
-    "Synced services show their expiry and connections",
-    "Landing starts on the service you used last",
-    "More providers load: damaged lists are repaired, and older secure servers connect",
-    "Clearer messages when a device runs out of memory or its date is wrong"
+    "Big libraries open faster and use far less memory: titles stay on disk and load as you move",
+    "Continuous Scrolling: one long page on Movies, Series and Live TV",
+    "Movies: skipping back, and Resume after Exit, start at once from what was already downloaded",
+    "Filters and sort are remembered per page and service again",
+    "One icon set in every app, and sharper player question buttons on TV"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
