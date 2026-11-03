@@ -1,14 +1,17 @@
 {
   "app": "tachyon",
-  "version": "1.4.4",
-  "build": "2026.10.30.1751",
-  "versionCode": 3592431,
+  "version": "1.4.5",
+  "build": "2026.11.03.1152",
+  "versionCode": 3597832,
   "whatsNew": [
-    "Big libraries open faster and use far less memory: titles stay on disk and load as you move",
-    "Continuous Scrolling: one long page on Movies, Series and Live TV",
-    "Movies: skipping back, and Resume after Exit, start at once from what was already downloaded",
-    "Filters and sort are remembered per page and service again",
-    "One icon set in every app, and sharper player question buttons on TV"
+    "Title pages: one clean row of icons in every app, with Play and Resume up front",
+    "Resume asks: carry on, or start again",
+    "A series keeps the audio language you picked for its next episodes",
+    "Track lists show languages instead of uploaders' names",
+    "Smoother starts: a short wait instead of an early stop",
+    "Continue Watching shows a frame from where you stopped",
+    "The app opens and browses without internet",
+    "Fixes for Fire TV and for leaving the app completely"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
