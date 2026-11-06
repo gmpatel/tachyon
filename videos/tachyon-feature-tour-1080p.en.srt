@@ -1,0 +1,451 @@
+1
+00:00:02,197 --> 00:00:02,682
+G'day,
+
+2
+00:00:02,718 --> 00:00:04,071
+and welcome to Tachyon!
+
+3
+00:00:04,854 --> 00:00:07,944
+We honestly reckon it's the best IPTV player around
+
+4
+00:00:07,817 --> 00:00:10,687
+right now built from the ground up for presentation,
+
+5
+00:00:10,711 --> 00:00:11,705
+for performance,
+
+6
+00:00:11,810 --> 00:00:13,395
+and for the watching experience.
+
+7
+00:00:13,977 --> 00:00:14,764
+On your phone,
+
+8
+00:00:14,788 --> 00:00:16,350
+your tablet and your TV.
+
+9
+00:00:17,191 --> 00:00:19,992
+One video can't show you everything it does but
+
+10
+00:00:19,853 --> 00:00:21,577
+let us give you the best brief we can!
+
+11
+00:00:22,124 --> 00:00:25,110
+Bring your own services Xtream Codes logins,
+
+12
+00:00:25,330 --> 00:00:28,281
+M3U playlists with their XMLTV guides,
+
+13
+00:00:28,386 --> 00:00:29,496
+and Emby servers.
+
+14
+00:00:30,326 --> 00:00:31,541
+Add as many as you like,
+
+15
+00:00:31,565 --> 00:00:33,162
+and watch them one at a time,
+
+16
+00:00:33,243 --> 00:00:35,338
+or all together as one library.
+
+17
+00:00:35,903 --> 00:00:37,245
+Home shows what's on now,
+
+18
+00:00:37,303 --> 00:00:38,402
+what you were watching,
+
+19
+00:00:38,495 --> 00:00:39,617
+and what's up next.
+
+20
+00:00:40,390 --> 00:00:42,299
+Movies and series come with posters,
+
+21
+00:00:42,438 --> 00:00:45,424
+ratings and cast every copy of a title grouped
+
+22
+00:00:45,309 --> 00:00:46,396
+into one card.
+
+23
+00:00:47,149 --> 00:00:50,042
+And you choose your audio and subtitles before you
+
+24
+00:00:49,938 --> 00:00:50,945
+even press Play.
+
+25
+00:00:51,628 --> 00:00:54,231
+Live TV comes with a proper guide what's on
+
+26
+00:00:54,093 --> 00:00:54,914
+now and next,
+
+27
+00:00:55,146 --> 00:00:57,542
+catch-up and Start Over where your provider keeps an
+
+28
+00:00:57,438 --> 00:00:58,086
+archive,
+
+29
+00:00:58,167 --> 00:00:59,995
+and reminders for the shows you love.
+
+30
+00:01:00,391 --> 00:01:01,444
+Now the player.
+
+31
+00:01:02,216 --> 00:01:04,218
+This is where Tachyon really shines.
+
+32
+00:01:05,098 --> 00:01:07,181
+Press OK and the controls glide in,
+
+33
+00:01:07,274 --> 00:01:09,345
+with every detail of the stream right there:
+
+34
+00:01:09,519 --> 00:01:10,352
+what it needs,
+
+35
+00:01:10,526 --> 00:01:11,568
+how it's arriving,
+
+36
+00:01:11,637 --> 00:01:12,887
+and how much is buffered.
+
+37
+00:01:13,605 --> 00:01:14,588
+Skip with a tap,
+
+38
+00:01:14,612 --> 00:01:16,903
+and a ring shows you exactly how far.
+
+39
+00:01:17,725 --> 00:01:18,246
+Audio,
+
+40
+00:01:18,281 --> 00:01:19,241
+subtitles,
+
+41
+00:01:19,276 --> 00:01:22,193
+speed and picture size are one press away and
+
+42
+00:01:22,077 --> 00:01:24,380
+Tachyon remembers your picks for every title.
+
+43
+00:01:25,098 --> 00:01:26,162
+Finish an episode,
+
+44
+00:01:26,151 --> 00:01:28,003
+and the next one's ready to roll.
+
+45
+00:01:29,070 --> 00:01:30,111
+On live channels,
+
+46
+00:01:30,169 --> 00:01:32,634
+press left and the channel list opens right over
+
+47
+00:01:32,484 --> 00:01:33,074
+the picture,
+
+48
+00:01:33,132 --> 00:01:35,678
+with what's on now so you can zap without
+
+49
+00:01:35,563 --> 00:01:36,569
+ever leaving the show.
+
+50
+00:01:37,376 --> 00:01:39,749
+The live strip shows your buffer at a glance.
+
+51
+00:01:40,629 --> 00:01:42,793
+Volume goes all the way up to two hundred
+
+52
+00:01:42,643 --> 00:01:43,626
+and fifty percent,
+
+53
+00:01:43,788 --> 00:01:44,864
+just for Tachyon,
+
+54
+00:01:44,981 --> 00:01:48,140
+and Sound Stabiliser evens out loud ads and quiet
+
+55
+00:01:47,990 --> 00:01:48,545
+channels.
+
+56
+00:01:49,268 --> 00:01:50,553
+And when something stutters,
+
+57
+00:01:50,634 --> 00:01:51,536
+you'll know why.
+
+58
+00:01:52,413 --> 00:01:54,912
+The stream details bar shows what the stream needs,
+
+59
+00:01:55,063 --> 00:01:56,440
+what your provider's sending,
+
+60
+00:01:56,626 --> 00:01:57,910
+what's actually arriving,
+
+61
+00:01:58,015 --> 00:01:59,588
+how many seconds are buffered,
+
+62
+00:01:59,623 --> 00:02:01,220
+and your own line speed.
+
+63
+00:02:01,973 --> 00:02:03,859
+Green means your provider's keeping up.
+
+64
+00:02:04,612 --> 00:02:07,667
+Amber or red means the slowdown is upstream not
+
+65
+00:02:07,563 --> 00:02:08,315
+your Wi-Fi.
+
+66
+00:02:09,149 --> 00:02:11,070
+You can even pin it on the picture while
+
+67
+00:02:10,954 --> 00:02:11,521
+you watch.
+
+68
+00:02:12,292 --> 00:02:13,009
+Under the hood,
+
+69
+00:02:13,079 --> 00:02:15,382
+Tachyon plays what providers really send:
+
+70
+00:02:15,591 --> 00:02:16,296
+HLS,
+
+71
+00:02:16,644 --> 00:02:17,477
+MPEG-TS,
+
+72
+00:02:17,639 --> 00:02:18,148
+DASH,
+
+73
+00:02:18,334 --> 00:02:20,197
+RTSP and multicast;
+
+74
+00:02:20,463 --> 00:02:20,798
+H.264,
+
+75
+00:02:20,718 --> 00:02:24,861
+HEVC and 4K ten-bit video;
+
+76
+00:02:25,128 --> 00:02:25,717
+AAC,
+
+77
+00:02:25,799 --> 00:02:27,338
+Dolby and DTS sound.
+
+78
+00:02:28,041 --> 00:02:29,765
+Hardware decoding comes first,
+
+79
+00:02:29,788 --> 00:02:31,177
+with a software fallback.
+
+80
+00:02:31,953 --> 00:02:34,649
+Broken broadcast streams get repaired on the fly,
+
+81
+00:02:34,823 --> 00:02:37,056
+and stalls recover all by themselves.
+
+82
+00:02:37,772 --> 00:02:39,554
+Buffering adapts to your connection.
+
+83
+00:02:40,361 --> 00:02:41,402
+On live channels,
+
+84
+00:02:41,507 --> 00:02:44,331
+every hiccup grows the safety cushion then it gently
+
+85
+00:02:44,227 --> 00:02:45,488
+catches back up to live.
+
+86
+00:02:46,264 --> 00:02:47,618
+Movies read well ahead,
+
+87
+00:02:47,641 --> 00:02:49,689
+and Deeper Buffer steadies slow links.
+
+88
+00:02:50,616 --> 00:02:53,463
+And Tachyon only ever opens one stream per service,
+
+89
+00:02:53,602 --> 00:02:56,067
+so it never eats up your plan's connections.
+
+90
+00:02:56,778 --> 00:02:59,428
+Every remote key and touch gesture is mapped and
+
+91
+00:02:59,301 --> 00:02:59,972
+explained,
+
+92
+00:03:00,054 --> 00:03:01,407
+right inside the player.
+
+93
+00:03:02,156 --> 00:03:03,001
+And on phones,
+
+94
+00:03:03,082 --> 00:03:06,033
+send any castable title to your Chromecast in one
+
+95
+00:03:05,929 --> 00:03:06,369
+tap.
+
+96
+00:03:07,431 --> 00:03:08,241
+And it's yours.
+
+97
+00:03:09,106 --> 00:03:10,367
+There's no account to make,
+
+98
+00:03:10,402 --> 00:03:11,848
+no ads in the interface,
+
+99
+00:03:11,988 --> 00:03:14,175
+and no ad or tracking kits inside.
+
+100
+00:03:14,928 --> 00:03:15,668
+What you watch,
+
+101
+00:03:15,773 --> 00:03:18,214
+your history and your favourites stay on your device,
+
+102
+00:03:18,377 --> 00:03:21,513
+and your service passwords are encrypted there they only
+
+103
+00:03:21,432 --> 00:03:22,971
+ever go to your own provider.
+
+104
+00:03:23,736 --> 00:03:25,240
+Lock the app with a PIN,
+
+105
+00:03:25,483 --> 00:03:27,994
+keep adult categories behind a parental PIN,
+
+106
+00:03:28,122 --> 00:03:30,483
+and move everything to a new device with an
+
+107
+00:03:30,356 --> 00:03:31,258
+encrypted backup.
+
+108
+00:03:31,999 --> 00:03:34,430
+Tachyon is freeware and it stays free.
+
+109
+00:03:35,347 --> 00:03:35,994
+Tachyon.
+
+110
+00:03:36,801 --> 00:03:37,669
+Built with heart,
+
+111
+00:03:37,681 --> 00:03:39,185
+for watching private,
+
+112
+00:03:39,232 --> 00:03:39,822
+and free,
+
+113
+00:03:39,857 --> 00:03:40,447
+forever.

@@ -1,0 +1,99 @@
+1
+00:00:01,697 --> 00:00:02,171
+G'day!
+
+2
+00:00:03,023 --> 00:00:06,194
+This is Tachyon the IPTV player we set out
+
+3
+00:00:06,056 --> 00:00:07,305
+to make the best around.
+
+4
+00:00:08,058 --> 00:00:09,284
+Built for presentation,
+
+5
+00:00:09,296 --> 00:00:10,037
+performance,
+
+6
+00:00:10,130 --> 00:00:11,564
+and the watching experience.
+
+7
+00:00:11,791 --> 00:00:13,110
+Bring your Xtream Codes,
+
+8
+00:00:13,203 --> 00:00:15,633
+M3U and Emby services movies,
+
+9
+00:00:15,668 --> 00:00:17,126
+series and live TV,
+
+10
+00:00:17,300 --> 00:00:18,318
+with a proper guide.
+
+11
+00:00:18,541 --> 00:00:19,570
+And the player's the star:
+
+12
+00:00:19,663 --> 00:00:21,133
+controls that glide in,
+
+13
+00:00:21,203 --> 00:00:22,290
+skips you can see,
+
+14
+00:00:22,615 --> 00:00:24,616
+and the channel list right over the picture.
+
+15
+00:00:24,960 --> 00:00:26,071
+When something stutters,
+
+16
+00:00:26,198 --> 00:00:29,103
+the stream details bar shows you why your provider,
+
+17
+00:00:29,231 --> 00:00:30,342
+or your own line.
+
+18
+00:00:30,791 --> 00:00:31,577
+No account.
+
+19
+00:00:32,384 --> 00:00:33,830
+No ads in the interface.
+
+20
+00:00:34,722 --> 00:00:35,844
+No tracking kits.
+
+21
+00:00:36,713 --> 00:00:38,518
+Your history stays on your device.
+
+22
+00:00:39,208 --> 00:00:39,856
+Tachyon.
+
+23
+00:00:40,663 --> 00:00:41,542
+Built with heart,
+
+24
+00:00:41,554 --> 00:00:43,116
+for watching and free,
+
+25
+00:00:43,151 --> 00:00:43,741
+forever.
