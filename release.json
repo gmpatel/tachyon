@@ -1,17 +1,17 @@
 {
   "app": "tachyon",
-  "version": "1.4.5",
-  "build": "2026.11.03.1152",
-  "versionCode": 3597832,
+  "version": "1.4.6",
+  "build": "2026.11.06.1920",
+  "versionCode": 3602600,
   "whatsNew": [
-    "Title pages: one clean row of icons in every app, with Play and Resume up front",
-    "Resume asks: carry on, or start again",
-    "A series keeps the audio language you picked for its next episodes",
-    "Track lists show languages instead of uploaders' names",
-    "Smoother starts: a short wait instead of an early stop",
-    "Continue Watching shows a frame from where you stopped",
-    "The app opens and browses without internet",
-    "Fixes for Fire TV and for leaving the app completely"
+    "Tablets: upright like a phone, on its side like the TV app",
+    "Subtitle sizes in 9 named steps, right on every screen",
+    "Filters, sorts and layouts stay after updates and restarts",
+    "Poster Size: Small, Small Plus, Medium and Large",
+    "Big Emby movie libraries load on slow servers",
+    "Updates are checked with the store the app came from",
+    "A paused video lets the screen sleep",
+    "A cleaner Amazon Appstore version for Fire devices"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
