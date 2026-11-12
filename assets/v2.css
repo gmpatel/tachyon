@@ -137,6 +137,60 @@ body.v2 {
   text-decoration: none;
   border-color: rgba(167, 139, 250, 0.5);
 }
+/* the hero's news pill (2026-11-13: the Vega OS app live on the Amazon Appstore) — Fire TV orange beside the release */
+.v2-news {
+  gap: 10px;
+  padding: 7px 14px 7px 7px;
+  font-size: 14px;
+  max-width: 100%;
+  border-color: rgba(255, 165, 58, 0.38);
+  background: linear-gradient(90deg, rgba(255, 153, 0, 0.16), rgba(255, 153, 0, 0.04)), var(--panel-2);
+  box-shadow: 0 8px 30px -14px rgba(255, 153, 0, 0.55);
+}
+.v2-news:hover {
+  border-color: rgba(255, 165, 58, 0.7);
+}
+.v2-news b {
+  font-weight: 700;
+  color: #ffd7a1;
+}
+.v2-news .nw-tag {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffb347, #ff9900);
+  color: #1d1204;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.v2-news .nw-sep {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 165, 58, 0.35);
+  flex: none;
+}
+.v2-news .nw-store {
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.v2-news svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  color: #ffa53a;
+  transition: transform 0.2s var(--ease);
+}
+.v2-news:hover svg {
+  transform: translateX(2px);
+}
+@media (max-width: 520px) {
+  .v2-news .nw-sep,
+  .v2-news .nw-store {
+    display: none;
+  }
+}
 /* the hero's release badge (user, 2026-10-19: bigger, "Latest", the build beside it — one line on a phone too) */
 .v2-release {
   gap: 10px;
@@ -1144,6 +1198,34 @@ body.v2 {
   border-style: dashed;
   border-color: rgba(255, 255, 255, 0.18);
   cursor: default;
+}
+/* the Fire TV card's Appstore button (every Fire TV, Vega OS included): Amazon orange edge + a "Live" tag at the end */
+.dlf-amazon {
+  border-color: rgba(255, 153, 0, 0.45);
+}
+.dlf-amazon:hover {
+  border-color: rgba(255, 153, 0, 0.8);
+}
+.dlf-amazon .dlf-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.14);
+  color: #4ade80;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.dlf-amazon .dlf-live::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
 }
 .dlf-store small {
   font-weight: 500;
@@ -2443,6 +2525,11 @@ details.q .a {
 .v2-hero-top {
   grid-column: 1 / -1;
   justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 12px;
   margin-bottom: calc(-1 * clamp(12px, 2vw, 28px));
 }
 .v2-hero-copy h1 {
