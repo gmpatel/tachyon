@@ -1,0 +1,151 @@
+1
+00:00:01,000 --> 00:00:03,138
+Friend Mode adds Offline Viewing:
+
+2
+00:00:03,175 --> 00:00:06,588
+save movies and episodes to watch with no internet.
+
+3
+00:00:07,375 --> 00:00:09,812
+You'll need a Friend key from the app's owner.
+
+4
+00:00:11,093 --> 00:00:11,943
+On a TV,
+
+5
+00:00:11,943 --> 00:00:13,056
+use your phone.
+
+6
+00:00:13,806 --> 00:00:15,606
+Open Settings, then About.
+
+7
+00:00:16,343 --> 00:00:17,156
+Right now,
+
+8
+00:00:17,156 --> 00:00:17,093
+it's in User Mode.
+
+9
+00:00:17,093 --> 00:00:20,056
+Scan the Easy Settings QR code with your phone.
+
+10
+00:00:22,043 --> 00:00:23,906
+On your phone, open Access,
+
+11
+00:00:23,943 --> 00:00:25,818
+type or paste your Friend key,
+
+12
+00:00:26,043 --> 00:00:27,206
+and tap Use Key.
+
+13
+00:00:32,021 --> 00:00:33,521
+The TV checks the key,
+
+14
+00:00:33,633 --> 00:00:35,158
+and Friend Mode is on.
+
+15
+00:00:35,908 --> 00:00:37,508
+There's the new Friend badge.
+
+16
+00:00:41,703 --> 00:00:44,078
+Or do it right on the TV: in About,
+
+17
+00:00:44,165 --> 00:00:46,003
+open Designer, Developer.
+
+18
+00:00:47,988 --> 00:00:48,838
+Choose It's Me!
+
+19
+00:00:52,388 --> 00:00:53,313
+Enter your key,
+
+20
+00:00:53,363 --> 00:00:54,701
+then choose Unlock.
+
+21
+00:00:59,628 --> 00:01:00,990
+A few seconds later,
+
+22
+00:01:00,990 --> 00:01:02,490
+Friend Mode is on.
+
+23
+00:01:03,928 --> 00:01:04,665
+On a phone,
+
+24
+00:01:04,665 --> 00:01:05,590
+it's the same.
+
+25
+00:01:06,353 --> 00:01:08,128
+Go to Settings, then About.
+
+26
+00:01:08,128 --> 00:01:10,928
+Scroll down and tap Designer, Developer.
+
+27
+00:01:12,488 --> 00:01:13,313
+Tap It's Me!
+
+28
+00:01:16,857 --> 00:01:17,794
+Enter your key,
+
+29
+00:01:17,844 --> 00:01:19,044
+and tap Unlock.
+
+30
+00:01:23,590 --> 00:01:24,803
+Friend Mode is on,
+
+31
+00:01:24,803 --> 00:01:26,140
+with its Friend badge.
+
+32
+00:01:30,790 --> 00:01:31,878
+One thing to know:
+
+33
+00:01:31,903 --> 00:01:33,303
+the mode isn't synced.
+
+34
+00:01:34,090 --> 00:01:36,403
+Turn Friend Mode on in each app you use:
+
+35
+00:01:36,528 --> 00:01:37,565
+the TV app,
+
+36
+00:01:37,703 --> 00:01:39,615
+the phone app and the desktop app.
+
+37
+00:01:40,802 --> 00:01:41,489
+That's it!
+
+38
+00:01:42,214 --> 00:01:45,339
+Ask the app's owner for your Friend key, and enjoy.
