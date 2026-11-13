@@ -1,15 +1,16 @@
 {
   "app": "tachyon",
-  "version": "1.4.7",
-  "build": "2026.11.11.0742",
-  "versionCode": 3609102,
+  "version": "1.4.8",
+  "build": "2026.11.13.1837",
+  "versionCode": 3612637,
   "whatsNew": [
-    "Tachyon Hologram: a see-through 3D disc drifts by now and then while you watch (Settings)",
-    "Subtitles: the best one per language first, every other one under More",
-    "Emby: pick a title's version; its external subtitles show on TVs and phones",
-    "Browse By (languages, regions, genres) in the Filters on TVs and phones",
-    "A live channel that reconnects no longer replays what you just saw",
-    "The TV Guide opened from the player keeps your Live TV filter"
+    "Put a service's Live TV, Movies or Series on your home screen",
+    "Switch service right from a page's header",
+    "Stream Info shows where the server is and your route to it",
+    "A channel that sends no picture plays its sound and says so",
+    "Removing a service clears its favorites and history too",
+    "12 new Tachyon Hologram looks, 20 in all",
+    "Fixes for empty Group filters, Stop Update and slow starts"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
