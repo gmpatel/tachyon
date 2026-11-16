@@ -1,16 +1,17 @@
 {
   "app": "tachyon",
-  "version": "1.4.8",
-  "build": "2026.11.13.1837",
-  "versionCode": 3612637,
+  "version": "1.4.9",
+  "build": "2026.11.16.1858",
+  "versionCode": 3616978,
   "whatsNew": [
-    "Put a service's Live TV, Movies or Series on your home screen",
-    "Switch service right from a page's header",
-    "Stream Info shows where the server is and your route to it",
-    "A channel that sends no picture plays its sound and says so",
-    "Removing a service clears its favorites and history too",
-    "12 new Tachyon Hologram looks, 20 in all",
-    "Fixes for empty Group filters, Stop Update and slow starts"
+    "Search finds channels by what's on the TV Guide now and soon",
+    "Search shows the closest matches to your words first",
+    "Browse By finds more regions and genres in provider names",
+    "Keep listening with the screen off on phones",
+    "Hide the picture to listen only, using far less data",
+    "Save offline to a USB drive, removable or set up as storage",
+    "Held skip presses speed up through long jumps",
+    "Fixes for offline copies and playback"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
