@@ -2928,3 +2928,22 @@ details.q .a {
 .dlc-short .host {
   min-width: 0;
 }
+
+/* Tachyon Lens's short links (2026-11-17): <site>/lens picks this computer's file; /lens/<os> one file each */
+.dl-lens-short {
+  max-width: 520px;
+  margin: 14px auto 6px;
+}
+.dl-lens-links {
+  margin: 0 0 14px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.dl-lens-links code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.75;
+}

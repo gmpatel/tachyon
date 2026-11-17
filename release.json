@@ -1,24 +1,25 @@
 {
   "app": "tachyon",
-  "version": "1.4.9",
-  "build": "2026.11.16.1858",
-  "versionCode": 3616978,
+  "version": "1.5.0",
+  "build": "2026.11.17.2107",
+  "versionCode": 3618547,
   "whatsNew": [
-    "Search finds channels by what's on the TV Guide now and soon",
-    "Search shows the closest matches to your words first",
-    "Browse By finds more regions and genres in provider names",
-    "Keep listening with the screen off on phones",
-    "Hide the picture to listen only, using far less data",
-    "Save offline to a USB drive, removable or set up as storage",
-    "Held skip presses speed up through long jumps",
-    "Fixes for offline copies and playback"
+    "Turn through a series' episodes or a page's movies in a wheel while watching",
+    "Previous and next episode buttons, and Up Next near an episode's end",
+    "TV Guide search finds titles and descriptions however the words are typed",
+    "Live TV search shows matches from the TV Guide too",
+    "Emby pictures your device can't decode are converted by the server",
+    "Slow providers start playing sooner",
+    "Fixes for channels that are gone and for pauses as a play opens"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
     "install": "https://gmpatel.github.io/tachyon/install.html",
     "play": "https://play.google.com/store/apps/details?id=app.tachyon.android",
     "apkDropbox": "https://www.dropbox.com/scl/fi/aeuu95e36p7jmti7dlcu2/Tachyon-latest-android-native-universal.apk?rlkey=19ch5si1hjmfdko6z8n0epig0&st=fb46pkao&dl=1",
-    "apkGoogleDrive": "https://drive.usercontent.google.com/download?id=1IaYbtUR_lsaY6m5rKpnpgZbe0tGVOW-y&export=download&confirm=t"
+    "apkGoogleDrive": "https://drive.usercontent.google.com/download?id=1IaYbtUR_lsaY6m5rKpnpgZbe0tGVOW-y&export=download&confirm=t",
+    "apkAutoDropbox": "https://www.dropbox.com/scl/fi/iu0k1ofsnjt33x5yhvozn/Tachyon-latest-android-native-auto.apk?rlkey=juy8u6x8fy24zcjzte22s2672&dl=1",
+    "apkAutoGoogleDrive": "https://drive.usercontent.google.com/download?id=1i4gONB8QsNRmRt04fLY5AD7hiFmlfGQI&export=download&confirm=t"
   },
   "downloader": {
     "dropbox": "7607080",
@@ -35,6 +36,10 @@
     }
   },
   "downloads": {
+    "Tachyon-latest-android-native-auto.apk": {
+      "dropbox": "https://www.dropbox.com/scl/fi/iu0k1ofsnjt33x5yhvozn/Tachyon-latest-android-native-auto.apk?rlkey=juy8u6x8fy24zcjzte22s2672&dl=1",
+      "drive": "https://drive.usercontent.google.com/download?id=1i4gONB8QsNRmRt04fLY5AD7hiFmlfGQI&export=download&confirm=t"
+    },
     "Tachyon-latest-android-native-universal.apk": {
       "dropbox": "https://www.dropbox.com/scl/fi/aeuu95e36p7jmti7dlcu2/Tachyon-latest-android-native-universal.apk?rlkey=19ch5si1hjmfdko6z8n0epig0&dl=1",
       "drive": "https://drive.usercontent.google.com/download?id=1IaYbtUR_lsaY6m5rKpnpgZbe0tGVOW-y&export=download&confirm=t"
