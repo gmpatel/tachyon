@@ -1,16 +1,16 @@
 {
   "app": "tachyon",
-  "version": "1.5.0",
-  "build": "2026.11.17.2107",
-  "versionCode": 3618547,
+  "version": "1.5.1",
+  "build": "2026.11.18.2149",
+  "versionCode": 3620029,
   "whatsNew": [
-    "Turn through a series' episodes or a page's movies in a wheel while watching",
-    "Previous and next episode buttons, and Up Next near an episode's end",
-    "TV Guide search finds titles and descriptions however the words are typed",
-    "Live TV search shows matches from the TV Guide too",
-    "Emby pictures your device can't decode are converted by the server",
-    "Slow providers start playing sooner",
-    "Fixes for channels that are gone and for pauses as a play opens"
+    "Hold Back on a wheel while watching to go up: Live TV, Movies and Series, and a pick plays right there",
+    "The next episode starts in the same player, on the same login",
+    "Watched it before? Resume or Start Again",
+    "Channels play at the app's own volume on more TVs, and Dolby channels never go silent",
+    "Smoother picture on 4K TVs",
+    "The update window fits every screen",
+    "Fixes for a freeze and a crash on some TVs"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
