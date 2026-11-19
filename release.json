@@ -1,16 +1,16 @@
 {
   "app": "tachyon",
-  "version": "1.5.1",
-  "build": "2026.11.18.2149",
-  "versionCode": 3620029,
+  "version": "1.5.2",
+  "build": "2026.11.19.1234",
+  "versionCode": 3620914,
   "whatsNew": [
-    "Hold Back on a wheel while watching to go up: Live TV, Movies and Series, and a pick plays right there",
-    "The next episode starts in the same player, on the same login",
-    "Watched it before? Resume or Start Again",
-    "Channels play at the app's own volume on more TVs, and Dolby channels never go silent",
-    "Smoother picture on 4K TVs",
-    "The update window fits every screen",
-    "Fixes for a freeze and a crash on some TVs"
+    "Watching? A Services wheel above Live TV, Movies and Series lets you switch service right there",
+    "Hold OK on a series in the wheel to play it; a short press shows its episodes",
+    "Your line speed shows the real figure again",
+    "Subtitles look the same size on every screen and window",
+    "More stable 4K channels, smoother next episodes and faster starts on small boxes",
+    "Casting keeps going after a channel the TV can't play",
+    "Fixes across the player, wheels and reports"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
