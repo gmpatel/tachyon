@@ -1,16 +1,15 @@
 {
   "app": "tachyon",
-  "version": "1.5.2",
-  "build": "2026.11.19.1234",
-  "versionCode": 3620914,
+  "version": "1.5.3",
+  "build": "2026.11.20.1925",
+  "versionCode": 3622765,
   "whatsNew": [
-    "Watching? A Services wheel above Live TV, Movies and Series lets you switch service right there",
-    "Hold OK on a series in the wheel to play it; a short press shows its episodes",
-    "Your line speed shows the real figure again",
-    "Subtitles look the same size on every screen and window",
-    "More stable 4K channels, smoother next episodes and faster starts on small boxes",
-    "Casting keeps going after a channel the TV can't play",
-    "Fixes across the player, wheels and reports"
+    "Search finds actors and directors: type part of a name, in any order, to see their movies and series",
+    "Casting tells you when a channel's sound may not play on your TV, with Try on the TV Anyway",
+    "A channel slow to start on the TV gets a full minute, then plays here",
+    "Tachyon Hologram comes back after 2, 2, 4, 6, 10, 16 and 26 minutes; the minutes under it are now a setting",
+    "Movies and episodes start faster when played again",
+    "Fixes across casting and Tachyon Lens"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
