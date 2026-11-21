@@ -1,15 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.5.3",
-  "build": "2026.11.20.1925",
-  "versionCode": 3622765,
+  "version": "1.5.4",
+  "build": "2026.11.21.1615",
+  "versionCode": 3624015,
   "whatsNew": [
-    "Search finds actors and directors: type part of a name, in any order, to see their movies and series",
-    "Casting tells you when a channel's sound may not play on your TV, with Try on the TV Anyway",
-    "A channel slow to start on the TV gets a full minute, then plays here",
-    "Tachyon Hologram comes back after 2, 2, 4, 6, 10, 16 and 26 minutes; the minutes under it are now a setting",
-    "Movies and episodes start faster when played again",
-    "Fixes across casting and Tachyon Lens"
+    "Wheels: picking the kind you came from (Live TV, Movies, Series) goes back to the wheel you started on — Back then closes it",
+    "Sound Level now changes the sound at once, even while something plays, and on Dolby channels too",
+    "Phones: the side menu's service list holds Add Shortcut",
+    "Clean Up Storage never slows the app while it works",
+    "Fixes across the player and the library"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
