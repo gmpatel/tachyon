@@ -1,14 +1,12 @@
 {
   "app": "tachyon",
-  "version": "1.5.4",
-  "build": "2026.11.21.1615",
-  "versionCode": 3624015,
+  "version": "1.5.5",
+  "build": "2026.11.21.1811",
+  "versionCode": 3624131,
   "whatsNew": [
-    "Wheels: picking the kind you came from (Live TV, Movies, Series) goes back to the wheel you started on — Back then closes it",
-    "Sound Level now changes the sound at once, even while something plays, and on Dolby channels too",
-    "Phones: the side menu's service list holds Add Shortcut",
-    "Clean Up Storage never slows the app while it works",
-    "Fixes across the player and the library"
+    "Report a problem in one press: hold Back, then OK on what is already playing — it keeps playing and the report is sent",
+    "Live channels with a damaged stretch of picture come back in about a second instead of reconnecting",
+    "Fixes across the player"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
