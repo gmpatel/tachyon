@@ -1,12 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.5.5",
-  "build": "2026.11.21.1811",
-  "versionCode": 3624131,
+  "version": "1.5.6",
+  "build": "2026.11.23.1224",
+  "versionCode": 3626664,
   "whatsNew": [
-    "Report a problem in one press: hold Back, then OK on what is already playing — it keeps playing and the report is sent",
-    "Live channels with a damaged stretch of picture come back in about a second instead of reconnecting",
-    "Fixes across the player"
+    "Steady Start: movies and episodes wait a few seconds for a steady stream, then play without stops (Settings → Playback)",
+    "The player's wheels follow the page you browse: a channel opens the Live TV page's list, a movie the Movies page",
+    "Reporting a problem sends only when something went wrong, and a report that couldn't go out is kept and sent later",
+    "Closing a box keeps the button you opened it from; hold Pin Stream Info to unpin",
+    "Fixes for TV boxes with very large libraries"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
