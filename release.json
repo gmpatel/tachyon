@@ -1,15 +1,14 @@
 {
   "app": "tachyon",
-  "version": "1.5.7",
-  "build": "2026.11.24.1936",
-  "versionCode": 3628536,
+  "version": "1.5.8",
+  "build": "2026.11.26.1223",
+  "versionCode": 3630983,
   "whatsNew": [
-    "Channel logos show at once in the player's channel list",
-    "Service tiles count each title once, not every language or quality copy",
-    "A title with no poster borrows one from another copy, and provider names are tidier",
-    "Your library is kept per server: changing account or device never loads it again",
-    "Playlists with relative links now play",
-    "Fixes for problem reports and for TV boxes"
+    "Tachyon opens again after it was left in the background, with no need to force stop it",
+    "A channel's volume and audio / subtitle choices stay when your provider renumbers its channels",
+    "Refresh Library asks first when the library was updated in the last 3 hours; automatic updates stay at once a week",
+    "Problem reports are sent even when the player was left in the background",
+    "Fixes for TV boxes"
   ],
   "links": {
     "site": "https://gmpatel.github.io/tachyon/",
